@@ -1,0 +1,2349 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="다각형을 삼각형으로 나누어 내각의 크기의 합을 탐구하는 중학교 수학 수업 도구">
+<title>내각의 합 탐구실</title>
+
+    <!-- Tailwind CSS: 오프라인에서도 동작하도록 빌드된 CSS를 파일 안에 포함 -->
+    <style id="tailwind-css">*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{border:0 solid #e5e7eb;box-sizing:border-box}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-tap-highlight-color:transparent}body{line-height:inherit;margin:0}hr{border-top-width:1px;color:inherit;height:0}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-size:1em;font-variation-settings:normal}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-collapse:collapse;border-color:inherit;text-indent:0}button,input,optgroup,select,textarea{color:inherit;font-family:inherit;font-feature-settings:inherit;font-size:100%;font-variation-settings:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{color:#9ca3af;opacity:1}input::placeholder,textarea::placeholder{color:#9ca3af;opacity:1}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{height:auto;max-width:100%}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.left-0\.5{left:.125rem}.left-4{left:1rem}.right-4{right:1rem}.top-0\.5{top:.125rem}.top-28{top:7rem}.z-10{z-index:10}.z-20{z-index:20}.z-40{z-index:40}.z-50{z-index:50}.-mx-1{margin-left:-.25rem;margin-right:-.25rem}.mx-1{margin-left:.25rem;margin-right:.25rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.ml-0\.5{margin-left:.125rem}.ml-1{margin-left:.25rem}.ml-1\.5{margin-left:.375rem}.mr-2{margin-right:.5rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.table{display:table}.grid{display:grid}.hidden{display:none}.h-3{height:.75rem}.h-3\.5{height:.875rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-\[80svh\]{height:80svh}.h-full{height:100%}.max-h-full{max-height:100%}.min-h-0{min-height:0}.min-h-\[1\.6rem\]{min-height:1.6rem}.min-h-\[36rem\]{min-height:36rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-3{width:.75rem}.w-3\.5{width:.875rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-9{width:2.25rem}.w-full{width:100%}.w-px{width:1px}.min-w-0{min-width:0}.min-w-\[1\.75rem\]{min-width:1.75rem}.min-w-\[40rem\]{min-width:40rem}.min-w-\[8\.5rem\]{min-width:8.5rem}.max-w-\[62rem\]{max-width:62rem}.flex-1{flex:1 1 0%}.flex-\[1\.3\]{flex:1.3}.flex-shrink{flex-shrink:1}.shrink-0{flex-shrink:0}.border-collapse{border-collapse:collapse}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.resize{resize:both}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.space-y-1\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(.375rem*var(--tw-space-y-reverse));margin-top:calc(.375rem*(1 - var(--tw-space-y-reverse)))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(.5rem*var(--tw-space-y-reverse));margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(.75rem*var(--tw-space-y-reverse));margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(1rem*var(--tw-space-y-reverse));margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis}.truncate,.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-sm{border-radius:.125rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-\[3px\]{border-width:3px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-t-4{border-top-width:4px}.border-dashed{border-style:dashed}.border-emerald-300{--tw-border-opacity:1;border-color:rgb(110 231 183/var(--tw-border-opacity,1))}.border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129/var(--tw-border-opacity,1))}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255/var(--tw-border-opacity,1))}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241/var(--tw-border-opacity,1))}.border-indigo-600{--tw-border-opacity:1;border-color:rgb(79 70 229/var(--tw-border-opacity,1))}.border-indigo-700\/80{border-color:rgba(67,56,202,.8)}.border-orange-500{--tw-border-opacity:1;border-color:rgb(249 115 22/var(--tw-border-opacity,1))}.border-rose-300{--tw-border-opacity:1;border-color:rgb(253 164 175/var(--tw-border-opacity,1))}.border-rose-500{--tw-border-opacity:1;border-color:rgb(244 63 94/var(--tw-border-opacity,1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249/var(--tw-border-opacity,1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225/var(--tw-border-opacity,1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85/var(--tw-border-opacity,1))}.border-slate-900{--tw-border-opacity:1;border-color:rgb(15 23 42/var(--tw-border-opacity,1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11/var(--tw-bg-opacity,1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255/var(--tw-bg-opacity,1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235/var(--tw-bg-opacity,1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245/var(--tw-bg-opacity,1))}.bg-emerald-50\/60{background-color:rgba(236,253,245,.6)}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105/var(--tw-bg-opacity,1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255/var(--tw-bg-opacity,1))}.bg-indigo-50\/50{background-color:rgba(238,242,255,.5)}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241/var(--tw-bg-opacity,1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity,1))}.bg-indigo-900\/95{background-color:rgba(49,46,129,.95)}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237/var(--tw-bg-opacity,1))}.bg-orange-500{--tw-bg-opacity:1;background-color:rgb(249 115 22/var(--tw-bg-opacity,1))}.bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242/var(--tw-bg-opacity,1))}.bg-rose-600{--tw-bg-opacity:1;background-color:rgb(225 29 72/var(--tw-bg-opacity,1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity,1))}.bg-slate-300{--tw-bg-opacity:1;background-color:rgb(203 213 225/var(--tw-bg-opacity,1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.bg-slate-50\/70{background-color:rgba(248,250,252,.7)}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.bg-slate-800\/90{background-color:rgba(30,41,59,.9)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/95{background-color:hsla(0,0%,100%,.95)}.p-1{padding:.25rem}.p-2{padding:.5rem}.p-2\.5{padding:.625rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-3\.5{padding-left:.875rem;padding-right:.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-bottom:.125rem;padding-top:.125rem}.py-1{padding-bottom:.25rem;padding-top:.25rem}.py-1\.5{padding-bottom:.375rem;padding-top:.375rem}.py-2{padding-bottom:.5rem;padding-top:.5rem}.py-2\.5{padding-bottom:.625rem;padding-top:.625rem}.py-3{padding-bottom:.75rem;padding-top:.75rem}.py-4{padding-bottom:1rem;padding-top:1rem}.pb-2{padding-bottom:.5rem}.pb-2\.5{padding-bottom:.625rem}.pl-2{padding-left:.5rem}.pr-0\.5{padding-right:.125rem}.pr-1{padding-right:.25rem}.pr-3{padding-right:.75rem}.pt-0\.5{padding-top:.125rem}.pt-3{padding-top:.75rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-semibold{font-weight:600}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-.025em}.\!text-indigo-950{--tw-text-opacity:1!important;color:rgb(30 27 75/var(--tw-text-opacity,1))!important}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77/var(--tw-text-opacity,1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36/var(--tw-text-opacity,1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6/var(--tw-text-opacity,1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235/var(--tw-text-opacity,1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216/var(--tw-text-opacity,1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87/var(--tw-text-opacity,1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70/var(--tw-text-opacity,1))}.text-indigo-200{--tw-text-opacity:1;color:rgb(199 210 254/var(--tw-text-opacity,1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229/var(--tw-text-opacity,1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202/var(--tw-text-opacity,1))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129/var(--tw-text-opacity,1))}.text-orange-700{--tw-text-opacity:1;color:rgb(194 65 12/var(--tw-text-opacity,1))}.text-rose-300{--tw-text-opacity:1;color:rgb(253 164 175/var(--tw-text-opacity,1))}.text-rose-700{--tw-text-opacity:1;color:rgb(190 18 60/var(--tw-text-opacity,1))}.text-sky-300{--tw-text-opacity:1;color:rgb(125 211 252/var(--tw-text-opacity,1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity,1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.underline{text-decoration-line:underline}.decoration-dotted{text-decoration-style:dotted}.decoration-2{text-decoration-thickness:2px}.underline-offset-4{text-underline-offset:4px}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-2xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-lg,.shadow-md{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.shadow-sm,.shadow-xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)}.outline{outline-style:solid}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-indigo-500{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241/var(--tw-ring-opacity,1))}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-all{transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1)}.hover\:bg-amber-600:hover{--tw-bg-opacity:1;background-color:rgb(217 119 6/var(--tw-bg-opacity,1))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216/var(--tw-bg-opacity,1))}.hover\:bg-emerald-700:hover{--tw-bg-opacity:1;background-color:rgb(4 120 87/var(--tw-bg-opacity,1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity,1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.hover\:text-blue-700:hover{--tw-text-opacity:1;color:rgb(29 78 216/var(--tw-text-opacity,1))}.hover\:text-slate-900:hover{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.disabled\:opacity-30:disabled{opacity:.3}.disabled\:shadow-none:disabled{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}@media (min-width:640px){.sm\:inline{display:inline}}@media (min-width:768px){.md\:absolute{position:absolute}.md\:left-auto{left:auto}.md\:right-0{right:0}.md\:top-full{top:100%}.md\:mt-2{margin-top:.5rem}.md\:inline{display:inline}.md\:w-\[22rem\]{width:22rem}.md\:w-\[26rem\]{width:26rem}.md\:gap-3{gap:.75rem}.md\:p-3{padding:.75rem}.md\:p-4{padding:1rem}.md\:p-6{padding:1.5rem}.md\:px-2\.5{padding-left:.625rem;padding-right:.625rem}.md\:px-4{padding-left:1rem;padding-right:1rem}.md\:py-5{padding-bottom:1.25rem;padding-top:1.25rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-sm{font-size:.875rem;line-height:1.25rem}}@media (min-width:1024px){.lg\:block{display:block}.lg\:flex{display:flex}.lg\:h-full{height:100%}.lg\:w-\[34\%\]{width:34%}.lg\:w-\[66\%\]{width:66%}.lg\:flex-row{flex-direction:row}.lg\:overflow-hidden{overflow:hidden}.lg\:border-l{border-left-width:1px}.lg\:border-t-0{border-top-width:0}}@media (min-width:1280px){.xl\:h-14{height:3.5rem}.xl\:w-\[30\%\]{width:30%}.xl\:w-\[70\%\]{width:70%}.xl\:shrink-0{flex-shrink:0}.xl\:gap-3{gap:.75rem}.xl\:py-0{padding-bottom:0;padding-top:0}}@media (min-width:1800px){.min-\[1800px\]\:inline{display:inline}}</style>
+    <!-- 글꼴: 인터넷이 없으면 맑은 고딕 / Consolas로 자동 대체 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;800;900&family=JetBrains+Mono:wght@600;700;800&display=swap">
+    <style>
+        * {
+            font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', system-ui, sans-serif;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        .font-mono-num {
+            font-family: 'JetBrains Mono', Consolas, monospace;
+            font-variant-numeric: tabular-nums;
+        }
+        /* 수업용 밝은 화면 하나로 고정 (어두운 테마에서도 같은 모습) */
+        :root { color-scheme: light; --page-bg: #F8FAFC; --ink: #0F172A; }
+        html, body { height: 100%; }
+        body { background: var(--page-bg); color: var(--ink); }
+        @media (max-width: 1023px) { html, body { height: auto; } }
+        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+        button:focus-visible, input:focus-visible { outline: 3px solid #2563EB; outline-offset: 2px; }
+        /* 칠판 모드: 화면 전체 글자·버튼을 키움 (rem 기준) */
+        html { font-size: 16px; }
+        html.board { font-size: clamp(15px, 1.04vw, 24px); }
+        .section-label { font-size: 0.75rem; font-weight: 800; color: #475569; letter-spacing: 0.02em; }
+        .icon { display: inline-block; flex-shrink: 0; }
+        #modal-backdrop { background: rgba(15, 23, 42, 0.55); }
+        .choice-btn { transition: transform .12s ease, background-color .15s ease, border-color .15s ease; }
+        .choice-btn:active { transform: scale(0.97); }
+        .rule-cell { cursor: pointer; }
+        .rule-cell.hidden-val { color: #64748B; background: repeating-linear-gradient(45deg, #E2E8F0 0 8px, #F1F5F9 8px 16px); }
+        .bg-math-grid {
+            background-color: #F8FAFC;
+            background-image: 
+                radial-gradient(#CBD5E1 1.25px, transparent 1.25px),
+                linear-gradient(to right, rgba(226, 232, 240, 0.55) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(226, 232, 240, 0.55) 1px, transparent 1px);
+            background-size: 24px 24px, 96px 96px, 96px 96px;
+            background-position: -1px -1px;
+        }
+        input[type=range].gather-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 8px;
+            background: #E2E8F0;
+            border-radius: 999px;
+            outline: none;
+        }
+        input[type=range].gather-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 1.4rem;
+            height: 1.4rem;
+            border-radius: 50%;
+            background: #0F172A;
+            cursor: pointer;
+            border: 3px solid #FFFFFF;
+            box-shadow: 0 3px 8px rgba(15, 23, 42, 0.25);
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+        input[type=range].gather-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+            background: #2563EB;
+        }
+        @keyframes pulseBorder {
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.08); opacity: 1; }
+        }
+        .pulse-highlight {
+            animation: pulseBorder 1.6s infinite ease-in-out;
+        }
+    </style>
+
+</head>
+<body style="margin:0">
+<div id="app" class="lg:h-full w-full lg:overflow-hidden bg-slate-50 text-slate-900 flex flex-col">
+
+    <!-- Top Toolbar -->
+    <header class="xl:h-14 bg-white border-b border-slate-200 px-4 py-2 xl:py-0 flex flex-wrap items-center justify-between gap-2 xl:gap-3 shrink-0 z-20">
+        <!-- Left: Title & Polygon Selector -->
+        <div class="flex flex-wrap items-center gap-2 xl:gap-3 min-w-0">
+            <div class="flex items-center gap-2 shrink-0">
+                <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center">
+                    <i data-lucide="shapes" class="w-4 h-4"></i>
+                </div>
+                <span class="hidden min-[1800px]:inline font-extrabold text-base tracking-tight text-slate-900">다각형 내각의 합 탐구실</span>
+            </div>
+
+            <!-- n각형 선택 (3 ~ 12) -->
+            <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 shrink-0">
+                <button onclick="changeSides(-1)" id="btn-sides-minus" title="변의 수 줄이기" class="w-9 h-9 rounded-lg bg-white text-slate-900 font-extrabold text-xl leading-none shadow-sm hover:bg-slate-50 active:scale-95 transition-all disabled:opacity-30 disabled:shadow-none">−</button>
+                <div class="px-2 min-w-[8.5rem] text-center leading-tight">
+                    <div id="sides-label" class="text-base font-extrabold text-slate-900">오각형</div>
+                    <div id="sides-sub" class="text-xs font-bold text-slate-500 font-mono-num">n = 5</div>
+                </div>
+                <button onclick="changeSides(1)" id="btn-sides-plus" title="변의 수 늘리기" class="w-9 h-9 rounded-lg bg-white text-slate-900 font-extrabold text-xl leading-none shadow-sm hover:bg-slate-50 active:scale-95 transition-all disabled:opacity-30 disabled:shadow-none">+</button>
+            </div>
+
+            <button onclick="resetToRegularPolygon()" class="shrink-0 px-3 py-2 rounded-xl text-sm font-bold border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 active:scale-95 transition-all flex items-center gap-1.5">
+                <i data-lucide="layout-grid" class="w-4 h-4 text-slate-500"></i>
+                <span class="hidden sm:inline">정다각형으로</span>
+            </button>
+
+            <!-- 오목다각형 허용 스위치 -->
+            <button onclick="toggleConcave()" id="btn-concave" title="끄면 볼록다각형만 만들 수 있어요" class="shrink-0 pl-2 pr-3 py-2 rounded-xl text-sm font-bold border-2 border-slate-200 bg-white text-slate-700 hover:bg-slate-50 transition-all flex items-center gap-2">
+                <span id="switch-concave" class="relative w-9 h-5 rounded-full bg-slate-300 transition-all"><span class="absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-white shadow transition-all"></span></span>
+                <span>오목다각형</span>
+            </button>
+        </div>
+
+        <!-- Right: 보기 설정 · 탐구 도구 · 화면 설정 -->
+        <div class="flex flex-wrap items-center gap-2 min-w-0 xl:shrink-0">
+            <div class="relative">
+                <button onclick="toggleViewMenu(event)" id="btn-view-menu" class="px-3 py-2 rounded-xl text-sm font-extrabold border-2 border-indigo-600 bg-indigo-50 text-indigo-700 transition-all flex items-center gap-1.5">
+                    <i data-lucide="eye" class="w-4 h-4"></i>
+                    <span>각도 보기</span>
+                    <span id="view-count" class="ml-0.5 px-1.5 rounded-md bg-indigo-600 text-white text-xs font-mono-num">2</span>
+                </button>
+                <!-- 보기 설정 메뉴 -->
+                <div id="view-menu" class="hidden fixed left-4 right-4 top-28 md:absolute md:left-auto md:right-0 md:top-full md:mt-2 md:w-[22rem] bg-white border-2 border-slate-200 rounded-2xl shadow-2xl p-2 z-40" onclick="event.stopPropagation()">
+                    <div id="view-menu-items"></div>
+                    <div class="flex gap-2 p-2 pt-3 mt-1 border-t border-slate-100">
+                        <button onclick="setAllViews(false)" class="flex-1 py-2 rounded-xl border-2 border-slate-200 text-sm font-bold text-slate-700 hover:bg-slate-50">숫자 모두 끄기</button>
+                        <button onclick="setAllViews(true)" class="flex-1 py-2 rounded-xl border-2 border-slate-200 text-sm font-bold text-slate-700 hover:bg-slate-50">모두 켜기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden lg:block h-6 w-px bg-slate-200 mx-1"></div>
+            <button onclick="openHelp()" class="px-3 py-2 rounded-xl text-sm font-extrabold border-2 border-slate-300 bg-white text-slate-700 hover:bg-slate-50 transition-all flex items-center gap-1.5">
+                <i data-lucide="info" class="w-4 h-4"></i>
+                <span>사용법</span>
+            </button>
+            <button onclick="openRuleModal()" class="px-3 py-2 rounded-xl text-sm font-extrabold bg-emerald-600 hover:bg-emerald-700 text-white transition-all flex items-center gap-1.5 active:scale-95">
+                <i data-lucide="table" class="w-4 h-4"></i>
+                <span>규칙 찾기</span>
+            </button>
+            <button onclick="openQuiz()" class="px-3 py-2 rounded-xl text-sm font-extrabold bg-amber-500 hover:bg-amber-600 text-white transition-all flex items-center gap-1.5 active:scale-95">
+                <i data-lucide="help-circle" class="w-4 h-4"></i>
+                <span>확인 문제</span>
+            </button>
+            <div class="hidden lg:block h-6 w-px bg-slate-200 mx-1"></div>
+            <button onclick="toggleBoardMode()" id="btn-board" title="전자칠판용 큰 화면" class="hidden lg:flex px-3 py-2 rounded-xl text-sm font-extrabold border-2 transition-all flex items-center gap-1.5">
+                <i data-lucide="monitor" class="w-4 h-4"></i>
+                <span id="text-board-btn">칠판 모드</span>
+            </button>
+            <button onclick="toggleFullscreen()" title="전체 화면" class="hidden lg:block p-2 rounded-xl border-2 border-slate-200 bg-white text-slate-700 hover:bg-slate-50 transition-all">
+                <i data-lucide="maximize" class="w-5 h-5"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main 70:30 Split Workspace -->
+    <main class="flex-1 flex flex-col lg:flex-row lg:overflow-hidden">
+        
+        <!-- LEFT 70%: Interactive Canvas Stage -->
+        <section class="w-full lg:w-[66%] xl:w-[70%] h-[80svh] min-h-[36rem] lg:h-full relative bg-math-grid flex flex-col justify-between p-3 md:p-4 select-none overflow-hidden">
+            
+            <!-- Canvas -->
+            <canvas id="simCanvas" class="absolute inset-0 w-full h-full cursor-pointer"></canvas>
+
+            <!-- Top Context Info & Vertex Inspector Card -->
+            <div id="canvas-top-row" class="relative z-10 flex flex-wrap items-start justify-between gap-2 md:gap-3 pointer-events-none">
+                <!-- Mode & Vertex Relation Realtime Callout -->
+                <div class="space-y-1.5 pointer-events-auto min-w-0">
+                    <div class="bg-white/95 border border-slate-200 rounded-xl px-3 py-1.5 shadow-sm flex items-center gap-2.5 flex-wrap">
+                        <span id="canvas-mode-badge" class="px-2 py-0.5 rounded-md bg-slate-900 text-white text-sm font-extrabold">꼭짓점 A 기준</span>
+                        <span id="canvas-hint" class="hidden md:inline text-sm text-slate-600 font-semibold">꼭짓점을 끌어 모양을 바꾸거나, 눌러서 기준 꼭짓점을 바꿔 보세요</span>
+                    </div>
+
+                    <!-- 오목다각형에서 나눌 수 없을 때 등 안내 -->
+                    <div id="canvas-warning" class="hidden bg-rose-600 text-white rounded-xl px-3 py-2 text-sm md:text-base font-extrabold shadow-lg"></div>
+
+                    <!-- 각 분해 보기를 끈 상태에서만 보이는 꼭짓점 수식 카드 (켠 상태에서는 그림 위 말풍선이 같은 역할) -->
+                    <div id="vertex-focus-card" class="hidden bg-indigo-900/95 text-white border border-indigo-700/80 rounded-xl px-3.5 py-2 shadow-lg flex items-center gap-3 transition-all">
+                        <div class="w-7 h-7 rounded-lg bg-indigo-500 text-white flex items-center justify-center font-extrabold text-sm" id="vertex-focus-badge">A</div>
+                        <div class="text-sm">
+                            <span class="text-indigo-200 font-bold" id="vertex-focus-title">다각형의 꼭짓점 ∠A의 크기:</span>
+                            <span class="font-extrabold font-mono-num text-amber-300 ml-1.5 text-base" id="vertex-focus-math">∠A₁ + ∠A₂ + ∠A₃ = 108°</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gather Target Mode Switch -->
+                <div class="bg-white/95 border border-slate-200 rounded-xl p-1 shadow-sm pointer-events-auto flex items-center gap-1 shrink-0">
+                    <button onclick="setGatherLayout('TRAY')" id="layout-tray-btn" class="px-2 md:px-2.5 py-1.5 rounded-lg text-xs md:text-sm font-extrabold bg-slate-900 text-white transition-all">
+                        아래 받침대에 모으기
+                    </button>
+                    <button onclick="setGatherLayout('CENTROID')" id="layout-centroid-btn" class="px-2 md:px-2.5 py-1.5 rounded-lg text-xs md:text-sm font-bold text-slate-600 hover:text-slate-900 transition-all">
+                        삼각형 안에 모으기
+                    </button>
+                </div>
+            </div>
+
+            <!-- Bottom Floating: 180° 하나씩 모으기 컨트롤러 -->
+            <div class="relative z-10 flex items-end justify-end gap-4 pointer-events-none">
+                <div id="gather-panel" class="bg-white/95 border-2 border-slate-900 rounded-2xl p-2.5 md:p-3 shadow-xl pointer-events-auto flex flex-col gap-2 w-full md:w-[26rem]">
+
+                    <div class="flex items-center justify-between gap-2 border-b border-slate-100 pb-2">
+                        <span class="text-sm font-extrabold text-slate-900 flex items-center gap-1.5">
+                            <i data-lucide="pie-chart" class="w-4 h-4 text-blue-600"></i>
+                            <span>세 각을 모아 180° 만들기</span>
+                        </span>
+                        <span id="step-status-badge" class="px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 text-xs font-extrabold font-mono-num">
+                            준비 (0 / 3 조각)
+                        </span>
+                    </div>
+
+                    <!-- Step Controls -->
+                    <div class="flex items-center gap-2">
+                        <button onclick="stepGatherNextWedge()" id="btn-step-next" class="flex-1 py-2.5 px-3 rounded-xl bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-extrabold text-sm transition-all flex items-center justify-center gap-1.5">
+                            <i data-lucide="corner-down-right" class="w-4 h-4"></i>
+                            <span id="step-btn-text">조각 1개씩 모으기 (+1각)</span>
+                        </button>
+                        <button onclick="toggleGatherFull()" id="btn-gather-full" class="py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-sm transition-all flex items-center gap-1">
+                            <i data-lucide="zap" class="w-4 h-4 text-amber-400"></i>
+                            <span>한 번에</span>
+                        </button>
+                        <button onclick="resetGatherSteps()" class="p-2.5 rounded-xl border-2 border-slate-200 hover:bg-slate-100 text-slate-700 transition-all" title="원위치로 초기화">
+                            <i data-lucide="rotate-ccw" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+
+                    <!-- Progress Slider -->
+                    <div class="flex items-center gap-3 pt-0.5">
+                        <input type="range" id="gatherSlider" min="0" max="100" value="0" class="gather-slider flex-1" oninput="onGatherSliderChange(this.value)">
+                        <span class="text-sm font-extrabold font-mono-num text-slate-800 w-12 text-right" id="gatherValueLabel">0%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RIGHT 30%: Control Panel & Mathematical Relation -->
+        <aside class="w-full lg:w-[34%] xl:w-[30%] lg:h-full bg-white border-t lg:border-t-0 lg:border-l border-slate-200 flex flex-col p-4 lg:overflow-hidden z-10 gap-3">
+
+            <!-- 1. Triangulation Mode Selector -->
+            <div class="space-y-1.5 shrink-0">
+                <span class="section-label block">1. 삼각형으로 나누는 방법</span>
+                <div class="grid grid-cols-3 gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200">
+                    <button onclick="setTriMode('VERTEX')" id="mode-vertex-btn" class="py-2 px-1 rounded-lg text-sm font-extrabold transition-all bg-white text-slate-900 shadow-sm text-center">
+                        한 꼭짓점에서
+                    </button>
+                    <button onclick="setTriMode('MANUAL')" id="mode-manual-btn" class="py-2 px-1 rounded-lg text-sm font-bold transition-all text-slate-600 hover:text-slate-900 text-center">
+                        대각선 직접
+                    </button>
+                    <button onclick="setTriMode('CENTER')" id="mode-center-btn" class="py-2 px-1 rounded-lg text-sm font-bold transition-all text-slate-600 hover:text-slate-900 text-center">
+                        내부의 한 점
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2. 다각형 꼭짓점 내각과 삼각형 분할각 대조표 -->
+            <div class="rounded-xl border border-indigo-100 bg-indigo-50/50 p-3 flex flex-col gap-2 flex-1 min-h-0">
+                <div class="flex items-center justify-between shrink-0">
+                    <span class="section-label flex items-center gap-1 !text-indigo-950">
+                        <i data-lucide="link-2" class="w-4 h-4 text-indigo-600"></i>
+                        <span>2. 다각형의 내각 = 삼각형 각들의 합</span>
+                    </span>
+                </div>
+                <div id="vertex-angle-breakdown-list" class="space-y-1.5 overflow-y-auto pr-1 min-h-0 flex-1">
+                    <!-- Populated with vertex relationship pills -->
+                </div>
+            </div>
+
+            <!-- 3. Divided Triangles List with individual Step Gather Buttons -->
+            <div class="flex flex-col gap-1.5 flex-[1.3] min-h-0">
+                <div class="flex items-center justify-between shrink-0">
+                    <span class="section-label">3. 나뉜 삼각형 (세 각의 합 = 180°)</span>
+                    <span id="selected-count-badge" class="text-sm font-extrabold font-mono-num text-blue-700">3개</span>
+                </div>
+                <div id="triangle-cards-container" class="space-y-2 overflow-y-auto pr-0.5 min-h-0 flex-1">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <!-- 4. Formula Summary Box -->
+            <div class="bg-slate-900 text-white p-4 rounded-2xl shadow-md space-y-3 shrink-0">
+                <div class="flex items-center justify-between border-b border-slate-700 pb-2.5">
+                    <span class="text-sm font-bold text-slate-300">다각형의 내각의 크기의 합</span>
+                    <span id="formula-poly-name" class="text-sm font-extrabold px-2 py-0.5 rounded-md bg-slate-800 text-sky-300 font-mono-num">
+                        오각형 (n = 5)
+                    </span>
+                </div>
+
+                <!-- Formula Visualization -->
+                <div id="semicircle-equation-row" class="flex flex-wrap items-center gap-1.5 min-h-[1.6rem]"></div>
+
+                <div class="bg-slate-800/90 rounded-xl p-3 border border-slate-700 flex items-center justify-between gap-2">
+                    <div class="min-w-0">
+                        <div id="formula-expression" class="text-base font-extrabold font-mono-num text-white">
+                            180° × (5 - 2)
+                        </div>
+                        <div id="formula-caption" class="text-xs font-semibold text-slate-300 mt-0.5">
+                            = 삼각형 3개의 내각의 합
+                        </div>
+                    </div>
+                    <div class="flex items-baseline gap-1 shrink-0">
+                        <span class="text-slate-300 font-extrabold text-base">=</span>
+                        <span id="formula-total-deg" class="text-3xl font-extrabold font-mono-num text-amber-400">540°</span>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+    </main>
+
+    <!-- 규칙 찾기 / 확인 문제 공용 창 -->
+    <div id="modal-backdrop" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 md:p-6" onclick="if (event.target === this) closeModal()">
+        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-[62rem] max-h-full flex flex-col overflow-hidden">
+            <div class="flex items-center justify-between px-6 py-4 border-b border-slate-200 shrink-0">
+                <h2 id="modal-title" class="text-2xl font-extrabold text-slate-900">규칙 찾기</h2>
+                <button onclick="closeModal()" title="닫기" class="p-2 rounded-xl hover:bg-slate-100 text-slate-600">
+                    <i data-lucide="x" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <div id="modal-body" class="p-4 md:p-6 overflow-y-auto"></div>
+        </div>
+    </div>
+
+    <script>
+        // ============================================================================
+        // 0. 아이콘 (인터넷 없이 동작하도록 SVG를 파일 안에 포함)
+        // ============================================================================
+        const ICONS = {
+            'shapes': '<path d="M8.3 10a.7.7 0 0 1-.63-1.08L11.4 3a.7.7 0 0 1 1.2-.04L16.3 8.9a.7.7 0 0 1-.57 1.1Z"/><rect x="3" y="14" width="7" height="7" rx="1"/><circle cx="17.5" cy="17.5" r="3.5"/>',
+            'layout-grid': '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/>',
+            'sparkles': '<path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 3v4M17 5h4"/>',
+            'pie-chart': '<path d="M21 12A9 9 0 1 1 12 3v9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/>',
+            'corner-down-right': '<polyline points="15 10 20 15 15 20"/><path d="M4 4v7a4 4 0 0 0 4 4h12"/>',
+            'zap': '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
+            'rotate-ccw': '<path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/>',
+            'link-2': '<path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" x2="16" y1="12" y2="12"/>',
+            'play': '<polygon points="6 3 20 12 6 21 6 3"/>',
+            'maximize': '<path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/>',
+            'monitor': '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>',
+            'table': '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/>',
+            'help-circle': '<circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>',
+            'x': '<path d="M18 6 6 18M6 6l12 12"/>',
+            'info': '<circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>',
+            'eye': '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+            'eye-off': '<path d="M3 3l18 18"/><path d="M10.6 5.1A10 10 0 0 1 12 5c6.5 0 10 7 10 7a17 17 0 0 1-3.2 4.2M6.6 6.6A17 17 0 0 0 2 12s3.5 7 10 7a9.7 9.7 0 0 0 5.4-1.6"/>',
+            'arrow-right': '<path d="M5 12h14M13 6l6 6-6 6"/>'
+        };
+        function renderIcons() {
+            document.querySelectorAll('i[data-lucide]').forEach(el => {
+                const name = el.getAttribute('data-lucide');
+                const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                svg.setAttribute('viewBox', '0 0 24 24');
+                svg.setAttribute('fill', 'none');
+                svg.setAttribute('stroke', 'currentColor');
+                svg.setAttribute('stroke-width', '2.2');
+                svg.setAttribute('stroke-linecap', 'round');
+                svg.setAttribute('stroke-linejoin', 'round');
+                svg.setAttribute('class', 'icon ' + (el.getAttribute('class') || ''));
+                svg.innerHTML = ICONS[name] || '';
+                el.replaceWith(svg);
+            });
+        }
+        // 기존 코드의 lucide.createIcons() 호출을 그대로 쓸 수 있도록 연결
+        const lucide = { createIcons: renderIcons };
+        lucide.createIcons();
+
+        // ============================================================================
+        // 1. CONSTANTS & PALETTE
+        // ============================================================================
+        const MIN_SIDES = 3, MAX_SIDES = 12;
+        const VERTEX_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
+        const KOR_DIGITS = ['', '일', '이', '삼', '사', '오', '육', '칠', '팔', '구'];
+        function polyName(n) {
+            const tens = Math.floor(n / 10), ones = n % 10;
+            let s = '';
+            if (tens > 0) s += (tens > 1 ? KOR_DIGITS[tens] : '') + '십';
+            s += KOR_DIGITS[ones];
+            return s + '각형';
+        }
+
+        function hexToRgba(hex, a) {
+            const v = parseInt(hex.slice(1), 16);
+            return `rgba(${(v >> 16) & 255}, ${(v >> 8) & 255}, ${v & 255}, ${a})`;
+        }
+        // 삼각형 최대 12개(내부 한 점 · 십이각형)까지 구분되는 색
+        const TRI_PALETTE = [
+            ['#F43F5E', '#E11D48'], ['#F59E0B', '#B45309'], ['#10B981', '#047857'], ['#0EA5E9', '#0369A1'],
+            ['#8B5CF6', '#6D28D9'], ['#EC4899', '#BE185D'], ['#6366F1', '#4338CA'], ['#84CC16', '#4D7C0F'],
+            ['#F97316', '#C2410C'], ['#06B6D4', '#0E7490'], ['#D946EF', '#A21CAF'], ['#A16207', '#854D0E']
+        ].map(([hex, textHex], i) => ({
+            id: `T${i + 1}`, hex, textHex,
+            fill: hexToRgba(hex, 0.16), boardFill: hexToRgba(hex, 0.28),
+            activeFill: hexToRgba(hex, 0.32), wedgeFill: hexToRgba(hex, 0.9)
+        }));
+
+        // 칠판 모드 배율 (캔버스 글자·선·점 크기)
+        let S = 1;
+        const monoFont = (px) => `800 ${Math.round(px * S)}px "JetBrains Mono", Consolas, monospace`;
+
+        // ============================================================================
+        // 2. APPLICATION STATE
+        // ============================================================================
+        const canvas = document.getElementById('simCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let state = {
+            numSides: 5,
+            vertices: [],
+            centerPoint: { x: 0, y: 0 },
+
+            triMode: 'VERTEX', // 'VERTEX' | 'MANUAL' | 'CENTER'
+            baseVertexIndex: 0,
+            manualDiagonals: [],
+            manualSelectedVertex: -1,
+            excludeCenterAngles: true,
+
+            selectedTriIndices: new Set(),
+
+            // 시각화 개선 옵션
+            showVertexBreakdown: true, // 꼭짓점별 내각 분할 관계 강조
+            showTotalVertexLabels: false, // 다각형 꼭짓점 바깥에 내각 크기 배지
+            showTriangleAngles: true, // 꼭짓점 주변 삼각형 조각의 각도 숫자
+            allowConcave: false, // 오목다각형 허용
+            boardMode: true, // 전자칠판용 큰 화면
+            focusedVertexIdx: 0, // 현재 하이라이트된 꼭짓점 (기본 A)
+
+            // 조각 모으기 (Step-by-step)
+            gatherLayout: 'TRAY', // 'TRAY' | 'CENTROID'
+            targetTriForStep: 0, // 단계별 모으기 대상 삼각형
+            stepWedgeCount: 0, // 현재 대상 삼각형에서 모인 조각 개수 (0, 1, 2, 3)
+            wedgeAnimProgress: {}, // 개별 조각별(tIdx_cIdx) 애니메이션 진행도 (0 ~ 1)
+            gatherSliderValue: 0,
+
+            // 인터랙션
+            draggingVertexIndex: -1,
+            draggingCenterPoint: false,
+            hoveredVertexIndex: -1,
+            hoveredTriIndex: -1,
+            pointerDownPos: null,
+            hasDragged: false
+        };
+
+        // ============================================================================
+        // 3. GEOMETRY & TRIANGULATION ENGINE
+        // ============================================================================
+        function getCanvasSize() {
+            const dpr = window.devicePixelRatio || 1;
+            return { w: canvas.width / dpr, h: canvas.height / dpr };
+        }
+
+        function resizeCanvas() {
+            const rect = canvas.parentElement.getBoundingClientRect();
+            const dpr = window.devicePixelRatio || 1;
+            const oldW = canvas.width / dpr || rect.width;
+            const oldH = canvas.height / dpr || rect.height;
+
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+            if (state.vertices.length === 0) {
+                initRegularPolygon(state.numSides);
+            } else if (oldW > 0 && oldH > 0) {
+                const dx = (rect.width - oldW) / 2;
+                const dy = (rect.height - oldH) / 2;
+                state.vertices.forEach(v => { v.x += dx; v.y += dy; });
+                state.centerPoint.x += dx;
+                state.centerPoint.y += dy;
+            }
+        }
+
+        window.addEventListener('resize', () => {
+            const oldS = S;
+            if (typeof applyBoardMode === 'function') applyBoardMode();
+            resizeCanvas();
+            // 크기 배율이 바뀌면(전체 화면 전환 등) 다각형을 새 화면에 맞게 다시 배치
+            if (Math.abs(S - oldS) > 0.01) initRegularPolygon(state.numSides);
+        });
+
+        // 캔버스 위에 떠 있는 패널들의 위치 (그림이 패널 밑에 가려지지 않게)
+        function getOverlayRects() {
+            const cr = canvas.getBoundingClientRect();
+            const top = document.getElementById('canvas-top-row').getBoundingClientRect();
+            const gp = document.getElementById('gather-panel').getBoundingClientRect();
+            return { topSafe: top.bottom - cr.top + 8, panelLeft: gp.left - cr.left, panelTop: gp.top - cr.top };
+        }
+
+        // 아래 받침대(180° 반원 자리) 배치: 삼각형이 많으면 두 줄로
+        function trayLayout(count) {
+            const { w, h } = getCanvasSize();
+            const ov = getOverlayRects();
+            // 아래 패널이 화면 폭을 다 차지하면(휴대폰) 받침대는 패널 위쪽에 전체 폭으로
+            const panelFull = ov.panelLeft < w * 0.35;
+            const left = 24, right = panelFull ? w - 24 : Math.max(left + 200, ov.panelLeft - 24);
+            const avail = right - left;
+            let rows = 1, perRow = Math.max(1, count);
+            let spacing = Math.min(130 * S, avail / perRow);
+            if (spacing < 84 * S && count > 1) {
+                rows = 2;
+                perRow = Math.ceil(count / 2);
+                spacing = Math.min(130 * S, avail / perRow);
+            }
+            const radius = Math.max(18, Math.min(40 * S, spacing / 2 - 8));
+            const rowGap = radius + 36 * S;
+            const baseY = panelFull ? ov.panelTop - 30 * S : h - 34 * S;
+            const cx = (left + right) / 2;
+            const positions = [];
+            for (let i = 0; i < count; i++) {
+                const row = rows === 2 && i < perRow ? 0 : (rows === 2 ? 1 : 0);
+                const idxInRow = rows === 2 && row === 1 ? i - perRow : i;
+                const nInRow = rows === 2 ? (row === 0 ? perRow : count - perRow) : count;
+                positions.push({
+                    x: cx + (idxInRow - (nInRow - 1) / 2) * spacing,
+                    y: rows === 2 && row === 0 ? baseY - rowGap : baseY
+                });
+            }
+            const topY = (rows === 2 ? baseY - rowGap : baseY) - radius - 10;
+            return { positions, radius, topY };
+        }
+
+        function initRegularPolygon(n) {
+            const { w, h } = getCanvasSize();
+            const ov = getOverlayRects();
+            // 위쪽 안내 카드와 아래 받침대 사이에 다각형이 들어가도록 배치
+            // 휴대폰에서는 맨 위 꼭짓점의 수식 말풍선이 들어갈 자리를 위쪽에 남김
+            const top = ov.topSafe + (w < 640 ? 84 : 44) * S;
+            const bottom = Math.min(trayLayout(n).topY, ov.panelTop) - 56 * S;
+            const cx = w / 2;
+            const cy = (top + bottom) / 2;
+            const radius = Math.max(80, Math.min(w * 0.3, (bottom - top) / 2));
+
+            state.vertices = [];
+            const startAngle = -Math.PI / 2;
+            for (let i = 0; i < n; i++) {
+                const theta = startAngle + (i * 2 * Math.PI) / n;
+                state.vertices.push({
+                    x: cx + radius * Math.cos(theta),
+                    y: cy + radius * Math.sin(theta)
+                });
+            }
+
+            state.centerPoint = { x: cx, y: cy };
+            state.baseVertexIndex = 0;
+            state.focusedVertexIdx = 0;
+            state.manualDiagonals = [];
+            state.manualSelectedVertex = -1;
+            resetGatherSteps();
+            resetSelectionForCurrentMode();
+            updateDashboardUI();
+        }
+
+        function resetSelectionForCurrentMode() {
+            const tris = computeTriangles();
+            state.selectedTriIndices.clear();
+            tris.forEach((_, idx) => state.selectedTriIndices.add(idx));
+        }
+
+        function normalizeAngleSigned(angle) {
+            while (angle <= -Math.PI) angle += 2 * Math.PI;
+            while (angle > Math.PI) angle -= 2 * Math.PI;
+            return angle;
+        }
+
+        function isStrictlyConvexClockwise(verts) {
+            const n = verts.length;
+            const minTurnRad = (12 * Math.PI) / 180;
+            const maxTurnRad = (168 * Math.PI) / 180;
+            const minEdgeLen = 50;
+
+            for (let i = 0; i < n; i++) {
+                const prev = verts[(i - 1 + n) % n];
+                const curr = verts[i];
+                const next = verts[(i + 1) % n];
+
+                const len1 = Math.hypot(curr.x - prev.x, curr.y - prev.y);
+                const len2 = Math.hypot(next.x - curr.x, next.y - curr.y);
+                if (len1 < minEdgeLen || len2 < minEdgeLen) return false;
+
+                const ang1 = Math.atan2(curr.y - prev.y, curr.x - prev.x);
+                const ang2 = Math.atan2(next.y - curr.y, next.x - curr.x);
+                const turn = normalizeAngleSigned(ang2 - ang1);
+
+                if (turn < minTurnRad || turn > maxTurnRad) return false;
+            }
+            return true;
+        }
+
+        // ---------------------------------------------------------------------------
+        // 오목다각형까지 다루는 일반 도형 계산
+        // ---------------------------------------------------------------------------
+        function cross3(a, b, c) {
+            return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
+        }
+
+        // 두 선분이 끝점이 아닌 곳에서 서로 엇갈리는지
+        function segmentsCross(p1, p2, p3, p4) {
+            const d1 = cross3(p3, p4, p1), d2 = cross3(p3, p4, p2);
+            const d3 = cross3(p1, p2, p3), d4 = cross3(p1, p2, p4);
+            return ((d1 > 0 && d2 < 0) || (d1 < 0 && d2 > 0)) && ((d3 > 0 && d4 < 0) || (d3 < 0 && d4 > 0));
+        }
+
+        function distPointToSegment(p, a, b) {
+            const dx = b.x - a.x, dy = b.y - a.y;
+            const len2 = dx * dx + dy * dy || 1;
+            const t = Math.max(0, Math.min(1, ((p.x - a.x) * dx + (p.y - a.y) * dy) / len2));
+            return Math.hypot(p.x - (a.x + t * dx), p.y - (a.y + t * dy));
+        }
+
+        function pointInPolygon(pt, verts) {
+            let inside = false;
+            for (let i = 0, j = verts.length - 1; i < verts.length; j = i++) {
+                const a = verts[i], b = verts[j];
+                if ((a.y > pt.y) !== (b.y > pt.y) && pt.x < (b.x - a.x) * (pt.y - a.y) / (b.y - a.y) + a.x) inside = !inside;
+            }
+            return inside;
+        }
+
+        function polygonSignedArea(verts) {
+            let s = 0;
+            for (let i = 0; i < verts.length; i++) {
+                const a = verts[i], b = verts[(i + 1) % verts.length];
+                s += a.x * b.y - b.x * a.y;
+            }
+            return s / 2;
+        }
+
+        // 점이 다각형 안쪽에 있고, 모든 변에서 어느 정도 떨어져 있는지 (볼록·오목 모두)
+        function isPointStrictlyInsidePolygon(pt, verts) {
+            const margin = 28;
+            if (!pointInPolygon(pt, verts)) return false;
+            for (let i = 0; i < verts.length; i++) {
+                if (distPointToSegment(pt, verts[i], verts[(i + 1) % verts.length]) < margin) return false;
+            }
+            return true;
+        }
+
+        // 선분 a-b가 다각형 안쪽으로만 지나는지 (대각선, 점 P와 꼭짓점을 잇는 선)
+        function isSegmentInsidePolygon(a, b, verts) {
+            const n = verts.length;
+            for (let i = 0; i < n; i++) {
+                if (segmentsCross(a, b, verts[i], verts[(i + 1) % n])) return false;
+            }
+            // 선분이 다른 꼭짓점을 스쳐 지나가는 경우
+            for (const v of verts) {
+                const isEnd = (Math.hypot(v.x - a.x, v.y - a.y) < 1) || (Math.hypot(v.x - b.x, v.y - b.y) < 1);
+                if (!isEnd && distPointToSegment(v, a, b) < 3) return false;
+            }
+            for (const t of [0.25, 0.5, 0.75]) {
+                if (!pointInPolygon({ x: a.x + (b.x - a.x) * t, y: a.y + (b.y - a.y) * t }, verts)) return false;
+            }
+            return true;
+        }
+
+        // 꼭짓점 i가 오목한(내각이 180°보다 큰) 꼭짓점인지
+        function isReflexVertex(verts, i) {
+            const n = verts.length;
+            return cross3(verts[(i - 1 + n) % n], verts[i], verts[(i + 1) % n]) < 0;
+        }
+
+        // 오목다각형 허용 시: 변끼리 엇갈리지 않는 단순다각형인지 검사
+        function isSimpleValidPolygon(verts) {
+            const n = verts.length;
+            if (polygonSignedArea(verts) <= 0) return false;
+            const minEdgeLen = 50;
+            const minTurn = (12 * Math.PI) / 180, maxTurn = (168 * Math.PI) / 180;
+            for (let i = 0; i < n; i++) {
+                const prev = verts[(i - 1 + n) % n], curr = verts[i], next = verts[(i + 1) % n];
+                if (Math.hypot(next.x - curr.x, next.y - curr.y) < minEdgeLen) return false;
+                const turn = Math.abs(normalizeAngleSigned(Math.atan2(next.y - curr.y, next.x - curr.x) - Math.atan2(curr.y - prev.y, curr.x - prev.x)));
+                if (turn < minTurn || turn > maxTurn) return false;
+            }
+            for (let i = 0; i < n; i++) {
+                const a = verts[i], b = verts[(i + 1) % n];
+                for (let j = i + 2; j < n; j++) {
+                    if (i === 0 && j === n - 1) continue; // 이웃한 변
+                    if (segmentsCross(a, b, verts[j], verts[(j + 1) % n])) return false;
+                }
+                // 꼭짓점이 이웃하지 않은 변에 너무 붙지 않게
+                for (let k = 0; k < n; k++) {
+                    if (k === i || k === (i + 1) % n) continue;
+                    if (distPointToSegment(verts[k], a, b) < 24) return false;
+                }
+            }
+            return true;
+        }
+
+        function isValidPolygonShape(verts) {
+            return state.allowConcave ? isSimpleValidPolygon(verts) : isStrictlyConvexClockwise(verts);
+        }
+
+        // 한 꼭짓점에서 그은 대각선 중 다각형 밖으로 나가는 것들
+        function getInvalidFanTargets() {
+            const n = state.vertices.length, b = state.baseVertexIndex % n, bad = [];
+            for (let k = 2; k < n - 1; k++) {
+                const t = (b + k) % n;
+                if (!isSegmentInsidePolygon(state.vertices[b], state.vertices[t], state.vertices)) bad.push(t);
+            }
+            return bad;
+        }
+
+        // 점 P에서 이을 수 없는(선이 다각형 밖으로 나가는) 꼭짓점들
+        function getInvalidCenterTargets() {
+            return state.vertices.map((v, i) => i).filter(i => !isSegmentInsidePolygon(state.centerPoint, state.vertices[i], state.vertices));
+        }
+
+        // 모든 꼭짓점이 보이는 안쪽 점을 찾음 (없으면 가장 안쪽 점)
+        function findGoodCenter() {
+            const vs = state.vertices;
+            const xs = vs.map(v => v.x), ys = vs.map(v => v.y);
+            const minX = Math.min(...xs), maxX = Math.max(...xs), minY = Math.min(...ys), maxY = Math.max(...ys);
+            let best = null, bestScore = -Infinity;
+            for (let gx = 1; gx < 30; gx++) {
+                for (let gy = 1; gy < 30; gy++) {
+                    const p = { x: minX + (maxX - minX) * gx / 30, y: minY + (maxY - minY) * gy / 30 };
+                    if (!isPointStrictlyInsidePolygon(p, vs)) continue;
+                    const clearance = Math.min(...vs.map((v, i) => distPointToSegment(p, v, vs[(i + 1) % vs.length])));
+                    const seesAll = vs.every(v => isSegmentInsidePolygon(p, v, vs));
+                    const score = (seesAll ? 100000 : 0) + clearance;
+                    if (score > bestScore) { bestScore = score; best = p; }
+                }
+            }
+            return best || {
+                x: vs.reduce((s, v) => s + v.x, 0) / vs.length,
+                y: vs.reduce((s, v) => s + v.y, 0) / vs.length
+            };
+        }
+
+        function extractSubPolygonsFromDiagonals(n, diagonals) {
+            let faces = [Array.from({ length: n }, (_, i) => i)];
+            for (const [u, v] of diagonals) {
+                const nextFaces = [];
+                for (const face of faces) {
+                    const idxU = face.indexOf(u);
+                    const idxV = face.indexOf(v);
+                    if (idxU !== -1 && idxV !== -1 && Math.abs(idxU - idxV) > 1 && Math.abs(idxU - idxV) < face.length - 1) {
+                        const i1 = Math.min(idxU, idxV);
+                        const i2 = Math.max(idxU, idxV);
+                        const poly1 = face.slice(i1, i2 + 1);
+                        const poly2 = [...face.slice(i2), ...face.slice(0, i1 + 1)];
+                        nextFaces.push(poly1, poly2);
+                    } else {
+                        nextFaces.push(face);
+                    }
+                }
+                faces = nextFaces;
+            }
+            return faces;
+        }
+
+        function computeTriangles() {
+            const n = state.vertices.length;
+            const rawTris = [];
+
+            if (state.triMode === 'VERTEX') {
+                const b = state.baseVertexIndex % n;
+                // 오목다각형에서 대각선이 밖으로 나가면 이 꼭짓점에서는 나눌 수 없음
+                const fanOk = getInvalidFanTargets().length === 0;
+                for (let k = 1; k < n - 1 && fanOk; k++) {
+                    const i1 = b;
+                    const i2 = (b + k) % n;
+                    const i3 = (b + k + 1) % n;
+                    rawTris.push({
+                        points: [
+                            { ...state.vertices[i1], label: VERTEX_LETTERS[i1], vertexIdx: i1, isCenter: false },
+                            { ...state.vertices[i2], label: VERTEX_LETTERS[i2], vertexIdx: i2, isCenter: false },
+                            { ...state.vertices[i3], label: VERTEX_LETTERS[i3], vertexIdx: i3, isCenter: false }
+                        ]
+                    });
+                }
+            } else if (state.triMode === 'MANUAL') {
+                const faces = extractSubPolygonsFromDiagonals(n, state.manualDiagonals);
+                faces.forEach(face => {
+                    if (face.length === 3) {
+                        rawTris.push({
+                            points: face.map(idx => ({
+                                ...state.vertices[idx],
+                                label: VERTEX_LETTERS[idx],
+                                vertexIdx: idx,
+                                isCenter: false
+                            }))
+                        });
+                    }
+                });
+            } else if (state.triMode === 'CENTER') {
+                const centerOk = getInvalidCenterTargets().length === 0;
+                for (let i = 0; i < n && centerOk; i++) {
+                    const next = (i + 1) % n;
+                    rawTris.push({
+                        points: [
+                            { ...state.vertices[i], label: VERTEX_LETTERS[i], vertexIdx: i, isCenter: false },
+                            { ...state.vertices[next], label: VERTEX_LETTERS[next], vertexIdx: next, isCenter: false },
+                            { ...state.centerPoint, label: 'P', vertexIdx: -1, isCenter: true }
+                        ]
+                    });
+                }
+            }
+
+            return rawTris.map((t, tIdx) => {
+                const pts = t.points;
+                const cx = (pts[0].x + pts[1].x + pts[2].x) / 3;
+                const cy = (pts[0].y + pts[1].y + pts[2].y) / 3;
+                const palette = TRI_PALETTE[tIdx % TRI_PALETTE.length];
+
+                const corners = pts.map((curr, cIdx) => {
+                    const nextPt = pts[(cIdx + 1) % 3];
+                    const prevPt = pts[(cIdx + 2) % 3];
+
+                    const startAngle = Math.atan2(nextPt.y - curr.y, nextPt.x - curr.x);
+                    const endAngle = Math.atan2(prevPt.y - curr.y, prevPt.x - curr.x);
+                    let sweepRad = normalizeAngleSigned(endAngle - startAngle);
+                    if (sweepRad < 0) sweepRad += Math.PI * 2;
+
+                    const exactDeg = (sweepRad * 180) / Math.PI;
+                    return {
+                        cornerIdx: cIdx,
+                        pt: curr,
+                        label: curr.label,
+                        vertexIdx: curr.vertexIdx,
+                        isCenter: curr.isCenter,
+                        startAngle,
+                        endAngle,
+                        sweepRad,
+                        exactDeg,
+                        displayDeg: Math.round(exactDeg)
+                    };
+                });
+
+                // 합이 정확히 180도가 되도록 정수 보정
+                // 반올림 차이는 원래 값과 가장 가까운 쪽으로 보정 (최대 나머지 방식)
+                const degSum = corners[0].displayDeg + corners[1].displayDeg + corners[2].displayDeg;
+                if (degSum !== 180) {
+                    const dir = Math.sign(180 - degSum);
+                    const order = [...corners].sort((p, q) => dir * ((q.exactDeg - q.displayDeg) - (p.exactDeg - p.displayDeg)));
+                    for (let k = 0; k < Math.abs(180 - degSum); k++) order[k % 3].displayDeg += dir;
+                }
+
+                return {
+                    index: tIdx,
+                    id: `T${tIdx + 1}`,
+                    palette,
+                    centroid: { x: cx, y: cy },
+                    points: pts,
+                    corners
+                };
+            });
+        }
+
+        // 각 다각형 꼭짓점에 모인 삼각형 조각들의 관계 추출
+        function computeVertexAngleRelationships(triangles) {
+            const n = state.vertices.length;
+            const vertexRels = [];
+
+            for (let vIdx = 0; vIdx < n; vIdx++) {
+                const pieces = [];
+                triangles.forEach(tri => {
+                    tri.corners.forEach(corner => {
+                        if (corner.vertexIdx === vIdx) {
+                            pieces.push({
+                                triId: tri.id,
+                                triIndex: tri.index,
+                                cornerIdx: corner.cornerIdx,
+                                palette: tri.palette,
+                                deg: corner.displayDeg,
+                                sweepRad: corner.sweepRad
+                            });
+                        }
+                    });
+                });
+
+                let totalDeg = pieces.reduce((sum, p) => sum + p.deg, 0);
+                if (pieces.length === 0) {
+                    // 아직 나뉘지 않은 꼭짓점: 다각형의 실제 내각
+                    const v = state.vertices[vIdx], prev = state.vertices[(vIdx - 1 + n) % n], next = state.vertices[(vIdx + 1) % n];
+                    let sw = normalizeAngleSigned(Math.atan2(prev.y - v.y, prev.x - v.x) - Math.atan2(next.y - v.y, next.x - v.x));
+                    if (sw < 0) sw += Math.PI * 2;
+                    totalDeg = Math.round(sw * 180 / Math.PI);
+                }
+                vertexRels.push({
+                    vertexIdx: vIdx,
+                    label: VERTEX_LETTERS[vIdx],
+                    pieces,
+                    totalDeg
+                });
+            }
+            return vertexRels;
+        }
+
+        // ============================================================================
+        // 4. STEP-BY-STEP 180° GATHER ENGINE (개선 2)
+        // ============================================================================
+        function resetGatherSteps() {
+            state.stepWedgeCount = 0;
+            state.targetTriForStep = 0;
+            state.gatherSliderValue = 0;
+            document.getElementById('gatherSlider').value = 0;
+            document.getElementById('gatherValueLabel').textContent = '0%';
+            updateStepStatusBadge();
+        }
+
+        function updateStepStatusBadge() {
+            const tris = computeTriangles();
+            const badge = document.getElementById('step-status-badge');
+            const btnText = document.getElementById('step-btn-text');
+
+            if (tris.length === 0) {
+                badge.textContent = "삼각형 없음";
+                btnText.textContent = "먼저 대각선을 그어 보세요";
+                return;
+            }
+
+            const currentTri = tris[state.targetTriForStep % tris.length];
+            const currentCount = state.stepWedgeCount;
+
+            badge.textContent = `${currentTri.id} 모으는 중 (${currentCount} / 3 조각)`;
+            if (currentCount === 0) {
+                btnText.textContent = `${currentTri.id} 첫 번째 각 모으기`;
+            } else if (currentCount === 1) {
+                btnText.textContent = `${currentTri.id} 두 번째 각 모으기`;
+            } else if (currentCount === 2) {
+                btnText.textContent = `${currentTri.id} 세 번째 각 모아 180° 완성!`;
+            } else {
+                const nextTriIdx = (state.targetTriForStep + 1) % tris.length;
+                btnText.textContent = `다음 삼각형(T${nextTriIdx + 1}) 모으기`;
+            }
+        }
+
+        function stepGatherNextWedge() {
+            const tris = computeTriangles();
+            if (tris.length === 0) return;
+
+            if (state.stepWedgeCount < 3) {
+                state.stepWedgeCount++;
+            } else {
+                // 다음 삼각형으로 전진
+                state.targetTriForStep = (state.targetTriForStep + 1) % tris.length;
+                state.stepWedgeCount = 1;
+            }
+
+            // 슬라이더 동기화
+            const totalSteps = tris.length * 3;
+            const currentTotalStep = state.targetTriForStep * 3 + state.stepWedgeCount;
+            const pct = Math.min(100, Math.round((currentTotalStep / totalSteps) * 100));
+            state.gatherSliderValue = pct;
+            document.getElementById('gatherSlider').value = pct;
+            document.getElementById('gatherValueLabel').textContent = `${pct}%`;
+
+            updateStepStatusBadge();
+            updateDashboardUI();
+        }
+
+        function gatherSpecificTriangle(triIdx) {
+            state.targetTriForStep = triIdx;
+            state.stepWedgeCount = 3;
+            updateStepStatusBadge();
+            updateDashboardUI();
+        }
+
+        function toggleGatherFull() {
+            const tris = computeTriangles();
+            if (state.gatherSliderValue >= 95) {
+                resetGatherSteps();
+            } else {
+                state.targetTriForStep = Math.max(0, tris.length - 1);
+                state.stepWedgeCount = 3;
+                state.gatherSliderValue = 100;
+                document.getElementById('gatherSlider').value = 100;
+                document.getElementById('gatherValueLabel').textContent = '100%';
+                updateStepStatusBadge();
+            }
+            updateDashboardUI();
+        }
+
+        function onGatherSliderChange(val) {
+            const tris = computeTriangles();
+            state.gatherSliderValue = parseFloat(val);
+            document.getElementById('gatherValueLabel').textContent = `${Math.round(val)}%`;
+
+            const totalSteps = tris.length * 3;
+            const stepIndex = Math.min(totalSteps, Math.floor((val / 100) * totalSteps));
+            state.targetTriForStep = Math.min(tris.length - 1, Math.floor(stepIndex / 3));
+            state.stepWedgeCount = stepIndex % 3;
+            if (val >= 99) {
+                state.targetTriForStep = tris.length - 1;
+                state.stepWedgeCount = 3;
+            }
+            updateStepStatusBadge();
+        }
+
+        // ============================================================================
+        // 5. UI CONTROLLERS & ACTIONS
+        // ============================================================================
+        function setPolygonSides(n) {
+            n = Math.max(MIN_SIDES, Math.min(MAX_SIDES, n));
+            state.numSides = n;
+            document.getElementById('sides-label').textContent = polyName(n);
+            document.getElementById('sides-sub').textContent = `n = ${n}`;
+            document.getElementById('btn-sides-minus').disabled = n <= MIN_SIDES;
+            document.getElementById('btn-sides-plus').disabled = n >= MAX_SIDES;
+            initRegularPolygon(n);
+        }
+
+        function changeSides(delta) {
+            setPolygonSides(state.numSides + delta);
+        }
+
+        function applyBoardMode() {
+            // 칠판 모드는 넓은 화면(가로 1024px 이상)에서만. 휴대폰에서는 그림 요소를 조금 작게
+            const on = state.boardMode && window.innerWidth >= 1024;
+            S = on ? Math.max(1, Math.min(1.7, window.innerWidth / 1370)) : (window.innerWidth < 640 ? 0.85 : 1);
+            document.documentElement.classList.toggle('board', on);
+            const btn = document.getElementById('btn-board');
+            btn.className = state.boardMode
+                ? "hidden lg:flex px-3 py-2 rounded-xl text-sm font-extrabold border-2 border-slate-900 bg-slate-900 text-white transition-all items-center gap-1.5"
+                : "hidden lg:flex px-3 py-2 rounded-xl text-sm font-bold border-2 border-slate-200 bg-white text-slate-700 hover:bg-slate-50 transition-all items-center gap-1.5";
+            document.getElementById('text-board-btn').textContent = state.boardMode ? '칠판 모드 켜짐' : '칠판 모드';
+        }
+
+        function toggleBoardMode() {
+            state.boardMode = !state.boardMode;
+            try { localStorage.setItem('polygonLab.boardMode', state.boardMode ? '1' : '0'); } catch (e) {}
+            applyBoardMode();
+            // 글자 크기가 바뀌면 화면 배치가 바뀌므로 다각형을 다시 그림
+            requestAnimationFrame(() => { resizeCanvas(); initRegularPolygon(state.numSides); });
+        }
+
+        function toggleFullscreen() {
+            try {
+                const p = !document.fullscreenElement ? document.documentElement.requestFullscreen() : document.exitFullscreen();
+                if (p && p.catch) p.catch(() => {});
+            } catch (e) {}
+        }
+
+        function resetToRegularPolygon() {
+            initRegularPolygon(state.numSides);
+        }
+
+        function setTriMode(mode) {
+            state.triMode = mode;
+            state.manualSelectedVertex = -1;
+            resetGatherSteps();
+
+            const modes = [
+                { key: 'VERTEX', id: 'mode-vertex-btn' },
+                { key: 'MANUAL', id: 'mode-manual-btn' },
+                { key: 'CENTER', id: 'mode-center-btn' }
+            ];
+            modes.forEach(m => {
+                const el = document.getElementById(m.id);
+                el.className = m.key === mode
+                    ? "py-2 px-1 rounded-lg text-sm font-extrabold transition-all bg-white text-slate-900 shadow-sm text-center"
+                    : "py-2 px-1 rounded-lg text-sm font-bold transition-all text-slate-600 hover:text-slate-900 text-center";
+            });
+            const hints = {
+                VERTEX: '꼭짓점을 끌어 모양을 바꾸거나, 눌러서 기준 꼭짓점을 바꿔 보세요',
+                MANUAL: '두 꼭짓점을 차례로 누르면 대각선이 생겨요 (다시 누르면 지워져요)',
+                CENTER: '빨간 점 P를 끌어 위치를 바꿔 보세요'
+            };
+            document.getElementById('canvas-hint').textContent = hints[mode];
+
+            if (mode === 'CENTER' && (!isPointStrictlyInsidePolygon(state.centerPoint, state.vertices) || getInvalidCenterTargets().length > 0)) {
+                state.centerPoint = findGoodCenter();
+            }
+
+            resetSelectionForCurrentMode();
+            updateDashboardUI();
+        }
+
+        // ---------------------------------------------------------------------------
+        // 각도 보기 메뉴: 화면의 각도 숫자를 종류별로 켜고 끔
+        // ---------------------------------------------------------------------------
+        const VIEW_OPTIONS = [
+            { key: 'showTriangleAngles', title: '나뉜 각의 크기', desc: '꼭짓점 주변 삼각형 조각의 각도 숫자', swatch: '#F43F5E' },
+            { key: 'showVertexBreakdown', title: '꼭짓점 수식 말풍선', desc: '∠A = 36° + 36° + 36° = 108°', swatch: '#0F172A' },
+            { key: 'showTotalVertexLabels', title: '다각형의 내각의 크기', desc: '꼭짓점 바깥의 보라색 숫자', swatch: '#4338CA' }
+        ];
+
+        function renderViewMenu() {
+            document.getElementById('view-menu-items').innerHTML = VIEW_OPTIONS.map(o => {
+                const on = state[o.key];
+                return `<button onclick="toggleView('${o.key}')" class="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 text-left">
+                    <span class="w-3 h-8 rounded-full shrink-0" style="background:${o.swatch}; opacity:${on ? 1 : 0.25}"></span>
+                    <span class="flex-1 min-w-0">
+                        <span class="block text-base font-extrabold ${on ? 'text-slate-900' : 'text-slate-400'}">${o.title}</span>
+                        <span class="block text-xs font-semibold text-slate-500 font-mono-num truncate">${o.desc}</span>
+                    </span>
+                    <span class="relative w-11 h-6 rounded-full shrink-0 transition-all ${on ? 'bg-indigo-600' : 'bg-slate-300'}">
+                        <span class="absolute top-0.5 w-5 h-5 rounded-full bg-white shadow transition-all" style="left:${on ? '1.375rem' : '0.125rem'}"></span>
+                    </span>
+                </button>`;
+            }).join('');
+            const count = VIEW_OPTIONS.filter(o => state[o.key]).length;
+            document.getElementById('view-count').textContent = count;
+            document.getElementById('btn-view-menu').className = count > 0
+                ? "px-3 py-2 rounded-xl text-sm font-extrabold border-2 border-indigo-600 bg-indigo-50 text-indigo-700 transition-all flex items-center gap-1.5"
+                : "px-3 py-2 rounded-xl text-sm font-extrabold border-2 border-slate-300 bg-white text-slate-500 transition-all flex items-center gap-1.5";
+            // 말풍선이 꺼지면 같은 정보를 왼쪽 위 카드로 보여줌 (다른 숫자도 모두 꺼져 있으면 카드도 숨김)
+            const card = document.getElementById('vertex-focus-card');
+            card.classList.toggle('hidden', state.showVertexBreakdown || count === 0);
+        }
+
+        function toggleView(key) {
+            state[key] = !state[key];
+            renderViewMenu();
+        }
+
+        function setAllViews(on) {
+            VIEW_OPTIONS.forEach(o => state[o.key] = on);
+            renderViewMenu();
+        }
+
+        // ---------------------------------------------------------------------------
+        // 오목다각형 허용 스위치
+        // ---------------------------------------------------------------------------
+        function renderConcaveSwitch() {
+            const on = state.allowConcave;
+            const sw = document.getElementById('switch-concave');
+            sw.className = `relative w-9 h-5 rounded-full transition-all ${on ? 'bg-orange-500' : 'bg-slate-300'}`;
+            sw.firstElementChild.style.left = on ? '1.125rem' : '0.125rem';
+            document.getElementById('btn-concave').className = on
+                ? "shrink-0 pl-2 pr-3 py-2 rounded-xl text-sm font-extrabold border-2 border-orange-500 bg-orange-50 text-orange-700 transition-all flex items-center gap-2"
+                : "shrink-0 pl-2 pr-3 py-2 rounded-xl text-sm font-bold border-2 border-slate-200 bg-white text-slate-700 hover:bg-slate-50 transition-all flex items-center gap-2";
+        }
+
+        // 꼭짓점 하나를 안쪽으로 밀어 넣어 오목다각형을 만들어 줌
+        function dentOneVertex() {
+            const n = state.vertices.length;
+            if (n < 4) return -1;
+            const idx = Math.round(n / 2) % n;
+            const prev = state.vertices[(idx - 1 + n) % n], next = state.vertices[(idx + 1) % n], v = state.vertices[idx];
+            const mid = { x: (prev.x + next.x) / 2, y: (prev.y + next.y) / 2 };
+            for (const f of [0.6, 0.45, 0.3, 0.15]) {
+                const trial = state.vertices.map(p => ({ ...p }));
+                trial[idx] = { x: mid.x + (mid.x - v.x) * f, y: mid.y + (mid.y - v.y) * f };
+                if (isSimpleValidPolygon(trial) && isReflexVertex(trial, idx)) {
+                    state.vertices = trial;
+                    return idx;
+                }
+            }
+            return -1;
+        }
+
+        function toggleConcave() {
+            state.allowConcave = !state.allowConcave;
+            renderConcaveSwitch();
+            if (state.allowConcave) {
+                if (state.numSides === 3) {
+                    flashWarning('삼각형은 오목하게 만들 수 없어요. 변의 수를 늘려 보세요');
+                } else if (isStrictlyConvexClockwise(state.vertices)) {
+                    const idx = dentOneVertex();
+                    if (idx >= 0) {
+                        // 오목한 꼭짓점에서 나누면 잘 나뉘므로 기준·관찰 꼭짓점으로 지정
+                        state.baseVertexIndex = idx;
+                        state.focusedVertexIdx = idx;
+                    }
+                }
+            } else if (!isStrictlyConvexClockwise(state.vertices)) {
+                // 볼록다각형만 허용하면 지금 모양을 정다각형으로 되돌림
+                initRegularPolygon(state.numSides);
+            }
+            state.manualDiagonals = state.manualDiagonals.filter(([a, b]) => isSegmentInsidePolygon(state.vertices[a], state.vertices[b], state.vertices));
+            if (state.triMode === 'CENTER' && getInvalidCenterTargets().length > 0) state.centerPoint = findGoodCenter();
+            resetGatherSteps();
+            resetSelectionForCurrentMode();
+            updateDashboardUI();
+        }
+
+        // 잠깐 보였다 사라지는 안내
+        let flashTimer = null, flashText = '';
+        function flashWarning(text) {
+            flashText = text;
+            clearTimeout(flashTimer);
+            flashTimer = setTimeout(() => { flashText = ''; updateDashboardUI(); }, 2800);
+            updateDashboardUI();
+        }
+
+        function toggleViewMenu(evt) {
+            evt.stopPropagation();
+            document.getElementById('view-menu').classList.toggle('hidden');
+        }
+        document.addEventListener('click', () => document.getElementById('view-menu').classList.add('hidden'));
+
+        function setGatherLayout(layout) {
+            state.gatherLayout = layout;
+            const trayBtn = document.getElementById('layout-tray-btn');
+            const centBtn = document.getElementById('layout-centroid-btn');
+            const on = "px-2 md:px-2.5 py-1.5 rounded-lg text-xs md:text-sm font-extrabold bg-slate-900 text-white transition-all";
+            const off = "px-2 md:px-2.5 py-1.5 rounded-lg text-xs md:text-sm font-bold text-slate-600 hover:text-slate-900 transition-all";
+            trayBtn.className = layout === 'TRAY' ? on : off;
+            centBtn.className = layout === 'TRAY' ? off : on;
+        }
+
+        function focusVertex(vIdx) {
+            state.focusedVertexIdx = vIdx;
+            updateDashboardUI();
+        }
+
+        // ============================================================================
+        // 6. DASHBOARD & INSPECTOR UI UPDATER
+        // ============================================================================
+        function updateDashboardUI() {
+            const n = state.numSides;
+            const tris = computeTriangles();
+            const vertexRels = computeVertexAngleRelationships(tris);
+
+            // Canvas Top Mode Badge
+            const modeBadge = document.getElementById('canvas-mode-badge');
+            if (state.triMode === 'VERTEX') {
+                modeBadge.textContent = `꼭짓점 ${VERTEX_LETTERS[state.baseVertexIndex]} 기준 분할 (${tris.length}개 삼각형)`;
+            } else if (state.triMode === 'MANUAL') {
+                modeBadge.textContent = `직접 대각선 분할 (${tris.length}개 삼각형)`;
+            } else {
+                modeBadge.textContent = `내부 점 P 기준 분할 (${tris.length}개 삼각형)`;
+            }
+
+            // 나눌 수 없는 경우 등 안내 문구
+            let warn = flashText;
+            if (!warn && state.triMode === 'VERTEX' && getInvalidFanTargets().length > 0) {
+                warn = `꼭짓점 ${VERTEX_LETTERS[state.baseVertexIndex]}에서 그은 대각선이 다각형 밖으로 나가요. 다른 꼭짓점을 눌러 보세요`;
+            } else if (!warn && state.triMode === 'CENTER') {
+                const bad = getInvalidCenterTargets();
+                if (bad.length > 0) warn = `점 P와 꼭짓점 ${bad.map(i => VERTEX_LETTERS[i]).join(', ')}을(를) 이은 선이 다각형 밖으로 나가요. P를 옮겨 보세요`;
+            }
+            const warnEl = document.getElementById('canvas-warning');
+            warnEl.textContent = warn;
+            warnEl.classList.toggle('hidden', !warn);
+
+            // Top Floating Vertex Equation Focus Callout
+            const activeV = vertexRels[state.focusedVertexIdx % n];
+            if (activeV) {
+                document.getElementById('vertex-focus-badge').textContent = activeV.label;
+                document.getElementById('vertex-focus-title').textContent = `다각형 꼭짓점 ∠${activeV.label}의 구성:`;
+                
+                if (activeV.pieces.length > 0) {
+                    const pieceMath = activeV.pieces.map(p => 
+                        `<span style="color:${p.palette.hex}; font-weight:800;">${p.triId}의 ${p.deg}°</span>`
+                    ).join(' + ');
+                    document.getElementById('vertex-focus-math').innerHTML = `${pieceMath} = ${activeV.totalDeg}°`;
+                } else {
+                    document.getElementById('vertex-focus-math').textContent = `${activeV.totalDeg}°`;
+                }
+            }
+
+            // Vertex Relationship List in Sidebar
+            const relListEl = document.getElementById('vertex-angle-breakdown-list');
+            relListEl.innerHTML = vertexRels.map(rel => {
+                const isFocused = rel.vertexIdx === state.focusedVertexIdx;
+                const badges = rel.pieces.map(p => `
+                    <span class="px-1.5 py-0.5 rounded text-xs font-extrabold text-white font-mono-num" style="background-color:${p.palette.hex}">
+                        ${p.deg}°
+                    </span>
+                `).join(' <span class="text-slate-500 font-bold text-xs">+</span> ');
+
+                return `
+                    <div onclick="focusVertex(${rel.vertexIdx})"
+                         class="cursor-pointer px-2 py-1.5 rounded-lg border transition-all flex items-center justify-between ${isFocused ? 'bg-white border-indigo-500 ring-1 ring-indigo-500' : 'bg-slate-50/70 border-slate-200 hover:bg-white'}">
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-7 h-7 rounded-md font-mono-num font-extrabold text-sm flex items-center justify-center shrink-0 ${isFocused ? 'bg-indigo-600 text-white' : 'bg-slate-200 text-slate-800'}">
+                                ${rel.label}
+                            </span>
+                            <div class="flex items-center gap-1 flex-wrap">
+                                ${badges || '<span class="text-xs text-slate-500">나뉘지 않음</span>'}
+                            </div>
+                        </div>
+                        <span class="font-extrabold font-mono-num text-sm text-indigo-900 ml-1 shrink-0">
+                            = ${rel.totalDeg}°
+                        </span>
+                    </div>
+                `;
+            }).join('');
+
+            // Triangle Cards with Step Gather Buttons
+            const cardsContainer = document.getElementById('triangle-cards-container');
+            document.getElementById('selected-count-badge').textContent = `${tris.length}개`;
+
+            cardsContainer.innerHTML = tris.length === 0
+                ? `<div class="text-sm text-slate-500 font-semibold p-3 rounded-xl border-2 border-dashed border-slate-200">${
+                    state.triMode === 'MANUAL' ? '아직 삼각형이 없어요. 두 꼭짓점을 차례로 눌러 대각선을 그어 보세요.'
+                    : state.triMode === 'VERTEX' ? '이 꼭짓점에서는 대각선이 밖으로 나가 삼각형으로 나눌 수 없어요. 다른 꼭짓점을 눌러 보세요.'
+                    : '점 P에서 모든 꼭짓점을 이을 수 없어요. P를 옮겨 보세요.'}</div>`
+                : tris.map(t => {
+                const isTarget = state.targetTriForStep === t.index;
+                const c0 = t.corners[0], c1 = t.corners[1], c2 = t.corners[2];
+
+                return `
+                    <div class="px-2.5 py-2 rounded-xl border-2 transition-all bg-white flex flex-col gap-1.5"
+                         style="border-color: ${isTarget ? t.palette.hex : '#E2E8F0'}">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="px-1.5 h-7 min-w-[1.75rem] rounded-lg text-sm font-extrabold font-mono-num flex items-center justify-center text-white"
+                                      style="background-color: ${t.palette.hex}">
+                                    ${t.id}
+                                </span>
+                                <span class="text-sm font-extrabold text-slate-800">
+                                    △${c0.label}${c1.label}${c2.label}
+                                </span>
+                            </div>
+                            <button onclick="gatherSpecificTriangle(${t.index})"
+                                    class="px-2 py-1 rounded-lg text-xs font-extrabold bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center gap-1 transition-all">
+                                <i data-lucide="play" class="w-3 h-3 text-slate-600"></i>
+                                <span>180° 모으기</span>
+                            </button>
+                        </div>
+                        <div class="text-xs font-bold font-mono-num text-slate-700 flex items-center justify-between bg-slate-50 px-2 py-1 rounded-md">
+                            <span>∠${c0.label}(${c0.displayDeg}°) + ∠${c1.label}(${c1.displayDeg}°) + ∠${c2.label}(${c2.displayDeg}°)</span>
+                            <span class="font-extrabold text-indigo-700">= 180°</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            lucide.createIcons();
+
+            // Formula Box
+            document.getElementById('formula-poly-name').textContent = `${polyName(n)} (n = ${n})`;
+            const semiRow = document.getElementById('semicircle-equation-row');
+            const exprEl = document.getElementById('formula-expression');
+            const totalEl = document.getElementById('formula-total-deg');
+            const capEl = document.getElementById('formula-caption');
+
+            // 삼각형이 많으면 알약 대신 "180° × 개수"로 요약
+            let pills;
+            if (tris.length <= 6) {
+                pills = tris.map(t => `
+                    <span class="px-2 py-0.5 rounded-md text-sm font-extrabold font-mono-num flex items-center gap-1 text-white"
+                          style="background-color: ${t.palette.hex};">
+                        <span>${t.id}</span>
+                        <span>180°</span>
+                    </span>
+                `).join('<span class="text-slate-400 font-bold text-sm">+</span>');
+            } else {
+                pills = tris.map(t => `<span class="w-3.5 h-3.5 rounded-sm inline-block" style="background-color:${t.palette.hex}"></span>`).join('')
+                    + `<span class="ml-1 text-sm font-extrabold font-mono-num text-slate-200">180° × ${tris.length}</span>`;
+            }
+
+            if (state.triMode === 'CENTER') {
+                pills += `<span class="text-rose-300 font-extrabold text-sm">−</span>
+                          <span class="px-2 py-0.5 rounded-md text-sm font-extrabold font-mono-num bg-rose-600 text-white">점 P 주위 360°</span>`;
+                exprEl.textContent = `180° × ${n} − 360°`;
+                capEl.textContent = `= 삼각형 ${n}개의 내각의 합 − 점 P에 모인 각`;
+                totalEl.textContent = `${180 * n - 360}°`;
+            } else if (state.triMode !== 'MANUAL' && tris.length === 0) {
+                exprEl.textContent = `180° × (${n} − 2)`;
+                capEl.textContent = state.triMode === 'VERTEX' ? '이 꼭짓점에서는 삼각형으로 나눌 수 없어요' : '점 P에서는 삼각형으로 나눌 수 없어요';
+                totalEl.textContent = `${180 * (n - 2)}°`;
+            } else if (state.triMode === 'MANUAL' && tris.length !== n - 2) {
+                exprEl.textContent = `180° × (${n} − 2)`;
+                capEl.textContent = `대각선을 더 그어 삼각형 ${n - 2}개로 나눠 보세요 (지금 ${tris.length}개)`;
+                totalEl.textContent = `${180 * (n - 2)}°`;
+            } else {
+                exprEl.textContent = `180° × (${n} − 2)`;
+                capEl.textContent = `= 삼각형 ${n - 2}개의 내각의 합`;
+                totalEl.textContent = `${180 * (n - 2)}°`;
+            }
+            semiRow.innerHTML = pills;
+        }
+
+        // ============================================================================
+        // 7. POINTER & INTERACTION
+        // ============================================================================
+        function getPointerPos(evt) {
+            const rect = canvas.getBoundingClientRect();
+            const clientX = evt.touches ? evt.touches[0].clientX : evt.clientX;
+            const clientY = evt.touches ? evt.touches[0].clientY : evt.clientY;
+            return { x: clientX - rect.left, y: clientY - rect.top };
+        }
+
+        function isPointInTriangle(pt, v0, v1, v2) {
+            const d1 = (pt.x - v1.x) * (v0.y - v1.y) - (v0.x - v1.x) * (pt.y - v1.y);
+            const d2 = (pt.x - v2.x) * (v1.y - v2.y) - (v1.x - v2.x) * (pt.y - v2.y);
+            const d3 = (pt.x - v0.x) * (v2.y - v0.y) - (v2.x - v0.x) * (pt.y - v0.y);
+            return !((d1 < 0 || d2 < 0 || d3 < 0) && (d1 > 0 || d2 > 0 || d3 > 0));
+        }
+
+        canvas.addEventListener('mousedown', onPointerDown);
+        canvas.addEventListener('mousemove', onPointerMove);
+        window.addEventListener('mouseup', onPointerUp);
+
+        canvas.addEventListener('touchstart', onPointerDown, { passive: false });
+        canvas.addEventListener('touchmove', onPointerMove, { passive: false });
+        window.addEventListener('touchend', onPointerUp);
+
+        function onPointerDown(evt) {
+            const pos = getPointerPos(evt);
+            state.pointerDownPos = pos;
+            state.hasDragged = false;
+
+            if (state.triMode === 'CENTER' && Math.hypot(pos.x - state.centerPoint.x, pos.y - state.centerPoint.y) <= 24 * S) {
+                state.draggingCenterPoint = true;
+                if (evt.cancelable) evt.preventDefault();
+                return;
+            }
+
+            for (let i = 0; i < state.vertices.length; i++) {
+                if (Math.hypot(pos.x - state.vertices[i].x, pos.y - state.vertices[i].y) <= 26 * S) {
+                    state.draggingVertexIndex = i;
+                    state.focusedVertexIdx = i;
+                    updateDashboardUI();
+                    if (evt.cancelable) evt.preventDefault();
+                    return;
+                }
+            }
+        }
+
+        function onPointerMove(evt) {
+            const pos = getPointerPos(evt);
+            const { w, h } = getCanvasSize();
+
+            if (state.pointerDownPos && Math.hypot(pos.x - state.pointerDownPos.x, pos.y - state.pointerDownPos.y) > 6) {
+                state.hasDragged = true;
+            }
+
+            if (state.draggingCenterPoint) {
+                if (evt.cancelable) evt.preventDefault();
+                const oldP = { ...state.centerPoint };
+                state.centerPoint = { x: pos.x, y: pos.y };
+                if (!isPointStrictlyInsidePolygon(state.centerPoint, state.vertices)) {
+                    state.centerPoint = oldP;
+                } else {
+                    updateDashboardUI();
+                }
+                return;
+            }
+
+            if (state.draggingVertexIndex !== -1) {
+                if (evt.cancelable) evt.preventDefault();
+                const idx = state.draggingVertexIndex;
+                const oldV = { ...state.vertices[idx] };
+                const pad = 30 * S;
+                const n = state.vertices.length;
+                const maxBottom = state.gatherLayout === 'TRAY' ? trayLayout(state.triMode === 'CENTER' ? n : n - 2).topY - 20 * S : h - pad;
+
+                state.vertices[idx] = {
+                    x: Math.max(pad, Math.min(w - pad, pos.x)),
+                    y: Math.max(pad, Math.min(maxBottom, pos.y))
+                };
+
+                const validShape = isValidPolygonShape(state.vertices);
+                const validCenter = state.triMode !== 'CENTER' || isPointStrictlyInsidePolygon(state.centerPoint, state.vertices);
+                // 직접 그은 대각선이 밖으로 나가게 되는 움직임은 막음
+                const validManual = state.triMode !== 'MANUAL' || state.manualDiagonals.every(([a, b]) =>
+                    isSegmentInsidePolygon(state.vertices[a], state.vertices[b], state.vertices));
+
+                if (!validShape || !validCenter || !validManual) {
+                    state.vertices[idx] = oldV;
+                } else {
+                    updateDashboardUI();
+                }
+                return;
+            }
+
+            // Hover check
+            let hoverV = -1;
+            for (let i = 0; i < state.vertices.length; i++) {
+                if (Math.hypot(pos.x - state.vertices[i].x, pos.y - state.vertices[i].y) <= 26 * S) {
+                    hoverV = i;
+                    break;
+                }
+            }
+            if (hoverV !== -1 && hoverV !== state.focusedVertexIdx) {
+                state.focusedVertexIdx = hoverV;
+                updateDashboardUI();
+            }
+            state.hoveredVertexIndex = hoverV;
+        }
+
+      function onPointerUp(evt) {
+    const clickedVertex = state.draggingVertexIndex;
+    const wasDraggingCenter = state.draggingCenterPoint;
+    state.draggingVertexIndex = -1;
+    state.draggingCenterPoint = false;
+
+    if (!state.pointerDownPos || state.hasDragged || wasDraggingCenter) {
+        state.pointerDownPos = null;
+        return;
+    }
+
+    state.pointerDownPos = null;
+
+    if (clickedVertex !== -1) {
+        if (state.triMode === 'VERTEX') {
+            state.baseVertexIndex = clickedVertex;
+        } else if (state.triMode === 'MANUAL') {
+            handleManualVertexTap(clickedVertex);
+        }
+        state.focusedVertexIdx = clickedVertex;
+        updateDashboardUI();
+    }
+}
+// 두 꼭짓점을 클릭해 대각선을 직접 긋거나 지우는 함수
+function handleManualVertexTap(vIdx) {
+    const n = state.vertices.length;
+    if (state.manualSelectedVertex === -1) {
+        state.manualSelectedVertex = vIdx; // 첫 번째 꼭짓점 선택
+        return;
+    }
+
+    if (state.manualSelectedVertex === vIdx) {
+        state.manualSelectedVertex = -1; // 취소
+        return;
+    }
+
+    const u = Math.min(state.manualSelectedVertex, vIdx);
+    const v = Math.max(state.manualSelectedVertex, vIdx);
+    state.manualSelectedVertex = -1;
+
+    // 인접한 다각형 변은 대각선이 될 수 없음
+    if (v - u === 1 || (u === 0 && v === n - 1)) return;
+
+    // 이미 존재하는 대각선이면 제거(토글), 없으면 교차 여부 확인 후 추가
+    const existingIdx = state.manualDiagonals.findIndex(([a, b]) => a === u && b === v);
+    if (existingIdx !== -1) {
+        state.manualDiagonals.splice(existingIdx, 1);
+    } else {
+        const crosses = state.manualDiagonals.some(([a, b]) => {
+            const x = Math.min(a, b), y = Math.max(a, b);
+            return (u < x && x < v && v < y) || (x < u && u < y && y < v);
+        });
+        if (!isSegmentInsidePolygon(state.vertices[u], state.vertices[v], state.vertices)) {
+            flashWarning(`${VERTEX_LETTERS[u]}${VERTEX_LETTERS[v]}는 다각형 밖으로 나가서 대각선으로 쓸 수 없어요`);
+        } else if (crosses) {
+            flashWarning('이미 그은 대각선과 엇갈려요');
+        } else {
+            state.manualDiagonals.push([u, v]);
+        }
+    }
+
+    resetGatherSteps();
+    resetSelectionForCurrentMode();
+}
+        // ============================================================================
+        // 8. ANIMATION LOOP & POWERFUL VISUAL RENDERING
+        // ============================================================================
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        function interpolateAngle(a1, a2, t) {
+            const diff = normalizeAngleSigned(a2 - a1);
+            return a1 + diff * t;
+        }
+
+        let lastTime = performance.now();
+
+        function animateLoop(now) {
+            const dt = Math.min((now - lastTime) / 1000, 0.1);
+            lastTime = now;
+
+            // 각 삼각형별 조각들의 목표 이동도(0 또는 1)를 향해 부드럽게 보간
+            const tris = computeTriangles();
+            tris.forEach(t => {
+                t.corners.forEach((c, cIdx) => {
+                    const key = `${t.index}_${cIdx}`;
+                    // 만약 현재 t가 이전 삼각형이면 100% 모임
+                    // 현재 대상 삼각형이면 stepWedgeCount에 따라 해당 조각만 모임
+                    let targetVal = 0;
+                    if (t.index < state.targetTriForStep) {
+                        targetVal = 1;
+                    } else if (t.index === state.targetTriForStep) {
+                        targetVal = cIdx < state.stepWedgeCount ? 1 : 0;
+                    } else {
+                        targetVal = 0;
+                    }
+
+                    if (state.wedgeAnimProgress[key] === undefined) state.wedgeAnimProgress[key] = 0;
+                    const diff = targetVal - state.wedgeAnimProgress[key];
+                    state.wedgeAnimProgress[key] += diff * Math.min(1, 10 * dt);
+                });
+            });
+
+            renderScene();
+            requestAnimationFrame(animateLoop);
+        }
+
+        function renderScene() {
+            const { w, h } = getCanvasSize();
+            ctx.clearRect(0, 0, w, h);
+            if (state.vertices.length === 0) return;
+
+            const tris = computeTriangles();
+            const vertexRels = computeVertexAngleRelationships(tris);
+
+            // 1. Polygon Fill
+            ctx.save();
+            ctx.beginPath();
+            state.vertices.forEach((v, idx) => {
+                if (idx === 0) ctx.moveTo(v.x, v.y);
+                else ctx.lineTo(v.x, v.y);
+            });
+            ctx.closePath();
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+            ctx.fill();
+            ctx.restore();
+
+            // 2. Divided Triangles Background Fill
+            tris.forEach(t => {
+                ctx.save();
+                ctx.beginPath();
+                ctx.moveTo(t.points[0].x, t.points[0].y);
+                ctx.lineTo(t.points[1].x, t.points[1].y);
+                ctx.lineTo(t.points[2].x, t.points[2].y);
+                ctx.closePath();
+                ctx.fillStyle = state.boardMode ? t.palette.boardFill : t.palette.fill;
+                ctx.fill();
+
+                // Centroid Label Watermark
+                ctx.font = monoFont(15);
+                ctx.fillStyle = t.palette.hex;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(t.id, t.centroid.x, t.centroid.y);
+                ctx.restore();
+            });
+
+            // 3. Triangulation Lines (대각선)
+            drawTriangulationLines();
+
+            // 4. Polygon Outer Boundary
+            ctx.save();
+            ctx.beginPath();
+            state.vertices.forEach((v, idx) => {
+                if (idx === 0) ctx.moveTo(v.x, v.y);
+                else ctx.lineTo(v.x, v.y);
+            });
+            ctx.closePath();
+            ctx.lineWidth = 3.5 * S;
+            ctx.lineJoin = 'round';
+            ctx.strokeStyle = '#0F172A';
+            ctx.stroke();
+            ctx.restore();
+
+            // =========================================================================
+            // 핵심 1: 다각형의 원래 내각 아크와 삼각형 분할각의 관계를 보여주는 시각 레이어
+            // =========================================================================
+            if (state.showVertexBreakdown) {
+                vertexRels.forEach(rel => {
+                    const v = state.vertices[rel.vertexIdx];
+                    const isFocused = rel.vertexIdx === state.focusedVertexIdx;
+
+                    // 꼭짓점에 모인 조각들을 감싸는 다각형의 원래 내각 기준 외곽선
+                    if (rel.pieces.length > 0) {
+                        ctx.save();
+                        // 집중된 꼭짓점에는 은은한 하이라이트 펄스 원
+                        if (isFocused) {
+                            ctx.beginPath();
+                            ctx.arc(v.x, v.y, 48 * S, 0, Math.PI * 2);
+                            ctx.fillStyle = 'rgba(99, 102, 241, 0.12)';
+                            ctx.fill();
+                            ctx.lineWidth = 2 * S;
+                            ctx.setLineDash([4 * S, 4 * S]);
+                            ctx.strokeStyle = '#6366F1';
+                            ctx.stroke();
+                            ctx.setLineDash([]);
+                        }
+                        ctx.restore();
+                    }
+                });
+            }
+
+            // =========================================================================
+            // 핵심 2: 삼각형 내각 조각들 (하나씩 날아가서 180° 반원 만드는 애니메이션)
+            // =========================================================================
+            const tray = trayLayout(tris.length);
+            const wedgeRadius = state.gatherLayout === 'TRAY' ? tray.radius : 34 * S;
+
+            // Tray Base Shelf Rendering
+            if (state.gatherLayout === 'TRAY' && tris.length > 0) {
+                ctx.save();
+                tris.forEach((t, tIdx) => {
+                    const tx = tray.positions[tIdx].x;
+                    const trayY = tray.positions[tIdx].y;
+                    // 받침대 가이드 (180도 반원 자리)
+                    ctx.beginPath();
+                    ctx.arc(tx, trayY, wedgeRadius + 6, Math.PI, 0, false);
+                    ctx.lineTo(tx + wedgeRadius + 6, trayY);
+                    ctx.lineTo(tx - wedgeRadius - 6, trayY);
+                    ctx.closePath();
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+                    ctx.fill();
+                    ctx.lineWidth = 2 * S;
+                    ctx.setLineDash([4 * S, 4 * S]);
+                    ctx.strokeStyle = t.palette.hex;
+                    ctx.stroke();
+                    ctx.setLineDash([]);
+
+                    // 받침선 (평각 지름)
+                    ctx.beginPath();
+                    ctx.moveTo(tx - wedgeRadius - 10, trayY);
+                    ctx.lineTo(tx + wedgeRadius + 10, trayY);
+                    ctx.lineWidth = 3 * S;
+                    ctx.strokeStyle = '#334155';
+                    ctx.stroke();
+
+                    // 삼각형 이름표
+                    ctx.font = monoFont(12);
+                    ctx.fillStyle = t.palette.textHex;
+                    ctx.textAlign = 'center';
+                    ctx.fillText(`${t.id} 180°`, tx, trayY + 20 * S);
+                });
+                ctx.restore();
+            }
+
+            // Draw individual wedges
+            const labelQueue = [];
+            const vertexWedgeR = {}; // 꼭짓점별 가장 긴 부채꼴 반지름 (내각 호를 그 바깥에 그리기 위함)
+            tris.forEach((t, tIdx) => {
+                const targetX = state.gatherLayout === 'TRAY' ? tray.positions[tIdx].x : t.centroid.x;
+                const targetY = state.gatherLayout === 'TRAY' ? tray.positions[tIdx].y : (t.centroid.y + 12 * S);
+
+                let runningDestAngle = -Math.PI;
+
+                t.corners.forEach((c, cIdx) => {
+                    const key = `${t.index}_${cIdx}`;
+                    const prog = easeInOutCubic(state.wedgeAnimProgress[key] || 0);
+
+                    // 목표 각도 (반원 -PI ~ 0에 딱 맞물리도록 배치)
+                    const destStart = runningDestAngle;
+                    runningDestAngle += c.sweepRad;
+
+                    // 위치 및 각도 보간
+                    const curX = c.pt.x + (targetX - c.pt.x) * prog;
+                    const curY = c.pt.y + (targetY - c.pt.y) * prog;
+                    const curStartAngle = interpolateAngle(c.startAngle, destStart, prog);
+                    const curEndAngle = curStartAngle + c.sweepRad;
+                    // 꼭짓점에 있을 때의 부채꼴 크기: 각도 숫자가 안에 들어가도록 좁은 각은 길게
+                    const label = `${c.displayDeg}°`;
+                    const labelPx = Math.round(15 * S);
+                    ctx.font = `800 ${labelPx}px "JetBrains Mono", Consolas, monospace`;
+                    const tw = ctx.measureText(label).width;
+                    const baseR = 46 * S, maxR = baseR * 2.1;
+                    const halfSin = Math.sin(Math.min(c.sweepRad, Math.PI * 0.999) / 2);
+                    // 글자 상자를 감싸는 원(반지름 rt)이 부채꼴 안, 꼭짓점 원 밖에 들어가는 거리
+                    const rt = Math.hypot(tw / 2, labelPx / 2) + 2 * S;
+                    const labelD = Math.max(20 * S + rt, rt / Math.max(halfSin, 0.01));
+                    const needR = labelD + rt + 3 * S;
+                    const fitsInside = !state.showTriangleAngles || needR <= maxR;
+                    const r0 = state.showTriangleAngles && fitsInside ? Math.max(baseR, needR) : baseR;
+                    const r = r0 + (wedgeRadius - r0) * prog;
+                    if (c.vertexIdx >= 0) vertexWedgeR[c.vertexIdx] = Math.max(vertexWedgeR[c.vertexIdx] || 0, r0);
+
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.moveTo(curX, curY);
+                    ctx.arc(curX, curY, r, curStartAngle, curEndAngle, false);
+                    ctx.closePath();
+
+                    // 모으기 전에도 모은 뒤와 같은 진한 부채꼴 (숫자를 끄면 연하게)
+                    ctx.fillStyle = (state.showTriangleAngles || prog > 0.4) ? t.palette.wedgeFill : t.palette.activeFill;
+                    ctx.fill();
+                    ctx.lineWidth = 2 * S;
+                    ctx.strokeStyle = (state.showTriangleAngles || prog > 0.4) ? '#FFFFFF' : t.palette.hex;
+                    ctx.stroke();
+
+                    // 부채꼴 안 흰 글씨 (밝은 색 위에서도 읽히도록 어두운 테두리).
+                    // 모든 부채꼴을 그린 뒤에 한꺼번에 써서 다른 부채꼴에 가려지지 않게 함
+                    const wedgeText = (txt, x, y, px, alpha, color) => labelQueue.push(() => {
+                        ctx.save();
+                        ctx.globalAlpha = Math.max(0, Math.min(1, alpha));
+                        ctx.font = `800 ${Math.round(px)}px "JetBrains Mono", Consolas, monospace`;
+                        ctx.textAlign = 'center';
+                        ctx.textBaseline = 'middle';
+                        ctx.lineJoin = 'round';
+                        ctx.lineWidth = 4 * S;
+                        ctx.strokeStyle = color ? 'rgba(255, 255, 255, 0.95)' : 'rgba(15, 23, 42, 0.45)';
+                        ctx.strokeText(txt, x, y);
+                        ctx.fillStyle = color || '#FFFFFF';
+                        ctx.fillText(txt, x, y);
+                        ctx.restore();
+                    });
+
+                    // 각도 수치 표시
+                    const midA = curStartAngle + c.sweepRad / 2;
+                    if (!state.showTriangleAngles) {
+                        // 각도 숫자 끔
+                    } else if (prog < 0.35) {
+                        const alpha = 1 - prog * 2.5;
+                        if (fitsInside) {
+                            wedgeText(label, curX + labelD * Math.cos(midA), curY + labelD * Math.sin(midA), labelPx, alpha);
+                        } else {
+                            // 아주 좁은 각: 부채꼴 끝 바깥, 이웃 숫자와 겹치지 않을 만큼 떨어진 곳에 같은 색 글씨
+                            const d = Math.max(r + rt + 3 * S, labelD);
+                            wedgeText(label, curX + d * Math.cos(midA), curY + d * Math.sin(midA), labelPx, alpha, t.palette.textHex);
+                        }
+                    } else if (prog > 0.75 && c.sweepRad > 0.28) {
+                        // 모였을 때 반원 안 숫자 (너무 좁은 조각은 생략)
+                        wedgeText(label, curX + (r * 0.62) * Math.cos(midA), curY + (r * 0.62) * Math.sin(midA), Math.min(13 * S, r * 0.34), 1);
+                    }
+                    ctx.restore();
+                });
+            });
+            // 다각형 테두리를 부채꼴 위에 다시 그려 경계가 끊겨 보이지 않게
+            ctx.save();
+            ctx.beginPath();
+            state.vertices.forEach((v, idx) => idx === 0 ? ctx.moveTo(v.x, v.y) : ctx.lineTo(v.x, v.y));
+            ctx.closePath();
+            ctx.lineWidth = 3.5 * S;
+            ctx.lineJoin = 'round';
+            ctx.strokeStyle = '#0F172A';
+            ctx.stroke();
+            ctx.restore();
+            labelQueue.forEach(draw => draw());
+
+            // 5-1. 다각형의 각 내각 크기 배지 (꼭짓점 바깥쪽)
+            if (state.showTotalVertexLabels) {
+                const n = state.vertices.length;
+                vertexRels.forEach(rel => {
+                    if (state.showVertexBreakdown && rel.vertexIdx === state.focusedVertexIdx) return;
+                    const v = state.vertices[rel.vertexIdx];
+                    const prev = state.vertices[(rel.vertexIdx - 1 + n) % n];
+                    const next = state.vertices[(rel.vertexIdx + 1) % n];
+                    const aStart = Math.atan2(next.y - v.y, next.x - v.x);
+                    let sweep = normalizeAngleSigned(Math.atan2(prev.y - v.y, prev.x - v.x) - aStart);
+                    if (sweep < 0) sweep += Math.PI * 2;
+                    const outA = aStart + sweep / 2 + Math.PI;
+                    const d = 40 * S;
+                    // 다각형 실제 내각 (조각 반올림과 무관한 값)
+                    const exact = Math.round(sweep * 180 / Math.PI);
+                    drawCrispBadge(v.x + d * Math.cos(outA), v.y + d * Math.sin(outA), `${exact}°`, '#FFFFFF', '#4338CA', '#312E81', 15 * S, 1);
+                });
+            }
+
+  // 5. [수업 시연 핵심] 다각형 원래 내각과 삼각형 분할각의 합성 관계 대형 표시
+            if (state.showVertexBreakdown && state.focusedVertexIdx >= 0) {
+                const rel = vertexRels[state.focusedVertexIdx];
+                const v = state.vertices[state.focusedVertexIdx];
+
+                if (rel && rel.pieces.length > 0) {
+                    ctx.save();
+
+                    // 1) 다각형의 원래 전체 내각 틀(두꺼운 인디고 호)을 그려 "원래 각"의 영역 강조
+                    const n = state.vertices.length;
+                    const prev = state.vertices[(rel.vertexIdx - 1 + n) % n];
+                    const next = state.vertices[(rel.vertexIdx + 1) % n];
+                    const aStart = Math.atan2(next.y - v.y, next.x - v.x);
+                    const aEnd = Math.atan2(prev.y - v.y, prev.x - v.x);
+                    let sweep = normalizeAngleSigned(aEnd - aStart);
+                    if (sweep < 0) sweep += Math.PI * 2;
+
+                    // 원래 내각을 나타내는 호: 조각 부채꼴들을 감싸도록 그 바깥에
+                    const ringR = state.showTriangleAngles && vertexWedgeR[rel.vertexIdx]
+                        ? vertexWedgeR[rel.vertexIdx] + 6 * S : 48 * S;
+                    ctx.beginPath();
+                    ctx.arc(v.x, v.y, ringR, aStart, aStart + sweep, false);
+                    ctx.lineWidth = 5 * S;
+                    ctx.strokeStyle = '#312E81';
+                    ctx.stroke();
+
+                    // 2) 꼭짓점 바깥쪽에 대형 수식 말풍선 배치 (예: ∠A = 36° + 36° + 36° = 108°)
+                    // 조각이 많으면 말풍선이 너무 길어지지 않게 간격을 줄임
+                    const sep = rel.pieces.length > 4 ? '+' : ' + ';
+                    const formulaText = rel.pieces.length === 1
+                        ? `∠${rel.label} = ${rel.totalDeg}°`
+                        : `∠${rel.label} = ` + rel.pieces.map(p => `${p.deg}°`).join(sep) + ` = ${rel.totalDeg}°`;
+
+                    ctx.font = monoFont(rel.pieces.length > 4 ? 15 : 17);
+                    const txtW = ctx.measureText(formulaText).width;
+                    const padX = 14 * S;
+                    const boxW = txtW + padX * 2, boxH = 40 * S;
+
+                    const midA = aStart + sweep / 2;
+                    const outDist = (w < 640 ? 40 : 70) * S + boxH / 2;
+                    let bx = v.x + outDist * Math.cos(midA + Math.PI);
+                    let by = v.y + outDist * Math.sin(midA + Math.PI);
+
+                    // 위쪽 안내 카드나 아래 받침대와 겹치면 꼭짓점 옆으로 옮김
+                    const ov = getOverlayRects();
+                    const minY = ov.topSafe + boxH / 2 + 4;
+                    const maxY = (state.gatherLayout === 'TRAY' ? trayLayout(tris.length).topY : h) - boxH / 2 - 4;
+                    // 위로 조금만 넘치면, 꼭짓점을 가리지 않는 한 안내 카드 바로 아래에 붙여 둠
+                    if (by < minY && minY + boxH / 2 <= v.y - 18 * S) {
+                        by = minY;
+                    } else if (by < minY || by > maxY) {
+                        const polyCx = state.vertices.reduce((s, p) => s + p.x, 0) / n;
+                        const side = v.x >= polyCx ? 1 : -1;
+                        bx = v.x + side * (boxW / 2 + 40 * S);
+                        by = Math.max(minY, Math.min(maxY, v.y));
+                        // 옆으로 옮겼는데 화면 밖이면 반대편으로
+                        if (bx + boxW / 2 > w - 8 || bx - boxW / 2 < 8) bx = v.x - side * (boxW / 2 + 40 * S);
+                    }
+                    bx = Math.max(boxW / 2 + 8, Math.min(w - boxW / 2 - 8, bx));
+
+                    // 연결 점선 (꼭짓점 -> 말풍선)
+                    ctx.beginPath();
+                    ctx.moveTo(v.x, v.y);
+                    ctx.lineTo(bx, by);
+                    ctx.lineWidth = 2 * S;
+                    ctx.strokeStyle = '#6366F1';
+                    ctx.setLineDash([4 * S, 4 * S]);
+                    ctx.stroke();
+                    ctx.setLineDash([]);
+
+                    // 말풍선 카드 박스
+                    ctx.shadowColor = 'rgba(15, 23, 42, 0.25)';
+                    ctx.shadowBlur = 10;
+                    ctx.shadowOffsetY = 4;
+                    ctx.beginPath();
+                    ctx.roundRect(bx - boxW / 2, by - boxH / 2, boxW, boxH, 10 * S);
+                    ctx.fillStyle = '#0F172A';
+                    ctx.fill();
+                    ctx.lineWidth = 2.5 * S;
+                    ctx.strokeStyle = '#6366F1';
+                    ctx.stroke();
+                    ctx.shadowColor = 'transparent';
+
+                    // 각도 텍스트를 삼각형 조각별 고유 색상으로 칠판처럼 렌더링
+                    ctx.textAlign = 'left';
+                    ctx.textBaseline = 'middle';
+                    let curX = bx - txtW / 2;
+                    
+                    ctx.fillStyle = '#F8FAFC';
+                    ctx.fillText(`∠${rel.label} = `, curX, by);
+                    curX += ctx.measureText(`∠${rel.label} = `).width;
+
+                    if (rel.pieces.length === 1) {
+                        ctx.fillStyle = '#FBBF24';
+                        ctx.fillText(`${rel.totalDeg}°`, curX, by);
+                    } else {
+                        rel.pieces.forEach((p, idx) => {
+                            ctx.fillStyle = p.palette.hex;
+                            ctx.fillText(`${p.deg}°`, curX, by);
+                            curX += ctx.measureText(`${p.deg}°`).width;
+
+                            if (idx < rel.pieces.length - 1) {
+                                ctx.fillStyle = '#94A3B8';
+                                ctx.fillText(sep, curX, by);
+                                curX += ctx.measureText(sep).width;
+                            }
+                        });
+                        ctx.fillStyle = '#F8FAFC';
+                        ctx.fillText(' = ', curX, by);
+                        curX += ctx.measureText(' = ').width;
+                        ctx.fillStyle = '#FBBF24';
+                        ctx.fillText(`${rel.totalDeg}°`, curX, by);
+                    }
+
+                    ctx.restore();
+                }
+            }
+
+            // 6. Polygon Vertices Handles (A, B, C...)
+            state.vertices.forEach((v, idx) => {
+                const isFocused = idx === state.focusedVertexIdx;
+                const isHovered = idx === state.hoveredVertexIndex;
+                const isManualPick = state.triMode === 'MANUAL' && idx === state.manualSelectedVertex;
+                const r = (isFocused || isManualPick ? 16 : 13) * S;
+
+                ctx.save();
+                // 오목한 꼭짓점(내각 > 180°)은 주황색 점선 고리로 표시
+                if (state.allowConcave && isReflexVertex(state.vertices, idx)) {
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.arc(v.x, v.y, 30 * S, 0, Math.PI * 2);
+                    ctx.lineWidth = 3 * S;
+                    ctx.setLineDash([5 * S, 4 * S]);
+                    ctx.strokeStyle = '#EA580C';
+                    ctx.stroke();
+                    ctx.restore();
+                }
+                if (isFocused || isManualPick) {
+                    ctx.beginPath();
+                    ctx.arc(v.x, v.y, 24 * S, 0, Math.PI * 2);
+                    ctx.fillStyle = isManualPick ? 'rgba(234, 88, 12, 0.3)' : 'rgba(79, 70, 229, 0.25)';
+                    ctx.fill();
+                }
+
+                ctx.beginPath();
+                ctx.arc(v.x, v.y, r, 0, Math.PI * 2);
+                ctx.fillStyle = isManualPick ? '#EA580C' : (isFocused ? '#4F46E5' : '#FFFFFF');
+                ctx.fill();
+                ctx.lineWidth = 3 * S;
+                ctx.strokeStyle = isManualPick ? '#9A3412' : (isFocused ? '#3730A3' : '#0F172A');
+                ctx.stroke();
+
+                ctx.font = monoFont(13);
+                ctx.fillStyle = (isFocused || isManualPick) ? '#FFFFFF' : '#0F172A';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(VERTEX_LETTERS[idx], v.x, v.y + 0.5);
+                ctx.restore();
+            });
+
+            // 7. Center Point P (Mode C)
+            if (state.triMode === 'CENTER') {
+                ctx.save();
+                ctx.beginPath();
+                ctx.arc(state.centerPoint.x, state.centerPoint.y, 14 * S, 0, Math.PI * 2);
+                ctx.fillStyle = '#E11D48';
+                ctx.fill();
+                ctx.lineWidth = 3 * S;
+                ctx.strokeStyle = '#FFFFFF';
+                ctx.stroke();
+
+                ctx.font = monoFont(12);
+                ctx.fillStyle = '#FFFFFF';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('P', state.centerPoint.x, state.centerPoint.y + 0.5);
+                ctx.restore();
+            }
+        }
+
+        function drawTriangulationLines() {
+            const n = state.vertices.length;
+            ctx.save();
+            ctx.setLineDash([7 * S, 5 * S]);
+            ctx.lineWidth = 2.5 * S;
+            ctx.strokeStyle = '#334155';
+
+            // 다각형 밖으로 나가는 선은 빨간색 굵은 선으로 표시
+            const drawSeg = (p, q, bad) => {
+                ctx.save();
+                if (bad) {
+                    ctx.strokeStyle = '#E11D48';
+                    ctx.lineWidth = 4 * S;
+                    ctx.setLineDash([10 * S, 6 * S]);
+                }
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(q.x, q.y);
+                ctx.stroke();
+                ctx.restore();
+            };
+
+            if (state.triMode === 'VERTEX') {
+                const b = state.baseVertexIndex;
+                const bad = getInvalidFanTargets();
+                for (let k = 2; k < n - 1; k++) {
+                    const target = (b + k) % n;
+                    drawSeg(state.vertices[b], state.vertices[target], bad.includes(target));
+                }
+            } else if (state.triMode === 'MANUAL') {
+                state.manualDiagonals.forEach(([a, b]) => {
+                    ctx.beginPath();
+                    ctx.moveTo(state.vertices[a].x, state.vertices[a].y);
+                    ctx.lineTo(state.vertices[b].x, state.vertices[b].y);
+                    ctx.stroke();
+                });
+            } else if (state.triMode === 'CENTER') {
+                const bad = getInvalidCenterTargets();
+                for (let i = 0; i < n; i++) {
+                    drawSeg(state.centerPoint, state.vertices[i], bad.includes(i));
+                }
+            }
+            ctx.restore();
+        }
+
+        function drawCrispBadge(x, y, text, textColor, bgColor, borderColor, fontSize, alpha) {
+            if (alpha <= 0.05) return;
+            ctx.save();
+            ctx.globalAlpha = Math.max(0, Math.min(1, alpha));
+            ctx.font = `800 ${Math.round(fontSize)}px "JetBrains Mono", Consolas, monospace`;
+            const textW = ctx.measureText(text).width;
+            const pw = textW + 14 * S;
+            const ph = fontSize + 10 * S;
+
+            ctx.shadowColor = 'rgba(15, 23, 42, 0.12)';
+            ctx.shadowBlur = 4;
+            ctx.shadowOffsetY = 2;
+
+            ctx.beginPath();
+            ctx.roundRect(x - pw / 2, y - ph / 2, pw, ph, 8);
+            ctx.fillStyle = bgColor;
+            ctx.fill();
+
+            ctx.shadowColor = 'transparent';
+            ctx.lineWidth = 1.8 * S;
+            ctx.strokeStyle = borderColor;
+            ctx.stroke();
+
+            ctx.fillStyle = textColor;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(text, x, y + 1);
+            ctx.restore();
+        }
+
+        // ============================================================================
+        // 9. 공용 창 (규칙 찾기 · 확인 문제)
+        // ============================================================================
+        function openModal(title, html) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-body').innerHTML = html;
+            document.getElementById('modal-backdrop').classList.remove('hidden');
+            lucide.createIcons();
+        }
+        function closeModal() {
+            document.getElementById('modal-backdrop').classList.add('hidden');
+        }
+        window.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+        function showOnCanvas(n, mode) {
+            closeModal();
+            if (n < MIN_SIDES || n > MAX_SIDES) return;
+            setTriMode(mode || 'VERTEX');
+            setPolygonSides(n);
+        }
+
+        // ---------------------------------------------------------------------------
+        // 9-1. 규칙 찾기 표: 칸을 눌러 하나씩 공개하며 규칙을 찾아감
+        // ---------------------------------------------------------------------------
+        const RULE_ROWS = [3, 4, 5, 6, 7, 8, 9, 10, 'n'];
+        const RULE_COLS = [
+            { title: '한 꼭짓점에서 그은<br>대각선의 수', val: n => n === 'n' ? 'n − 3' : `${n - 3}` },
+            { title: '나누어진<br>삼각형의 수', val: n => n === 'n' ? 'n − 2' : `${n - 2}` },
+            { title: '내각의 크기의 합', val: n => n === 'n' ? '180° × (n − 2)' : `180° × ${n - 2} = ${180 * (n - 2)}°` },
+            { title: '정다각형의<br>한 내각의 크기', val: n => {
+                if (n === 'n') return '180° × (n − 2) ÷ n';
+                const v = 180 * (n - 2) / n;
+                return Number.isInteger(v) ? `${v}°` : `약 ${v.toFixed(1)}°`;
+            } }
+        ];
+        const ruleRevealed = new Set();
+
+        function ruleTableHtml() {
+            const head = `<tr>
+                <th class="p-3 text-left text-lg font-extrabold text-slate-700 whitespace-nowrap">다각형</th>
+                ${RULE_COLS.map(c => `<th class="p-3 text-center text-base font-extrabold text-slate-700 leading-snug">${c.title}</th>`).join('')}
+            </tr>`;
+            const rows = RULE_ROWS.map((n, r) => {
+                const isGeneral = n === 'n';
+                const name = isGeneral ? 'n각형' : polyName(n);
+                const nameCell = isGeneral
+                    ? `<td class="p-2"><span class="whitespace-nowrap text-xl font-extrabold text-emerald-700">${name}</span></td>`
+                    : `<td class="p-2"><button onclick="showOnCanvas(${n})" title="그림으로 보기" class="whitespace-nowrap text-xl font-extrabold text-slate-900 hover:text-blue-700 underline decoration-dotted decoration-2 underline-offset-4">${name}</button></td>`;
+                const cells = RULE_COLS.map((c, ci) => {
+                    const key = `${r},${ci}`;
+                    const shown = ruleRevealed.has(key);
+                    return `<td class="p-1"><div onclick="toggleRuleCell('${key}')" class="rule-cell ${shown ? '' : 'hidden-val'} rounded-lg px-2 py-1.5 text-center text-xl font-extrabold font-mono-num ${isGeneral ? 'text-emerald-700' : 'text-slate-900'}">${shown ? c.val(n) : '?'}</div></td>`;
+                }).join('');
+                return `<tr class="${isGeneral ? 'border-t-4 border-emerald-500 bg-emerald-50/60' : 'border-t border-slate-200'}">${nameCell}${cells}</tr>`;
+            }).join('');
+            return `
+                <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+                    <p class="text-lg text-slate-600 font-semibold">칸을 누르면 값이 나타나요. 다각형 이름을 누르면 그림으로 볼 수 있어요.</p>
+                    <div class="flex gap-2 shrink-0">
+                        <button onclick="revealNextRuleRow()" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-lg font-extrabold">다음 줄 공개</button>
+                        <button onclick="setAllRule(true)" class="px-4 py-2.5 rounded-xl border-2 border-slate-300 text-slate-700 text-lg font-bold hover:bg-slate-50">모두 공개</button>
+                        <button onclick="setAllRule(false)" class="px-4 py-2.5 rounded-xl border-2 border-slate-300 text-slate-700 text-lg font-bold hover:bg-slate-50">모두 가리기</button>
+                    </div>
+                </div>
+                <div class="overflow-x-auto -mx-1 px-1"><table class="w-full min-w-[40rem] border-collapse">${head}${rows}</table></div>
+`;
+        }
+        function refreshRuleTable() {
+            document.getElementById('modal-body').innerHTML = ruleTableHtml();
+        }
+        function openRuleModal() {
+            openModal('규칙 찾기: n각형의 내각의 크기의 합', ruleTableHtml());
+        }
+        function toggleRuleCell(key) {
+            if (ruleRevealed.has(key)) ruleRevealed.delete(key); else ruleRevealed.add(key);
+            refreshRuleTable();
+        }
+        function revealNextRuleRow() {
+            for (let r = 0; r < RULE_ROWS.length; r++) {
+                const keys = RULE_COLS.map((_, c) => `${r},${c}`);
+                if (keys.some(k => !ruleRevealed.has(k))) {
+                    keys.forEach(k => ruleRevealed.add(k));
+                    break;
+                }
+            }
+            refreshRuleTable();
+        }
+        function setAllRule(show) {
+            ruleRevealed.clear();
+            if (show) RULE_ROWS.forEach((_, r) => RULE_COLS.forEach((_, c) => ruleRevealed.add(`${r},${c}`)));
+            refreshRuleTable();
+        }
+
+        // ---------------------------------------------------------------------------
+        // 9-2. 확인 문제: 매번 새로 만들어지는 4지선다
+        // ---------------------------------------------------------------------------
+        const randInt = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
+        const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+        function shuffle(arr) {
+            const a = [...arr];
+            for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+            return a;
+        }
+        function makeChoices(answer, candidates) {
+            const wrong = [...new Set(candidates)].filter(c => c !== answer);
+            return shuffle([answer, ...shuffle(wrong).slice(0, 3)]);
+        }
+
+        const QUIZ_TYPES = [
+            // 내각의 크기의 합 구하기
+            () => {
+                const n = randInt(5, 15), ans = 180 * (n - 2);
+                return {
+                    q: `${polyName(n)}의 내각의 크기의 합은?`,
+                    answer: `${ans}°`,
+                    choices: makeChoices(`${ans}°`, [180 * (n - 1), 180 * (n - 3), 180 * n, 180 * (n - 2) + 360].map(v => `${v}°`)),
+                    explain: `${polyName(n)}은 한 꼭짓점에서 대각선을 그으면 삼각형 ${n - 2}개로 나뉘어요.<br>180° × (${n} − 2) = ${ans}°`,
+                    n
+                };
+            },
+            // 내각의 크기의 합으로 다각형 찾기
+            () => {
+                const n = randInt(5, 14), s = 180 * (n - 2);
+                return {
+                    q: `내각의 크기의 합이 ${s}°인 다각형은?`,
+                    answer: polyName(n),
+                    choices: makeChoices(polyName(n), [n - 2, n - 1, n + 1, n + 2].filter(k => k >= 3).map(polyName)),
+                    explain: `180° × (n − 2) = ${s}° 이므로 n − 2 = ${n - 2}, n = ${n}`,
+                    n
+                };
+            },
+            // 정다각형의 한 내각
+            () => {
+                const list = [5, 6, 8, 9, 10, 12, 15, 18, 20];
+                const n = pick(list), val = 180 * (n - 2) / n;
+                const near = list.filter(k => k !== n).sort((a, b) => Math.abs(a - n) - Math.abs(b - n)).slice(0, 3).map(k => `${180 * (k - 2) / k}°`);
+                return {
+                    q: `정${polyName(n)}의 한 내각의 크기는?`,
+                    answer: `${val}°`,
+                    choices: makeChoices(`${val}°`, [`${360 / n}°`, ...near]),
+                    explain: `내각의 크기의 합은 180° × (${n} − 2) = ${180 * (n - 2)}°이고, 정다각형은 ${n}개의 내각의 크기가 모두 같아요.<br>${180 * (n - 2)}° ÷ ${n} = ${val}°`,
+                    n
+                };
+            },
+            // 한 꼭짓점에서 나눈 삼각형의 수
+            () => {
+                const n = randInt(5, 15);
+                return {
+                    q: `${polyName(n)}의 한 꼭짓점에서 대각선을 모두 그으면 삼각형은 몇 개 생길까?`,
+                    answer: `${n - 2}개`,
+                    choices: makeChoices(`${n - 2}개`, [`${n - 3}개`, `${n - 1}개`, `${n}개`]),
+                    explain: `한 꼭짓점에서 그을 수 있는 대각선은 ${n - 3}개이고, 이 대각선으로 삼각형 ${n - 2}개가 생겨요.`,
+                    n
+                };
+            },
+            // 내부의 한 점으로 나누는 방법
+            () => {
+                const n = randInt(5, 12);
+                return {
+                    q: `${polyName(n)}의 내부의 한 점과 각 꼭짓점을 이어 삼각형 ${n}개로 나누었어요. 내각의 크기의 합을 구하는 식은?`,
+                    answer: `180° × ${n} − 360°`,
+                    choices: makeChoices(`180° × ${n} − 360°`, [`180° × ${n}`, `180° × ${n} − 180°`, `180° × ${n} + 360°`]),
+                    explain: `삼각형 ${n}개의 내각의 합 180° × ${n}에서 내부의 점 주위에 모인 360°를 빼야 해요.<br>180° × ${n} − 360° = ${180 * n - 360}°`,
+                    n, mode: 'CENTER'
+                };
+            }
+        ];
+
+        const quiz = { score: 0, total: 0, current: null, lastType: -1, answered: false };
+
+        function newQuizQuestion() {
+            let t;
+            do { t = randInt(0, QUIZ_TYPES.length - 1); } while (t === quiz.lastType);
+            quiz.lastType = t;
+            quiz.current = QUIZ_TYPES[t]();
+            quiz.answered = false;
+            renderQuiz();
+        }
+
+        function renderQuiz(chosen) {
+            const c = quiz.current;
+            const choiceBtns = c.choices.map((ch, i) => {
+                let cls = 'border-slate-300 bg-white hover:bg-slate-50 text-slate-900';
+                if (quiz.answered) {
+                    if (ch === c.answer) cls = 'border-emerald-500 bg-emerald-50 text-emerald-800';
+                    else if (ch === chosen) cls = 'border-rose-500 bg-rose-50 text-rose-700';
+                    else cls = 'border-slate-200 bg-white text-slate-400';
+                }
+                return `<button ${quiz.answered ? 'disabled' : ''} onclick="answerQuiz(${i})"
+                    class="choice-btn px-3 md:px-4 py-4 md:py-5 rounded-2xl border-[3px] text-xl md:text-2xl font-extrabold font-mono-num ${cls}">
+                    <span class="text-slate-400 mr-2">${'①②③④'[i]}</span>${ch}</button>`;
+            }).join('');
+
+            let feedback = '';
+            if (quiz.answered) {
+                const ok = chosen === c.answer;
+                feedback = `
+                    <div class="mt-5 rounded-2xl p-5 ${ok ? 'bg-emerald-50 border-2 border-emerald-300' : 'bg-rose-50 border-2 border-rose-300'}">
+                        <div class="text-2xl font-extrabold ${ok ? 'text-emerald-700' : 'text-rose-700'} mb-2">${ok ? '정답이에요!' : `아쉬워요. 정답은 ${c.answer}`}</div>
+                        <div class="text-xl font-semibold text-slate-800 leading-relaxed font-mono-num">${c.explain}</div>
+                    </div>
+                    <div class="flex flex-wrap justify-end gap-2 mt-4">
+                        ${c.n <= MAX_SIDES ? `<button onclick="showOnCanvas(${c.n}, '${c.mode || 'VERTEX'}')" class="px-4 py-3 rounded-xl border-2 border-slate-300 text-slate-700 text-lg font-bold hover:bg-slate-50">그림으로 확인</button>` : ''}
+                        <button onclick="newQuizQuestion()" class="px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-lg font-extrabold flex items-center gap-2">다음 문제 <i data-lucide="arrow-right" class="w-5 h-5"></i></button>
+                    </div>`;
+            }
+
+            openModal('확인 문제', `
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-lg font-bold text-slate-500">문제 ${quiz.total + (quiz.answered ? 0 : 1)}</span>
+                    <span class="text-lg font-extrabold text-slate-700">맞힌 문제 <span class="text-amber-600">${quiz.score}</span> / ${quiz.total}</span>
+                </div>
+                <p class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-snug mb-6">${c.q}</p>
+                <div class="grid grid-cols-2 gap-3">${choiceBtns}</div>
+                ${feedback}`);
+        }
+
+        function answerQuiz(i) {
+            if (quiz.answered) return;
+            const chosen = quiz.current.choices[i];
+            quiz.answered = true;
+            quiz.total++;
+            if (chosen === quiz.current.answer) quiz.score++;
+            renderQuiz(chosen);
+        }
+
+        // 사용법 안내 (처음 써 보는 사람용)
+        function openHelp() {
+            const step = (n, title, body) => `
+                <li class="flex gap-3">
+                    <span class="w-8 h-8 rounded-full bg-slate-900 text-white font-extrabold flex items-center justify-center shrink-0 font-mono-num">${n}</span>
+                    <div class="min-w-0">
+                        <div class="text-lg font-extrabold text-slate-900">${title}</div>
+                        <div class="text-base font-semibold text-slate-600 leading-relaxed">${body}</div>
+                    </div>
+                </li>`;
+            openModal('사용법', `
+                <p class="text-lg font-semibold text-slate-700 mb-5">다각형을 삼각형으로 나누면 내각의 크기의 합을 어떻게 구할 수 있을까요?</p>
+                <ol class="space-y-4 mb-6">
+                    ${step(1, '다각형 고르기', '위쪽 − / + 로 삼각형부터 십이각형까지 바꿔요. 꼭짓점을 끌면 모양이 바뀌고, <b>정다각형으로</b>를 누르면 처음 모양으로 돌아가요.')}
+                    ${step(2, '삼각형으로 나누기', '<b>한 꼭짓점에서</b>, <b>대각선 직접</b>, <b>내부의 한 점</b> 중 나누는 방법을 골라요. 대각선 직접은 두 꼭짓점을 차례로 눌러 대각선을 그어요.')}
+                    ${step(3, '꼭짓점의 각 살펴보기', '꼭짓점을 누르면 그 내각이 어떤 삼각형 조각들로 나뉘는지 말풍선으로 보여 줘요. 예: ∠A = 36° + 36° + 36° = 108°')}
+                    ${step(4, '세 각을 모아 180°', '<b>조각 1개씩 모으기</b>나 <b>한 번에</b>를 누르면 각 삼각형의 세 각이 모여 180°의 반원이 돼요.')}
+                    ${step(5, '규칙 찾기와 확인 문제', '<b>규칙 찾기</b> 표의 칸을 하나씩 열며 180° × (n − 2)를 찾고, <b>확인 문제</b>로 마무리해요.')}
+                    ${step(6, '오목다각형', '<b>오목다각형</b> 스위치를 켜면 꼭짓점 하나가 들어간 모양이 돼요. 꼭짓점에 따라 대각선이 밖으로 나가는 경우를 빨간 선으로 보여 줘요.')}
+                </ol>
+                <div class="text-sm font-semibold text-slate-500">각도 보기 메뉴에서 나뉜 각, 수식 말풍선, 다각형의 내각 숫자를 따로 켜고 끌 수 있어요.</div>`);
+        }
+
+        function openQuiz() {
+            if (!quiz.current || quiz.answered) newQuizQuestion();
+            else renderQuiz();
+        }
+
+        window.onload = function () {
+            try {
+                const saved = localStorage.getItem('polygonLab.boardMode');
+                // 저장된 설정이 없으면 큰 화면(전자칠판·대형 모니터)에서만 칠판 모드로 시작
+                state.boardMode = saved !== null ? saved === '1' : window.innerWidth >= 1280;
+            } catch (e) {}
+            applyBoardMode();
+            renderConcaveSwitch();
+            renderViewMenu();
+            resizeCanvas();
+            setPolygonSides(state.numSides);
+            requestAnimationFrame(animateLoop);
+        };
+    </script>
+</div>
+</body>
+</html>
