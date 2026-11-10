@@ -1,0 +1,2159 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="자동차가 다각형 둘레를 돌며 꺾은 각을 모아 외각의 합을 탐구하는 중학교 수학 수업 도구">
+<title>외각의 합 실험실</title>
+
+    <!-- Tailwind CSS: 오프라인에서도 동작하도록 빌드된 CSS를 파일 안에 포함 -->
+    <style id="tailwind-css">*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{border:0 solid #e5e7eb;box-sizing:border-box}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-tap-highlight-color:transparent}body{line-height:inherit;margin:0}hr{border-top-width:1px;color:inherit;height:0}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-size:1em;font-variation-settings:normal}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-collapse:collapse;border-color:inherit;text-indent:0}button,input,optgroup,select,textarea{color:inherit;font-family:inherit;font-feature-settings:inherit;font-size:100%;font-variation-settings:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{color:#9ca3af;opacity:1}input::placeholder,textarea::placeholder{color:#9ca3af;opacity:1}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{height:auto;max-width:100%}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.-top-0\.5{top:-.125rem}.left-4{left:1rem}.right-3{right:.75rem}.right-4{right:1rem}.top-0\.5{top:.125rem}.top-1\/2{top:50%}.top-28{top:7rem}.z-10{z-index:10}.z-20{z-index:20}.z-40{z-index:40}.z-50{z-index:50}.mx-1{margin-left:.25rem;margin-right:.25rem}.my-1{margin-top:.25rem}.mb-1,.my-1{margin-bottom:.25rem}.mb-2{margin-bottom:.5rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.ml-0\.5{margin-left:.125rem}.mr-2{margin-right:.5rem}.mt-1{margin-top:.25rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-auto{margin-top:auto}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-0{height:0}.h-0\.5{height:.125rem}.h-10{height:2.5rem}.h-28{height:7rem}.h-3{height:.75rem}.h-32{height:8rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-\[62svh\]{height:62svh}.h-full{height:100%}.max-h-full{max-height:100%}.min-h-\[2\.5rem\]{min-height:2.5rem}.min-h-\[22rem\]{min-height:22rem}.w-0{width:0}.w-11{width:2.75rem}.w-12{width:3rem}.w-28{width:7rem}.w-3{width:.75rem}.w-32{width:8rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-9{width:2.25rem}.w-full{width:100%}.w-px{width:1px}.min-w-0{min-width:0}.min-w-\[8\.5rem\]{min-width:8.5rem}.max-w-\[62rem\]{max-width:62rem}.flex-1{flex:1 1 0%}.flex-shrink{flex-shrink:1}.shrink-0{flex-shrink:0}.-translate-y-1\/2{--tw-translate-y:-50%}.-rotate-90,.-translate-y-1\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-rotate-90{--tw-rotate:-90deg}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-grab{cursor:grab}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.resize{resize:both}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(.5rem*var(--tw-space-y-reverse));margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)))}.space-y-2\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(.625rem*var(--tw-space-y-reverse));margin-top:calc(.625rem*(1 - var(--tw-space-y-reverse)))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(.75rem*var(--tw-space-y-reverse));margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(1rem*var(--tw-space-y-reverse));margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-\[3px\]{border-width:3px}.border-b{border-bottom-width:1px}.border-b-\[3px\]{border-bottom-width:3px}.border-l-\[6px\]{border-left-width:6px}.border-r-\[6px\]{border-right-width:6px}.border-t{border-top-width:1px}.border-t-\[9px\]{border-top-width:9px}.border-dashed{border-style:dashed}.border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138/var(--tw-border-opacity,1))}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254/var(--tw-border-opacity,1))}.border-blue-500{--tw-border-opacity:1;border-color:rgb(59 130 246/var(--tw-border-opacity,1))}.border-emerald-300{--tw-border-opacity:1;border-color:rgb(110 231 183/var(--tw-border-opacity,1))}.border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129/var(--tw-border-opacity,1))}.border-indigo-600{--tw-border-opacity:1;border-color:rgb(79 70 229/var(--tw-border-opacity,1))}.border-orange-200{--tw-border-opacity:1;border-color:rgb(254 215 170/var(--tw-border-opacity,1))}.border-rose-300{--tw-border-opacity:1;border-color:rgb(253 164 175/var(--tw-border-opacity,1))}.border-rose-500{--tw-border-opacity:1;border-color:rgb(244 63 94/var(--tw-border-opacity,1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249/var(--tw-border-opacity,1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225/var(--tw-border-opacity,1))}.border-slate-600{--tw-border-opacity:1;border-color:rgb(71 85 105/var(--tw-border-opacity,1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85/var(--tw-border-opacity,1))}.border-slate-900{--tw-border-opacity:1;border-color:rgb(15 23 42/var(--tw-border-opacity,1))}.border-transparent{border-color:transparent}.border-l-transparent{border-left-color:transparent}.border-r-transparent{border-right-color:transparent}.border-t-rose-500{--tw-border-opacity:1;border-top-color:rgb(244 63 94/var(--tw-border-opacity,1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36/var(--tw-bg-opacity,1))}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235/var(--tw-bg-opacity,1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11/var(--tw-bg-opacity,1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.bg-blue-50\/40{background-color:rgba(239,246,255,.4)}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235/var(--tw-bg-opacity,1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229/var(--tw-bg-opacity,1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245/var(--tw-bg-opacity,1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105/var(--tw-bg-opacity,1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255/var(--tw-bg-opacity,1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity,1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237/var(--tw-bg-opacity,1))}.bg-rose-100{--tw-bg-opacity:1;background-color:rgb(255 228 230/var(--tw-bg-opacity,1))}.bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242/var(--tw-bg-opacity,1))}.bg-rose-500{--tw-bg-opacity:1;background-color:rgb(244 63 94/var(--tw-bg-opacity,1))}.bg-rose-600{--tw-bg-opacity:1;background-color:rgb(225 29 72/var(--tw-bg-opacity,1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity,1))}.bg-slate-300{--tw-bg-opacity:1;background-color:rgb(203 213 225/var(--tw-bg-opacity,1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.bg-slate-50\/60{background-color:rgba(248,250,252,.6)}.bg-slate-50\/70{background-color:rgba(248,250,252,.7)}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85/var(--tw-bg-opacity,1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/95{background-color:hsla(0,0%,100%,.95)}.bg-gradient-to-tr{background-image:linear-gradient(to top right,var(--tw-gradient-stops))}.from-rose-500{--tw-gradient-from:#f43f5e var(--tw-gradient-from-position);--tw-gradient-to:rgba(244,63,94,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-amber-400{--tw-gradient-to:rgba(251,191,36,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#fbbf24 var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-sky-500{--tw-gradient-to:#0ea5e9 var(--tw-gradient-to-position)}.p-1{padding:.25rem}.p-2{padding:.5rem}.p-2\.5{padding:.625rem}.p-3{padding:.75rem}.p-3\.5{padding:.875rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-3\.5{padding-left:.875rem;padding-right:.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-bottom:.125rem;padding-top:.125rem}.py-1{padding-bottom:.25rem;padding-top:.25rem}.py-1\.5{padding-bottom:.375rem;padding-top:.375rem}.py-2{padding-bottom:.5rem;padding-top:.5rem}.py-2\.5{padding-bottom:.625rem;padding-top:.625rem}.py-3{padding-bottom:.75rem;padding-top:.75rem}.py-4{padding-bottom:1rem;padding-top:1rem}.pl-3{padding-left:.75rem}.pr-8{padding-right:2rem}.pt-1{padding-top:.25rem}.pt-2{padding-top:.5rem}.pt-3{padding-top:.75rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-semibold{font-weight:600}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-.025em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77/var(--tw-text-opacity,1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6/var(--tw-text-opacity,1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14/var(--tw-text-opacity,1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235/var(--tw-text-opacity,1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216/var(--tw-text-opacity,1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175/var(--tw-text-opacity,1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87/var(--tw-text-opacity,1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70/var(--tw-text-opacity,1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202/var(--tw-text-opacity,1))}.text-orange-700{--tw-text-opacity:1;color:rgb(194 65 12/var(--tw-text-opacity,1))}.text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72/var(--tw-text-opacity,1))}.text-rose-700{--tw-text-opacity:1;color:rgb(190 18 60/var(--tw-text-opacity,1))}.text-sky-300{--tw-text-opacity:1;color:rgb(125 211 252/var(--tw-text-opacity,1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.opacity-60{opacity:.6}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-2xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-lg,.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.outline{outline-style:solid}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-all{transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-transform{transition-duration:.15s;transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1)}.placeholder\:text-base::-moz-placeholder{font-size:1rem;line-height:1.5rem}.placeholder\:text-base::placeholder{font-size:1rem;line-height:1.5rem}.placeholder\:font-bold::-moz-placeholder{font-weight:700}.placeholder\:font-bold::placeholder{font-weight:700}.hover\:bg-amber-100:hover{--tw-bg-opacity:1;background-color:rgb(254 243 199/var(--tw-bg-opacity,1))}.hover\:bg-amber-600:hover{--tw-bg-opacity:1;background-color:rgb(217 119 6/var(--tw-bg-opacity,1))}.hover\:bg-blue-600:hover{--tw-bg-opacity:1;background-color:rgb(37 99 235/var(--tw-bg-opacity,1))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216/var(--tw-bg-opacity,1))}.hover\:bg-emerald-700:hover{--tw-bg-opacity:1;background-color:rgb(4 120 87/var(--tw-bg-opacity,1))}.hover\:bg-rose-700:hover{--tw-bg-opacity:1;background-color:rgb(190 18 60/var(--tw-bg-opacity,1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.hover\:text-slate-900:hover{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.focus\:border-blue-600:focus{--tw-border-opacity:1;border-color:rgb(37 99 235/var(--tw-border-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.active\:cursor-grabbing:active{cursor:grabbing}.disabled\:opacity-30:disabled{opacity:.3}.disabled\:shadow-none:disabled{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}@media (min-width:640px){.sm\:inline{display:inline}}@media (min-width:768px){.md\:absolute{position:absolute}.md\:left-auto{left:auto}.md\:right-0{right:0}.md\:top-full{top:100%}.md\:mt-2{margin-top:.5rem}.md\:w-\[22rem\]{width:22rem}.md\:w-\[24rem\]{width:24rem}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:p-6{padding:1.5rem}.md\:px-4{padding-left:1rem;padding-right:1rem}.md\:py-3{padding-bottom:.75rem;padding-top:.75rem}.md\:py-5{padding-bottom:1.25rem;padding-top:1.25rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}}@media (min-width:1024px){.lg\:block{display:block}.lg\:flex{display:flex}.lg\:h-full{height:100%}.lg\:w-\[34\%\]{width:34%}.lg\:w-\[66\%\]{width:66%}.lg\:flex-row{flex-direction:row}.lg\:gap-3{gap:.75rem}.lg\:overflow-hidden{overflow:hidden}.lg\:overflow-y-auto{overflow-y:auto}.lg\:border-l{border-left-width:1px}.lg\:border-t-0{border-top-width:0}}@media (min-width:1280px){.xl\:flex{display:flex}.xl\:h-14{height:3.5rem}.xl\:w-\[30\%\]{width:30%}.xl\:w-\[70\%\]{width:70%}.xl\:shrink-0{flex-shrink:0}.xl\:gap-3{gap:.75rem}.xl\:py-0{padding-bottom:0;padding-top:0}}@media (min-width:1800px){.min-\[1800px\]\:inline{display:inline}}</style>
+    <!-- Pretendard & JetBrains Mono Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap">
+    <style>
+        * {
+            font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', system-ui, sans-serif;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        .font-mono-num {
+            font-family: 'JetBrains Mono', Consolas, monospace;
+            font-variant-numeric: tabular-nums;
+        }
+        /* 수업용 밝은 화면 하나로 고정 (어두운 테마에서도 같은 모습) */
+        :root { color-scheme: light; --page-bg: #F8FAFC; --ink: #0F172A; }
+        html, body { height: 100%; }
+        body { background: var(--page-bg); color: var(--ink); }
+        @media (max-width: 1023px) { html, body { height: auto; } }
+        @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+        button:focus-visible, input:focus-visible { outline: 3px solid #2563EB; outline-offset: 2px; }
+        /* 칠판 모드: 화면 전체 글자·버튼을 키움 (rem 기준) */
+        html { font-size: 16px; }
+        html.board { font-size: clamp(15px, 1.04vw, 24px); }
+        .section-label { font-size: 0.75rem; font-weight: 800; color: #475569; letter-spacing: 0.02em; }
+        .icon { display: inline-block; flex-shrink: 0; }
+        #modal-backdrop { background: rgba(15, 23, 42, 0.55); }
+        .choice-btn { transition: transform .12s ease, background-color .15s ease, border-color .15s ease; }
+        .choice-btn:active { transform: scale(0.97); }
+        .bg-math-grid {
+            background-color: #F8FAFC;
+            background-image: 
+                radial-gradient(#CBD5E1 1.25px, transparent 1.25px),
+                linear-gradient(to right, rgba(226, 232, 240, 0.55) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(226, 232, 240, 0.55) 1px, transparent 1px);
+            background-size: 24px 24px, 96px 96px, 96px 96px;
+            background-position: -1px -1px;
+        }
+        input[type=range].gather-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 8px;
+            background: #E2E8F0;
+            border-radius: 999px;
+            outline: none;
+        }
+        input[type=range].gather-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background: #0F172A;
+            cursor: pointer;
+            border: 3px solid #FFFFFF;
+            box-shadow: 0 3px 8px rgba(15, 23, 42, 0.25);
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+        input[type=range].gather-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.12);
+            background: #2563EB;
+        }
+        /* Hide number input arrows */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 999px;
+        }
+    </style>
+
+</head>
+<body style="margin:0">
+<div id="app" class="lg:h-full w-full lg:overflow-hidden bg-slate-50 text-slate-900 flex flex-col">
+
+    <!-- Top Toolbar -->
+    <header class="xl:h-14 bg-white border-b border-slate-200 px-4 py-2 xl:py-0 flex flex-wrap items-center justify-between gap-2 xl:gap-3 shrink-0 z-20">
+        <div class="flex flex-wrap items-center gap-2 lg:gap-3 min-w-0">
+            <div class="flex items-center gap-2 shrink-0">
+                <div class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center">
+                    <i data-lucide="compass" class="w-4 h-4"></i>
+                </div>
+                <span class="hidden min-[1800px]:inline font-extrabold text-base tracking-tight text-slate-900">다각형 외각의 합 실험실</span>
+            </div>
+
+            <!-- n각형 선택 (3 ~ 8) -->
+            <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 shrink-0">
+                <button onclick="changeSides(-1)" id="btn-sides-minus" title="변의 수 줄이기" class="w-9 h-9 rounded-lg bg-white text-slate-900 font-extrabold text-xl leading-none shadow-sm hover:bg-slate-50 active:scale-95 transition-all disabled:opacity-30 disabled:shadow-none">−</button>
+                <div class="px-2 min-w-[8.5rem] text-center leading-tight">
+                    <div id="sides-label" class="text-base font-extrabold text-slate-900">삼각형</div>
+                    <div id="sides-sub" class="text-xs font-bold text-slate-500 font-mono-num">n = 3</div>
+                </div>
+                <button onclick="changeSides(1)" id="btn-sides-plus" title="변의 수 늘리기" class="w-9 h-9 rounded-lg bg-white text-slate-900 font-extrabold text-xl leading-none shadow-sm hover:bg-slate-50 active:scale-95 transition-all disabled:opacity-30 disabled:shadow-none">+</button>
+            </div>
+
+            <button onclick="resetToRegularPolygon()" class="shrink-0 px-3 py-2 rounded-xl text-sm font-bold border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 active:scale-95 transition-all flex items-center gap-1.5">
+                <i data-lucide="layout-grid" class="w-4 h-4 text-slate-500"></i>
+                <span id="text-reset-shape" class="hidden sm:inline">정다각형으로</span>
+            </button>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2 min-w-0 xl:shrink-0">
+            <!-- 응용: 오목다각형 · 별다각형 -->
+            <div class="relative">
+                <button onclick="toggleShapeMenu(event)" id="btn-shape-menu" class="px-3 py-2 rounded-xl text-sm font-extrabold border-2 transition-all flex items-center gap-1.5">
+                    <i data-lucide="star" class="w-4 h-4"></i>
+                    <span id="text-shape-btn">응용</span>
+                </button>
+                <div id="shape-menu" class="hidden fixed left-4 right-4 top-28 md:absolute md:left-auto md:right-0 md:top-full md:mt-2 md:w-[24rem] bg-white border-2 border-slate-200 rounded-2xl shadow-2xl p-2 z-40" onclick="event.stopPropagation()">
+                    <div id="shape-menu-items"></div>
+                </div>
+            </div>
+            <div class="relative">
+                <button onclick="toggleViewMenu(event)" id="btn-view-menu" class="px-3 py-2 rounded-xl text-sm font-extrabold border-2 border-indigo-600 bg-indigo-50 text-indigo-700 transition-all flex items-center gap-1.5">
+                    <i data-lucide="eye" class="w-4 h-4"></i>
+                    <span>각도 보기</span>
+                    <span id="view-count" class="ml-0.5 px-1.5 rounded-md bg-indigo-600 text-white text-xs font-mono-num">2</span>
+                </button>
+                <div id="view-menu" class="hidden fixed left-4 right-4 top-28 md:absolute md:left-auto md:right-0 md:top-full md:mt-2 md:w-[22rem] bg-white border-2 border-slate-200 rounded-2xl shadow-2xl p-2 z-40" onclick="event.stopPropagation()">
+                    <div id="view-menu-items"></div>
+                    <div class="flex gap-2 p-2 pt-3 mt-1 border-t border-slate-100">
+                        <button onclick="setAllViews(false)" class="flex-1 py-2 rounded-xl border-2 border-slate-200 text-sm font-bold text-slate-700 hover:bg-slate-50">모두 끄기</button>
+                        <button onclick="setAllViews(true)" class="flex-1 py-2 rounded-xl border-2 border-slate-200 text-sm font-bold text-slate-700 hover:bg-slate-50">모두 켜기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden lg:block h-6 w-px bg-slate-200 mx-1"></div>
+            <button onclick="openHelp()" class="px-3 py-2 rounded-xl text-sm font-extrabold border-2 border-slate-300 bg-white text-slate-700 hover:bg-slate-50 transition-all flex items-center gap-1.5">
+                <i data-lucide="info" class="w-4 h-4"></i>
+                <span>사용법</span>
+            </button>
+            <button onclick="openQuiz()" class="px-3 py-2 rounded-xl text-sm font-extrabold bg-amber-500 hover:bg-amber-600 text-white transition-all flex items-center gap-1.5 active:scale-95">
+                <i data-lucide="help-circle" class="w-4 h-4"></i>
+                <span>확인 문제</span>
+            </button>
+            <div class="hidden lg:block h-6 w-px bg-slate-200 mx-1"></div>
+            <button onclick="toggleBoardMode()" id="btn-board" title="전자칠판용 큰 화면" class="hidden lg:flex px-3 py-2 rounded-xl text-sm font-extrabold border-2 transition-all flex items-center gap-1.5">
+                <i data-lucide="monitor" class="w-4 h-4"></i>
+                <span id="text-board-btn">칠판 모드</span>
+            </button>
+            <button onclick="toggleFullscreen()" id="btn-fullscreen" title="전체 화면" class="hidden lg:block p-2 rounded-xl border-2 border-slate-200 bg-white text-slate-700 hover:bg-slate-50 transition-all">
+                <i data-lucide="maximize" class="w-5 h-5"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-1 flex flex-col lg:flex-row lg:overflow-hidden">
+
+        <!-- LEFT: Canvas -->
+        <section class="w-full lg:w-[66%] xl:w-[70%] h-[62svh] min-h-[22rem] lg:h-full relative bg-math-grid flex flex-col justify-end p-4 select-none overflow-hidden">
+            <canvas id="simCanvas" class="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing"></canvas>
+
+            <div class="relative z-10 flex items-end justify-between gap-4 pointer-events-none">
+                <!-- 범례 -->
+                <div class="hidden xl:flex bg-white/95 border border-slate-200 rounded-xl px-3.5 py-2.5 shadow-sm pointer-events-auto items-center gap-4 text-sm font-bold text-slate-700">
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-6 h-0.5 border-b-[3px] border-dashed border-emerald-500 inline-block"></span>
+                        <span>연장선 (원래 가던 방향)</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-4 h-4 rounded bg-gradient-to-tr from-rose-500 via-amber-400 to-sky-500 inline-block"></span>
+                        <span>외각</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-4 h-4 rounded-full bg-slate-300 inline-block"></span>
+                        <span>내각</span>
+                    </div>
+                </div>
+
+                <!-- 외각 모으기 -->
+                <div id="gather-panel" class="bg-white/95 border-2 border-slate-900 rounded-2xl px-3 md:px-4 py-2.5 md:py-3 shadow-lg pointer-events-auto w-full md:w-[24rem] flex items-center gap-3">
+                    <button onclick="toggleGatherPeak()" id="btn-gather-quick" class="px-3 py-2.5 rounded-xl text-sm font-extrabold bg-slate-900 text-white hover:bg-blue-600 transition-colors shrink-0">
+                        외각 모으기
+                    </button>
+                    <input type="range" id="gatherSlider" min="0" max="100" value="0" class="gather-slider flex-1" oninput="onGatherSliderChange(this.value)">
+                    <span class="text-sm font-extrabold font-mono-num text-slate-900 w-12 text-right" id="gatherValueLabel">0%</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- RIGHT: Control Panel -->
+        <aside class="w-full lg:w-[34%] xl:w-[30%] lg:h-full bg-white border-t lg:border-t-0 lg:border-l border-slate-200 flex flex-col p-4 lg:overflow-y-auto z-10 gap-3">
+
+            <div class="space-y-3">
+                <div class="grid grid-cols-2 gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200">
+                    <button onclick="setSteeringMode('MANUAL')" id="mode-manual-btn" class="py-2 rounded-lg text-sm font-extrabold transition-all bg-white text-slate-900 shadow-sm flex items-center justify-center gap-1.5">
+                        <i data-lucide="sliders" class="w-4 h-4 text-blue-600"></i>
+                        <span>각도 직접 입력</span>
+                    </button>
+                    <button onclick="setSteeringMode('AUTO')" id="mode-auto-btn" class="py-2 rounded-lg text-sm font-bold transition-all text-slate-600 hover:text-slate-900 flex items-center justify-center gap-1.5">
+                        <i data-lucide="sparkles" class="w-4 h-4"></i>
+                        <span>자동으로 돌기</span>
+                    </button>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <button onclick="handlePrimaryDriveAction()" id="btn-drive-corner" class="flex-1 py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-base transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="play" class="w-5 h-5"></i>
+                        <span id="text-drive-corner">코너 A로 이동</span>
+                    </button>
+                    <button onclick="resetCarSimulation()" class="p-3 rounded-xl border-2 border-slate-200 bg-slate-50 hover:bg-slate-100 active:scale-95 text-slate-700 transition-all" title="출발선으로 초기화">
+                        <i data-lucide="rotate-ccw" class="w-5 h-5"></i>
+                    </button>
+                </div>
+
+                <div id="manual-steering-panel" class="p-3.5 rounded-2xl border-2 border-slate-200 bg-slate-50/70 space-y-2.5 transition-all">
+                    <div class="flex items-center justify-between gap-2">
+                        <span class="text-sm font-extrabold text-slate-800 flex items-center gap-1.5">
+                            <span id="active-vertex-dot" class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+                            <span id="manual-panel-title">코너 이동 후 입력 가능</span>
+                        </span>
+                        <span id="interior-hint-badge" class="text-sm font-bold font-mono-num px-2 py-0.5 rounded-md bg-slate-200 text-slate-700">내각 --°</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <div class="relative flex-1">
+                            <input type="number" id="angleInput" min="-360" max="360" placeholder="몇 도 돌까요?"
+                                   onkeydown="if(event.key==='Enter') submitManualAngle()"
+                                   class="w-full py-2 pl-3 pr-8 rounded-xl border-2 border-slate-300 bg-white font-mono-num text-2xl font-extrabold text-slate-900 focus:outline-none focus:border-blue-600 transition-colors placeholder:text-base placeholder:font-bold">
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 font-mono-num font-extrabold text-xl text-slate-400">°</span>
+                        </div>
+                        <button onclick="submitManualAngle()" id="btn-turn-wheel" class="py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-extrabold text-sm transition-all flex items-center gap-1.5 shrink-0">
+                            <i data-lucide="rotate-cw" class="w-4 h-4"></i>
+                            <span>핸들 돌리기</span>
+                        </button>
+                    </div>
+
+                    <div id="left-turn-hint" class="hidden text-sm font-bold text-orange-700 bg-orange-50 border border-orange-200 rounded-lg px-2.5 py-1.5">
+                        왼쪽으로 돌 때는 − 를 붙여 입력해요 (예: −40)
+                    </div>
+                    <div class="grid grid-cols-5 gap-1.5">
+                        <button onclick="adjustAngleInput(-10)" class="py-2 rounded-lg bg-white border-2 border-slate-200 hover:bg-slate-100 font-mono-num text-sm font-bold text-slate-700">−10°</button>
+                        <button onclick="adjustAngleInput(-5)" class="py-2 rounded-lg bg-white border-2 border-slate-200 hover:bg-slate-100 font-mono-num text-sm font-bold text-slate-700">−5°</button>
+                        <button onclick="adjustAngleInput(5)" class="py-2 rounded-lg bg-white border-2 border-slate-200 hover:bg-slate-100 font-mono-num text-sm font-bold text-slate-700">+5°</button>
+                        <button onclick="adjustAngleInput(10)" class="py-2 rounded-lg bg-white border-2 border-slate-200 hover:bg-slate-100 font-mono-num text-sm font-bold text-slate-700">+10°</button>
+                        <button onclick="setInputToInteriorWrong()" id="btn-preset-interior" class="py-2 rounded-lg bg-amber-50 border-2 border-amber-200 hover:bg-amber-100 font-mono-num text-xs font-extrabold text-amber-800" title="학생들이 흔히 하는 실수: 내각만큼 돌기">내각값</button>
+                    </div>
+
+                    <div id="turn-feedback-box" class="hidden pt-2 border-t border-slate-200 space-y-2">
+                        <div class="flex items-center justify-between gap-2">
+                            <span id="feedback-status-text" class="text-base font-extrabold"></span>
+                            <span id="feedback-diff-badge" class="text-sm font-mono-num font-bold px-2 py-0.5 rounded-md"></span>
+                        </div>
+                        <div id="wrong-action-buttons" class="grid grid-cols-2 gap-1.5">
+                            <button onclick="triggerOffTrackDrive()" id="btn-offtrack" class="py-2.5 px-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-extrabold text-sm transition-all flex items-center justify-center gap-1">
+                                <i data-lucide="alert-triangle" class="w-4 h-4"></i>
+                                <span id="text-offtrack">이 방향 그대로 직진</span>
+                            </button>
+                            <button onclick="snapToCorrectAngle()" class="py-2.5 px-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm transition-all flex items-center justify-center gap-1">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                                <span id="text-snap-correct">정답(120°)으로 바로잡기</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 핸들 · 누적 외각 -->
+            <div class="grid grid-cols-2 gap-2.5 bg-slate-50 p-3 rounded-2xl border border-slate-200">
+                <div class="bg-white rounded-xl p-2.5 border border-slate-200 flex flex-col items-center justify-between">
+                    <span class="section-label">핸들을 돌린 각</span>
+                    <div class="relative my-1 flex items-center justify-center w-32 h-32">
+                        <div class="absolute -top-0.5 z-10 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[9px] border-t-rose-500"></div>
+                        <svg id="steering-wheel-svg" viewBox="0 0 100 100" class="w-28 h-28 transition-transform">
+                            <circle cx="50" cy="50" r="42" fill="none" stroke="#1E293B" stroke-width="11" />
+                            <circle cx="50" cy="50" r="42" fill="none" stroke="#334155" stroke-width="3" stroke-dasharray="12 8" />
+                            <path d="M 44 8.5 A 42 42 0 0 1 56 8.5" fill="none" stroke="#F43F5E" stroke-width="11.5" />
+                            <path d="M 14 48 L 38 48 L 38 56 L 14 54 Z" fill="#334155" />
+                            <path d="M 86 48 L 62 48 L 62 56 L 86 54 Z" fill="#334155" />
+                            <path d="M 46 60 L 46 86 L 54 86 L 54 60 Z" fill="#334155" />
+                            <circle cx="50" cy="50" r="15" fill="#0F172A" stroke="#475569" stroke-width="2" />
+                            <path d="M 50 40 L 56 54 L 50 51 L 44 54 Z" fill="#38BDF8" />
+                        </svg>
+                    </div>
+                    <div class="text-center w-full pt-1 border-t border-slate-100">
+                        <span class="text-xs font-bold text-slate-500 block">이번 코너</span>
+                        <span id="current-turn-angle" class="text-2xl font-extrabold font-mono-num text-slate-900">0°</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-2.5 border border-slate-200 flex flex-col items-center justify-between">
+                    <span class="section-label">지금까지 돈 각</span>
+                    <div class="relative my-1 flex items-center justify-center w-32 h-32">
+                        <svg id="pizza-gauge-svg" viewBox="0 0 100 100" class="w-28 h-28 -rotate-90">
+                            <circle cx="50" cy="50" r="42" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="2" />
+                            <g id="pizza-wedges-group"></g>
+                            <circle cx="50" cy="50" r="22" fill="#FFFFFF" />
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                            <span id="gauge-center-num" class="text-base font-extrabold font-mono-num text-slate-900">0°</span>
+                            <span id="gauge-denominator" class="text-xs font-bold text-slate-500">/ 360°</span>
+                        </div>
+                    </div>
+                    <div class="text-center w-full pt-1 border-t border-slate-100">
+                        <span class="text-xs font-bold text-slate-500 block">누적 합계</span>
+                        <span id="cumulative-turn-angle" class="text-2xl font-extrabold font-mono-num text-blue-700">0°</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 외각의 합 계산식 -->
+            <div class="bg-slate-900 text-white p-4 rounded-2xl space-y-3 mt-auto">
+                <div class="flex items-center justify-between">
+                    <span class="text-sm font-bold text-slate-300">외각의 크기의 합</span>
+                    <span id="corner-progress-badge" class="text-sm font-extrabold font-mono-num px-2 py-0.5 rounded-md bg-slate-800 text-sky-300">0 / 3 완료</span>
+                </div>
+                <div id="angle-pills-container" class="flex flex-wrap items-center gap-1.5 min-h-[2.5rem]"></div>
+                <div id="interior-sum-line" class="text-sm font-bold text-slate-300 font-mono-num border-t border-slate-700 pt-2"></div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- 확인 문제 창 -->
+    <div id="modal-backdrop" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 md:p-6" onclick="if (event.target === this) closeModal()">
+        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-[62rem] max-h-full flex flex-col overflow-hidden">
+            <div class="flex items-center justify-between px-6 py-4 border-b border-slate-200 shrink-0">
+                <h2 id="modal-title" class="text-2xl font-extrabold text-slate-900">확인 문제</h2>
+                <button onclick="closeModal()" title="닫기" class="p-2 rounded-xl hover:bg-slate-100 text-slate-600">
+                    <i data-lucide="x" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <div id="modal-body" class="p-4 md:p-6 overflow-y-auto"></div>
+        </div>
+    </div>
+
+    <script>
+        // ============================================================================
+        // 0. 아이콘 (인터넷 없이 동작하도록 SVG를 파일 안에 포함)
+        // ============================================================================
+        const ICONS = {
+            'compass': '<circle cx="12" cy="12" r="10"/><polygon points="16.2 7.8 14.1 14.1 7.8 16.2 9.9 9.9 16.2 7.8"/>',
+            'layout-grid': '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/>',
+            'sliders': '<path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/>',
+            'sparkles': '<path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 3v4M17 5h4"/>',
+            'play': '<polygon points="6 3 20 12 6 21 6 3"/>',
+            'rotate-ccw': '<path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/>',
+            'rotate-cw': '<path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/>',
+            'alert-triangle': '<path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/>',
+            'check': '<path d="M20 6 9 17l-5-5"/>',
+            'eye': '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+            'help-circle': '<circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>',
+            'monitor': '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>',
+            'maximize': '<path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/>',
+            'x': '<path d="M18 6 6 18M6 6l12 12"/>',
+            'info': '<circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>',
+            'star': '<polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/>',
+            'arrow-right': '<path d="M5 12h14M13 6l6 6-6 6"/>'
+        };
+        function renderIcons() {
+            document.querySelectorAll('i[data-lucide]').forEach(el => {
+                const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                svg.setAttribute('viewBox', '0 0 24 24');
+                svg.setAttribute('fill', 'none');
+                svg.setAttribute('stroke', 'currentColor');
+                svg.setAttribute('stroke-width', '2.2');
+                svg.setAttribute('stroke-linecap', 'round');
+                svg.setAttribute('stroke-linejoin', 'round');
+                svg.setAttribute('class', 'icon ' + (el.getAttribute('class') || ''));
+                svg.innerHTML = ICONS[el.getAttribute('data-lucide')] || '';
+                el.replaceWith(svg);
+            });
+        }
+        const lucide = { createIcons: renderIcons };
+        lucide.createIcons();
+
+        // ============================================================================
+        // 1. VERTEX LABELS & RAINBOW PALETTE
+        // ============================================================================
+        const MIN_SIDES = 3, MAX_SIDES = 8;
+        const VERTEX_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+        const KOR_DIGITS = ['', '일', '이', '삼', '사', '오', '육', '칠', '팔', '구'];
+        function polyName(n) {
+            const tens = Math.floor(n / 10), ones = n % 10;
+            let s = '';
+            if (tens > 0) s += (tens > 1 ? KOR_DIGITS[tens] : '') + '십';
+            s += KOR_DIGITS[ones];
+            return s + '각형';
+        }
+
+        // 별다각형 {n/k}: n개의 점을 k칸씩 건너뛰며 이은 모양
+        const STAR_TYPES = [
+            { n: 5, k: 2, name: '오각별' },
+            { n: 7, k: 2, name: '칠각별 (2칸)' },
+            { n: 7, k: 3, name: '칠각별 (3칸)' },
+            { n: 8, k: 3, name: '팔각별' }
+        ];
+        // 외각의 합(자동차가 한 바퀴 돌며 꺾은 각의 합) = 360° × 바퀴 수
+        function getTurnTarget() { return 360 * (state.lapCount || 1); }
+
+        // 칠판 모드 배율 (캔버스 글자·선·점 크기)
+        let S = 1;
+        let labelK = 1; // 작은 화면용 글자 배율
+        const monoFont = (px) => `800 ${Math.round(px * S)}px "JetBrains Mono", Consolas, monospace`;
+
+        const CORNER_COLORS = [
+            { name: 'A', hex: '#F43F5E', fill: 'rgba(244, 63, 94, 0.28)', solidFill: 'rgba(244, 63, 94, 0.85)', badgeBg: '#FFE4E6', badgeText: '#E11D48' }, // Rose
+            { name: 'B', hex: '#F59E0B', fill: 'rgba(245, 158, 11, 0.28)', solidFill: 'rgba(245, 158, 11, 0.85)', badgeBg: '#FEF3C7', badgeText: '#D97706' }, // Amber
+            { name: 'C', hex: '#10B981', fill: 'rgba(16, 185, 129, 0.28)', solidFill: 'rgba(16, 185, 129, 0.85)', badgeBg: '#D1FAE5', badgeText: '#059669' }, // Emerald
+            { name: 'D', hex: '#0EA5E9', fill: 'rgba(14, 165, 233, 0.28)', solidFill: 'rgba(14, 165, 233, 0.85)', badgeBg: '#E0F2FE', badgeText: '#0284C7' }, // Sky
+            { name: 'E', hex: '#8B5CF6', fill: 'rgba(139, 92, 246, 0.28)', solidFill: 'rgba(139, 92, 246, 0.85)', badgeBg: '#EDE9FE', badgeText: '#7C3AED' }, // Violet
+            { name: 'F', hex: '#EC4899', fill: 'rgba(236, 72, 153, 0.28)', solidFill: 'rgba(236, 72, 153, 0.85)', badgeBg: '#FCE7F3', badgeText: '#DB2777' }, // Pink
+            { name: 'G', hex: '#6366F1', fill: 'rgba(99, 102, 241, 0.28)', solidFill: 'rgba(99, 102, 241, 0.85)', badgeBg: '#E0E7FF', badgeText: '#4338CA' }, // Indigo
+            { name: 'H', hex: '#84CC16', fill: 'rgba(132, 204, 22, 0.28)', solidFill: 'rgba(132, 204, 22, 0.88)', badgeBg: '#ECFCCB', badgeText: '#4D7C0F' }  // Lime
+        ];
+
+        // ============================================================================
+        // 2. APPLICATION STATE
+        // ============================================================================
+        const canvas = document.getElementById('simCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let state = {
+            numSides: 3,
+            vertices: [],
+            draggingVertexIndex: -1,
+            hoveredVertexIndex: -1,
+
+            // Display Options
+            steeringMode: 'MANUAL', // 'MANUAL' | 'AUTO'
+            showAllAnglesAlways: false,
+            showInteriorAngles: true,
+            showExteriorNumbers: true, // 외각 부채꼴 안 숫자
+            boardMode: true, // 전자칠판용 큰 화면
+            shapeMode: 'CONVEX', // 'CONVEX' 볼록 | 'CONCAVE' 오목 | 'STAR' 별
+            starIndex: 0,
+            lapCount: 1,
+            gatherRatio: 0,
+            gatherAnimTarget: null,
+
+            // Car & Corner State Machine
+            // carStage:
+            // 'START_LINE'     : Parked at start line before Corner A
+            // 'DRIVING_TO_V'   : Animating along edge toward activeCornerIndex
+            // 'WAITING_INPUT'  : Stopped at vertex with green extension laser; waiting for teacher's angle input
+            // 'TURNING'        : Animating car rotation to targetTurnDeg (could be right or wrong)
+            // 'TURN_WRONG'     : Turned to a wrong angle; showing red warning laser & off-track button
+            // 'DRIVING_OFF'    : Driving off-track along the wrong angle ray
+            // 'OFF_TRACK_STOP' : Stopped off-track in space
+            // 'TURN_CORRECT'   : Turned to exact exterior angle; ready for next corner (or final return)
+            // 'RETURNING_HOME' : Driving from final corner back to start flag
+            // 'LAP_COMPLETE'   : Full 360° lap completed
+            carStage: 'START_LINE',
+            activeCornerIndex: 0,
+            completedCorners: 0,
+
+            // Animation interpolation
+            animProgress: 0,
+            turnStartDeg: 0,
+            turnTargetDeg: 0,
+            enteredAngleDeg: null,
+            isTargetAngleCorrect: false,
+            offTrackDistance: 0,
+
+            // Real-time Car Pose
+            carX: 0,
+            carY: 0,
+            carAngle: 0,
+            currentCornerTurnDeg: 0,
+            cumulativeTurnDeg: 0
+        };
+
+        // ============================================================================
+        // 3. GEOMETRY & CONVEX POLYGON ENGINE
+        // ============================================================================
+        function resizeCanvas() {
+            const rect = canvas.parentElement.getBoundingClientRect();
+            const dpr = window.devicePixelRatio || 1;
+            const oldW = canvas.width / dpr || rect.width;
+            const oldH = canvas.height / dpr || rect.height;
+
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+            if (state.vertices.length === 0) {
+                initRegularPolygon(state.numSides);
+            } else if (oldW > 0 && oldH > 0) {
+                const dx = (rect.width - oldW) / 2;
+                const dy = (rect.height - oldH) / 2;
+                state.vertices.forEach(v => {
+                    v.x += dx;
+                    v.y += dy;
+                });
+                syncStaticCarPose();
+            }
+        }
+
+        window.addEventListener('resize', () => {
+            const oldS = S;
+            if (typeof applyBoardMode === 'function') applyBoardMode();
+            resizeCanvas();
+            // 크기 배율이 바뀌면(전체 화면 전환 등) 다각형을 새 화면에 맞게 다시 배치
+            if (Math.abs(S - oldS) > 0.01) initRegularPolygon(state.numSides);
+        });
+
+        function getCanvasSize() {
+            const dpr = window.devicePixelRatio || 1;
+            return { w: canvas.width / dpr, h: canvas.height / dpr };
+        }
+
+        function initRegularPolygon(n) {
+            const { w, h } = getCanvasSize();
+            // 위쪽 여백과 아래 '외각 모으기' 패널 사이에, 외각 부채꼴이 들어갈 자리를 남기고 배치
+            const cr = canvas.getBoundingClientRect();
+            const panelTop = document.getElementById('gather-panel').getBoundingClientRect().top - cr.top;
+            const wr = Math.min(w, h) * 0.13;
+            const top = wr * 0.9, bottom = Math.min(h, panelTop) - wr * 0.8;
+            const cx = w / 2;
+            const cy = (top + bottom) / 2;
+            const radius = Math.max(100, Math.min(w * 0.28, (bottom - top) / 2));
+
+            state.vertices = [];
+            const startAngle = -Math.PI / 2;
+            if (state.shapeMode === 'STAR') {
+                // 별다각형 {n/k}: 정n각형의 점을 k칸씩 건너뛰며 이음
+                const { n: sn, k } = STAR_TYPES[state.starIndex];
+                for (let i = 0; i < sn; i++) {
+                    const theta = startAngle + ((i * k) % sn) * 2 * Math.PI / sn;
+                    state.vertices.push({ x: cx + radius * Math.cos(theta), y: cy + radius * Math.sin(theta) });
+                }
+            } else {
+                for (let i = 0; i < n; i++) {
+                    const theta = startAngle + (i * 2 * Math.PI) / n;
+                    state.vertices.push({ x: cx + radius * Math.cos(theta), y: cy + radius * Math.sin(theta) });
+                }
+                if (state.shapeMode === 'CONCAVE') dentOneVertex();
+            }
+            state.lapCount = getLapCount(state.vertices);
+            resetCarSimulation();
+        }
+
+        // 꼭짓점 하나를 안쪽으로 밀어 넣어 오목다각형을 만듦
+        function dentOneVertex() {
+            const n = state.vertices.length;
+            const idx = Math.round(n / 2) % n;
+            const prev = state.vertices[(idx - 1 + n) % n], next = state.vertices[(idx + 1) % n], v = state.vertices[idx];
+            const mid = { x: (prev.x + next.x) / 2, y: (prev.y + next.y) / 2 };
+            for (const f of [0.5, 0.35, 0.2]) {
+                const trial = state.vertices.map(p => ({ ...p }));
+                trial[idx] = { x: mid.x + (mid.x - v.x) * f, y: mid.y + (mid.y - v.y) * f };
+                if (isSimpleTurnPolygon(trial)) { state.vertices = trial; return; }
+            }
+        }
+
+        // 한 바퀴 돌며 꺾은 각(부호 있음)의 합 ÷ 360° = 몇 바퀴 돌았는지
+        function getLapCount(verts) {
+            const n = verts.length;
+            let total = 0;
+            for (let i = 0; i < n; i++) {
+                const prev = verts[(i - 1 + n) % n], curr = verts[i], next = verts[(i + 1) % n];
+                total += normalizeAngleSigned(Math.atan2(next.y - curr.y, next.x - curr.x) - Math.atan2(curr.y - prev.y, curr.x - prev.x));
+            }
+            return Math.round(total / (2 * Math.PI));
+        }
+
+        function segmentsCross(p1, p2, p3, p4) {
+            const d = (a, b, c) => (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
+            const d1 = d(p3, p4, p1), d2 = d(p3, p4, p2), d3 = d(p1, p2, p3), d4 = d(p1, p2, p4);
+            return ((d1 > 0 && d2 < 0) || (d1 < 0 && d2 > 0)) && ((d3 > 0 && d4 < 0) || (d3 < 0 && d4 > 0));
+        }
+        function distPointToSegment(p, a, b) {
+            const dx = b.x - a.x, dy = b.y - a.y;
+            const t = Math.max(0, Math.min(1, ((p.x - a.x) * dx + (p.y - a.y) * dy) / (dx * dx + dy * dy || 1)));
+            return Math.hypot(p.x - (a.x + t * dx), p.y - (a.y + t * dy));
+        }
+
+        // 변의 길이와 꺾는 각이 너무 극단적이지 않은지 (오목·별 공통)
+        function hasReasonableTurns(verts, maxTurnDeg) {
+            const n = verts.length;
+            for (let i = 0; i < n; i++) {
+                const prev = verts[(i - 1 + n) % n], curr = verts[i], next = verts[(i + 1) % n];
+                if (Math.hypot(next.x - curr.x, next.y - curr.y) < 60) return false;
+                const t = Math.abs(normalizeAngleSigned(Math.atan2(next.y - curr.y, next.x - curr.x) - Math.atan2(curr.y - prev.y, curr.x - prev.x)));
+                if (t < (15 * Math.PI) / 180 || t > (maxTurnDeg * Math.PI) / 180) return false;
+            }
+            return true;
+        }
+
+        // 오목다각형: 변끼리 엇갈리지 않고, 시계 방향으로 한 바퀴
+        function isSimpleTurnPolygon(verts) {
+            const n = verts.length;
+            if (!hasReasonableTurns(verts, 165) || getLapCount(verts) !== 1) return false;
+            for (let i = 0; i < n; i++) {
+                const a = verts[i], b = verts[(i + 1) % n];
+                for (let j = i + 2; j < n; j++) {
+                    if (i === 0 && j === n - 1) continue;
+                    if (segmentsCross(a, b, verts[j], verts[(j + 1) % n])) return false;
+                }
+                for (let k = 0; k < n; k++) {
+                    if (k === i || k === (i + 1) % n) continue;
+                    if (distPointToSegment(verts[k], a, b) < 30) return false;
+                }
+            }
+            return true;
+        }
+
+        // 지금 모드에서 허용되는 모양인지
+        function isValidShape(verts) {
+            if (state.shapeMode === 'CONCAVE') return isSimpleTurnPolygon(verts);
+            if (state.shapeMode === 'STAR') {
+                // 별은 모양을 바꿔도 처음과 같은 바퀴 수를 유지해야 함
+                if (!hasReasonableTurns(verts, 172) || getLapCount(verts) !== state.lapCount) return false;
+                for (let i = 0; i < verts.length; i++)
+                    for (let j = i + 1; j < verts.length; j++)
+                        if (Math.hypot(verts[i].x - verts[j].x, verts[i].y - verts[j].y) < 50) return false;
+                return true;
+            }
+            return isStrictlyConvexClockwise(verts);
+        }
+
+        function normalizeAngleSigned(angle) {
+            while (angle <= -Math.PI) angle += 2 * Math.PI;
+            while (angle > Math.PI) angle -= 2 * Math.PI;
+            return angle;
+        }
+
+        function isStrictlyConvexClockwise(verts) {
+            const n = verts.length;
+            const minTurnRad = (15 * Math.PI) / 180;
+            const maxTurnRad = (165 * Math.PI) / 180;
+            const minEdgeLen = 70;
+
+            for (let i = 0; i < n; i++) {
+                const prev = verts[(i - 1 + n) % n];
+                const curr = verts[i];
+                const next = verts[(i + 1) % n];
+
+                const len1 = Math.hypot(curr.x - prev.x, curr.y - prev.y);
+                const len2 = Math.hypot(next.x - curr.x, next.y - curr.y);
+                if (len1 < minEdgeLen || len2 < minEdgeLen) return false;
+
+                const ang1 = Math.atan2(curr.y - prev.y, curr.x - prev.x);
+                const ang2 = Math.atan2(next.y - curr.y, next.x - curr.x);
+                const turn = normalizeAngleSigned(ang2 - ang1);
+
+                if (turn < minTurnRad || turn > maxTurnRad) return false;
+            }
+            return true;
+        }
+
+        function computePolygonGeometry() {
+            const n = state.vertices.length;
+            const corners = [];
+
+            for (let i = 0; i < n; i++) {
+                const prev = state.vertices[(i - 1 + n) % n];
+                const curr = state.vertices[i];
+                const next = state.vertices[(i + 1) % n];
+
+                const inAngle = Math.atan2(curr.y - prev.y, curr.x - prev.x);
+                const outAngle = Math.atan2(next.y - curr.y, next.x - curr.x);
+
+                // 꺾는 각(외각): 오른쪽(시계 방향)으로 돌면 +, 왼쪽으로 돌면 −
+                const turnRad = normalizeAngleSigned(outAngle - inAngle);
+
+                const exactDeg = (turnRad * 180) / Math.PI;
+                corners.push({
+                    index: i,
+                    label: VERTEX_LETTERS[i],
+                    vertex: curr,
+                    prev: prev,
+                    next: next,
+                    inAngle: inAngle,
+                    outAngle: outAngle,
+                    turnRad: turnRad,
+                    exactDeg: exactDeg,
+                    displayDeg: Math.round(exactDeg),
+                    interiorDeg: 180 - Math.round(exactDeg),
+                    color: CORNER_COLORS[i % CORNER_COLORS.length]
+                });
+            }
+
+            // 정수로 반올림한 외각의 합이 360° × (바퀴 수)가 되도록, 반올림 오차가 가장 큰 쪽부터 보정
+            const target = getTurnTarget();
+            let sum = corners.reduce((acc, c) => acc + c.displayDeg, 0);
+            if (sum !== target && corners.length > 0) {
+                const dir = Math.sign(target - sum);
+                const order = [...corners].sort((p, q) => dir * ((q.exactDeg - q.displayDeg) - (p.exactDeg - p.displayDeg)));
+                for (let k = 0; k < Math.abs(target - sum); k++) order[k % order.length].displayDeg += dir;
+                corners.forEach(c => c.interiorDeg = 180 - c.displayDeg);
+            }
+
+            const cx = state.vertices.reduce((s, v) => s + v.x, 0) / n;
+            const cy = state.vertices.reduce((s, v) => s + v.y, 0) / n;
+
+            return { corners, centroid: { x: cx, y: cy } };
+        }
+
+        function getStartPointInfo() {
+            const n = state.vertices.length;
+            const vLast = state.vertices[n - 1];
+            const vFirst = state.vertices[0];
+            return {
+                x: vLast.x * 0.65 + vFirst.x * 0.35,
+                y: vLast.y * 0.65 + vFirst.y * 0.35,
+                angle: Math.atan2(vFirst.y - vLast.y, vFirst.x - vLast.x)
+            };
+        }
+
+        function syncStaticCarPose() {
+            const { corners } = computePolygonGeometry();
+            const n = corners.length;
+            const prevSum = corners.slice(0, state.completedCorners).reduce((a, c) => a + c.displayDeg, 0);
+
+            if (state.carStage === 'START_LINE') {
+                const s = getStartPointInfo();
+                state.carX = s.x;
+                state.carY = s.y;
+                state.carAngle = s.angle;
+                state.currentCornerTurnDeg = 0;
+                state.cumulativeTurnDeg = 0;
+            } else if (state.carStage === 'WAITING_INPUT') {
+                const c = corners[state.activeCornerIndex];
+                state.carX = c.vertex.x;
+                state.carY = c.vertex.y;
+                state.carAngle = c.inAngle;
+                state.currentCornerTurnDeg = 0;
+                state.cumulativeTurnDeg = prevSum;
+            } else if (state.carStage === 'TURN_WRONG') {
+                const c = corners[state.activeCornerIndex];
+                state.carX = c.vertex.x;
+                state.carY = c.vertex.y;
+                state.carAngle = c.inAngle + (state.currentCornerTurnDeg * Math.PI) / 180;
+                state.cumulativeTurnDeg = prevSum + state.currentCornerTurnDeg;
+            } else if (state.carStage === 'OFF_TRACK_STOP') {
+                const c = corners[state.activeCornerIndex];
+                const wrongRad = c.inAngle + (state.currentCornerTurnDeg * Math.PI) / 180;
+                state.carX = c.vertex.x + state.offTrackDistance * Math.cos(wrongRad);
+                state.carY = c.vertex.y + state.offTrackDistance * Math.sin(wrongRad);
+                state.carAngle = wrongRad;
+            } else if (state.carStage === 'TURN_CORRECT') {
+                const c = corners[state.activeCornerIndex];
+                state.carX = c.vertex.x;
+                state.carY = c.vertex.y;
+                state.carAngle = c.outAngle;
+                state.currentCornerTurnDeg = c.displayDeg;
+                state.cumulativeTurnDeg = prevSum;
+            } else if (state.carStage === 'LAP_COMPLETE') {
+                const s = getStartPointInfo();
+                state.carX = s.x;
+                state.carY = s.y;
+                state.carAngle = s.angle;
+                state.currentCornerTurnDeg = corners[n - 1].displayDeg;
+                state.cumulativeTurnDeg = getTurnTarget();
+            }
+            updateDashboardUI();
+        }
+
+        // ============================================================================
+        // 4. STEERING MODE & MANUAL / WRONG ANSWER CONTROLLERS
+        // ============================================================================
+        function setPolygonSides(n) {
+            const minN = state.shapeMode === 'CONCAVE' ? 4 : MIN_SIDES;
+            n = Math.max(minN, Math.min(MAX_SIDES, n));
+            state.numSides = n;
+            updateSidesLabel();
+            initRegularPolygon(n);
+        }
+
+        function updateSidesLabel() {
+            const label = document.getElementById('sides-label'), sub = document.getElementById('sides-sub');
+            const minus = document.getElementById('btn-sides-minus'), plus = document.getElementById('btn-sides-plus');
+            if (state.shapeMode === 'STAR') {
+                const t = STAR_TYPES[state.starIndex];
+                label.textContent = t.name;
+                sub.textContent = `점 ${t.n}개 · ${t.k}칸씩`;
+                minus.disabled = state.starIndex <= 0;
+                plus.disabled = state.starIndex >= STAR_TYPES.length - 1;
+            } else {
+                const n = state.numSides;
+                label.textContent = (state.shapeMode === 'CONCAVE' ? '오목 ' : '') + polyName(n);
+                sub.textContent = `n = ${n}`;
+                minus.disabled = n <= (state.shapeMode === 'CONCAVE' ? 4 : MIN_SIDES);
+                plus.disabled = n >= MAX_SIDES;
+            }
+        }
+
+        function changeSides(delta) {
+            if (state.shapeMode === 'STAR') {
+                state.starIndex = Math.max(0, Math.min(STAR_TYPES.length - 1, state.starIndex + delta));
+                state.numSides = STAR_TYPES[state.starIndex].n;
+                updateSidesLabel();
+                initRegularPolygon(state.numSides);
+            } else {
+                setPolygonSides(state.numSides + delta);
+            }
+        }
+
+        // ---------------------------------------------------------------------------
+        // 응용 메뉴: 볼록 · 오목 · 별다각형
+        // ---------------------------------------------------------------------------
+        const SHAPE_OPTIONS = [
+            { key: 'CONVEX', title: '기본 (볼록다각형)', desc: '모든 꼭짓점에서 오른쪽으로 돌아요 → 외각의 합 360°', color: '#0F172A' },
+            { key: 'CONCAVE', title: '오목다각형', desc: '들어간 꼭짓점에서는 왼쪽으로 돌아요 → 그 외각은 −', color: '#EA580C' },
+            { key: 'STAR', title: '별다각형', desc: '한 번 그리는 동안 두 바퀴 이상 돌아요 → 360° × 바퀴 수', color: '#7C3AED' }
+        ];
+
+        function renderShapeMenu() {
+            document.getElementById('shape-menu-items').innerHTML = SHAPE_OPTIONS.map(o => {
+                const on = state.shapeMode === o.key;
+                return `<button onclick="setShapeMode('${o.key}')" class="w-full flex items-center gap-3 p-3 rounded-xl text-left border-2 mb-1 ${on ? 'bg-slate-50' : 'border-transparent hover:bg-slate-50'}" style="${on ? `border-color:${o.color}` : ''}">
+                    <span class="w-3 h-10 rounded-full shrink-0" style="background:${o.color}; opacity:${on ? 1 : 0.3}"></span>
+                    <span class="flex-1 min-w-0">
+                        <span class="block text-base font-extrabold text-slate-900">${o.title}</span>
+                        <span class="block text-xs font-semibold text-slate-500">${o.desc}</span>
+                    </span>
+                </button>`;
+            }).join('');
+            const btn = document.getElementById('btn-shape-menu');
+            const cur = SHAPE_OPTIONS.find(o => o.key === state.shapeMode);
+            if (state.shapeMode === 'CONVEX') {
+                btn.className = "px-3 py-2 rounded-xl text-sm font-extrabold border-2 border-slate-300 bg-white text-slate-700 hover:bg-slate-50 transition-all flex items-center gap-1.5";
+                btn.style.cssText = '';
+                document.getElementById('text-shape-btn').textContent = '응용';
+            } else {
+                btn.className = "px-3 py-2 rounded-xl text-sm font-extrabold border-2 text-white transition-all flex items-center gap-1.5";
+                btn.style.cssText = `background:${cur.color}; border-color:${cur.color}`;
+                document.getElementById('text-shape-btn').textContent = state.shapeMode === 'STAR' ? '응용: 별' : '응용: 오목';
+            }
+            document.getElementById('left-turn-hint').classList.toggle('hidden', state.shapeMode !== 'CONCAVE');
+            document.getElementById('text-reset-shape').textContent = state.shapeMode === 'CONVEX' ? '정다각형으로' : '처음 모양으로';
+        }
+
+        function setShapeMode(mode) {
+            state.shapeMode = mode;
+            document.getElementById('shape-menu').classList.add('hidden');
+            if (mode === 'STAR') state.numSides = STAR_TYPES[state.starIndex].n;
+            if (mode === 'CONCAVE' && state.numSides < 5) state.numSides = 5;
+            renderShapeMenu();
+            updateSidesLabel();
+            initRegularPolygon(state.numSides);
+        }
+
+        function toggleShapeMenu(evt) {
+            evt.stopPropagation();
+            document.getElementById('view-menu').classList.add('hidden');
+            document.getElementById('shape-menu').classList.toggle('hidden');
+        }
+        document.addEventListener('click', () => document.getElementById('shape-menu').classList.add('hidden'));
+
+        // ---------------------------------------------------------------------------
+        // 칠판 모드 · 전체 화면
+        // ---------------------------------------------------------------------------
+        function applyBoardMode() {
+            // 칠판 모드는 넓은 화면(가로 1024px 이상)에서만 적용
+            const on = state.boardMode && window.innerWidth >= 1024;
+            S = on ? Math.max(1, Math.min(1.7, window.innerWidth / 1370)) : 1;
+            document.documentElement.classList.toggle('board', on);
+            document.getElementById('btn-board').className = state.boardMode
+                ? "hidden lg:flex px-3 py-2 rounded-xl text-sm font-extrabold border-2 border-slate-900 bg-slate-900 text-white transition-all items-center gap-1.5"
+                : "hidden lg:flex px-3 py-2 rounded-xl text-sm font-bold border-2 border-slate-200 bg-white text-slate-700 hover:bg-slate-50 transition-all items-center gap-1.5";
+            document.getElementById('text-board-btn').textContent = state.boardMode ? '칠판 모드 켜짐' : '칠판 모드';
+        }
+
+        function toggleBoardMode() {
+            state.boardMode = !state.boardMode;
+            try { localStorage.setItem('polygonLab.boardMode', state.boardMode ? '1' : '0'); } catch (e) {}
+            applyBoardMode();
+            requestAnimationFrame(() => { resizeCanvas(); initRegularPolygon(state.numSides); });
+        }
+
+        function toggleFullscreen() {
+            try {
+                const p = !document.fullscreenElement ? document.documentElement.requestFullscreen() : document.exitFullscreen();
+                if (p && p.catch) p.catch(() => {});
+            } catch (e) {}
+        }
+
+        // ---------------------------------------------------------------------------
+        // 각도 보기 메뉴
+        // ---------------------------------------------------------------------------
+        const VIEW_OPTIONS = [
+            { key: 'showExteriorNumbers', title: '외각의 크기', desc: '색칠한 외각 부채꼴 안의 숫자', swatch: '#F43F5E' },
+            { key: 'showInteriorAngles', title: '내각과 그 크기', desc: '다각형 안쪽의 회색 부채꼴과 숫자', swatch: '#64748B' },
+            { key: 'showAllAnglesAlways', title: '모든 외각 미리 보기', desc: '자동차가 돌기 전에 외각을 모두 표시', swatch: '#0EA5E9' }
+        ];
+
+        function renderViewMenu() {
+            document.getElementById('view-menu-items').innerHTML = VIEW_OPTIONS.map(o => {
+                const on = state[o.key];
+                return `<button onclick="toggleView('${o.key}')" class="w-full flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 text-left">
+                    <span class="w-3 h-8 rounded-full shrink-0" style="background:${o.swatch}; opacity:${on ? 1 : 0.25}"></span>
+                    <span class="flex-1 min-w-0">
+                        <span class="block text-base font-extrabold ${on ? 'text-slate-900' : 'text-slate-400'}">${o.title}</span>
+                        <span class="block text-xs font-semibold text-slate-500 truncate">${o.desc}</span>
+                    </span>
+                    <span class="relative w-11 h-6 rounded-full shrink-0 transition-all ${on ? 'bg-indigo-600' : 'bg-slate-300'}">
+                        <span class="absolute top-0.5 w-5 h-5 rounded-full bg-white shadow transition-all" style="left:${on ? '1.375rem' : '0.125rem'}"></span>
+                    </span>
+                </button>`;
+            }).join('');
+            const count = VIEW_OPTIONS.filter(o => state[o.key]).length;
+            document.getElementById('view-count').textContent = count;
+            document.getElementById('btn-view-menu').className = count > 0
+                ? "px-3 py-2 rounded-xl text-sm font-extrabold border-2 border-indigo-600 bg-indigo-50 text-indigo-700 transition-all flex items-center gap-1.5"
+                : "px-3 py-2 rounded-xl text-sm font-extrabold border-2 border-slate-300 bg-white text-slate-500 transition-all flex items-center gap-1.5";
+        }
+
+        function toggleView(key) {
+            state[key] = !state[key];
+            renderViewMenu();
+            updateDashboardUI();
+        }
+
+        function setAllViews(on) {
+            VIEW_OPTIONS.forEach(o => state[o.key] = on);
+            renderViewMenu();
+            updateDashboardUI();
+        }
+
+        function toggleViewMenu(evt) {
+            evt.stopPropagation();
+            document.getElementById('view-menu').classList.toggle('hidden');
+        }
+        document.addEventListener('click', () => document.getElementById('view-menu').classList.add('hidden'));
+
+        function resetToRegularPolygon() {
+            initRegularPolygon(state.numSides);
+        }
+
+        function setSteeringMode(mode) {
+            state.steeringMode = mode;
+            const manualBtn = document.getElementById('mode-manual-btn');
+            const autoBtn = document.getElementById('mode-auto-btn');
+            const manualPanel = document.getElementById('manual-steering-panel');
+
+            const onCls = "py-2 rounded-lg text-sm font-extrabold transition-all bg-white text-slate-900 shadow-sm flex items-center justify-center gap-1.5";
+            const offCls = "py-2 rounded-lg text-sm font-bold transition-all text-slate-600 hover:text-slate-900 flex items-center justify-center gap-1.5";
+            if (mode === 'MANUAL') {
+                manualBtn.className = onCls;
+                autoBtn.className = offCls;
+                manualPanel.classList.remove('hidden');
+            } else {
+                autoBtn.className = onCls;
+                manualBtn.className = offCls;
+                manualPanel.classList.add('hidden');
+
+                // If currently waiting at a corner, automatically complete the turn
+                if (state.carStage === 'WAITING_INPUT' || state.carStage === 'TURN_WRONG' || state.carStage === 'OFF_TRACK_STOP') {
+                    snapToCorrectAngle();
+                }
+            }
+            updateDashboardUI();
+        }
+
+        function resetCarSimulation() {
+            state.carStage = 'START_LINE';
+            state.activeCornerIndex = 0;
+            state.completedCorners = 0;
+            state.animProgress = 0;
+            state.currentCornerTurnDeg = 0;
+            state.cumulativeTurnDeg = 0;
+            state.enteredAngleDeg = null;
+            state.gatherRatio = 0;
+            state.gatherAnimTarget = null;
+
+            document.getElementById('gatherSlider').value = 0;
+            document.getElementById('gatherValueLabel').textContent = '0%';
+            document.getElementById('btn-gather-quick').textContent = '외각 모으기';
+            document.getElementById('angleInput').value = '';
+            document.getElementById('turn-feedback-box').classList.add('hidden');
+
+            syncStaticCarPose();
+        }
+
+        // Primary Drive Action Button Handler
+        function handlePrimaryDriveAction() {
+            const { corners } = computePolygonGeometry();
+            const n = corners.length;
+
+            // Un-gather if gathered
+            if (state.gatherRatio > 0) {
+                state.gatherRatio = 0;
+                state.gatherAnimTarget = null;
+                document.getElementById('gatherSlider').value = 0;
+                document.getElementById('gatherValueLabel').textContent = '0%';
+            }
+
+            if (state.carStage === 'LAP_COMPLETE') {
+                resetCarSimulation();
+                return;
+            }
+
+            // If at start line or finished turning previous corner -> Drive to next corner
+            if (state.carStage === 'START_LINE' || state.carStage === 'TURN_CORRECT') {
+                if (state.completedCorners >= n) {
+                    // Drive back to start flag
+                    state.carStage = 'RETURNING_HOME';
+                    state.animProgress = 0;
+                } else {
+                    state.activeCornerIndex = state.completedCorners;
+                    state.carStage = 'DRIVING_TO_V';
+                    state.animProgress = 0;
+                    state.currentCornerTurnDeg = 0;
+                    document.getElementById('turn-feedback-box').classList.add('hidden');
+                }
+                updateDashboardUI();
+                return;
+            }
+
+            // If waiting at corner and teacher clicks primary button, focus input or auto-turn
+            if (state.carStage === 'WAITING_INPUT') {
+                if (state.steeringMode === 'AUTO') {
+                    snapToCorrectAngle();
+                } else {
+                    const inputEl = document.getElementById('angleInput');
+                    if (inputEl.value.trim() !== '') {
+                        submitManualAngle();
+                    } else {
+                        inputEl.focus();
+                    }
+                }
+            }
+        }
+
+        function adjustAngleInput(delta) {
+            if (state.carStage !== 'WAITING_INPUT' && state.carStage !== 'TURN_WRONG' && state.carStage !== 'OFF_TRACK_STOP') return;
+            const inputEl = document.getElementById('angleInput');
+            const currentVal = parseInt(inputEl.value, 10) || 0;
+            const nextVal = Math.max(-360, Math.min(360, currentVal + delta));
+            inputEl.value = nextVal;
+        }
+
+        // Quick preset to input the interior angle (common student misconception!)
+        function setInputToInteriorWrong() {
+            if (state.carStage !== 'WAITING_INPUT' && state.carStage !== 'TURN_WRONG' && state.carStage !== 'OFF_TRACK_STOP') return;
+            const { corners } = computePolygonGeometry();
+            const c = corners[state.activeCornerIndex];
+            document.getElementById('angleInput').value = c.interiorDeg;
+            submitManualAngle();
+        }
+
+        function submitManualAngle() {
+            if (state.carStage !== 'WAITING_INPUT' && state.carStage !== 'TURN_WRONG' && state.carStage !== 'OFF_TRACK_STOP') {
+                return;
+            }
+
+            const inputEl = document.getElementById('angleInput');
+            let val = parseFloat(inputEl.value);
+            if (isNaN(val)) return;
+            val = Math.max(-360, Math.min(360, val));
+
+            const { corners } = computePolygonGeometry();
+            const c = corners[state.activeCornerIndex];
+
+            // If car was off-track, snap back to vertex first before turning
+            state.carX = c.vertex.x;
+            state.carY = c.vertex.y;
+            state.offTrackDistance = 0;
+
+            state.turnStartDeg = state.currentCornerTurnDeg;
+            state.turnTargetDeg = val;
+            state.enteredAngleDeg = Math.round(val);
+            state.isTargetAngleCorrect = Math.abs(val - c.displayDeg) <= 1;
+            state.carStage = 'TURNING';
+            state.animProgress = 0;
+            updateDashboardUI();
+        }
+
+        function snapToCorrectAngle() {
+            const { corners } = computePolygonGeometry();
+            const c = corners[state.activeCornerIndex];
+            document.getElementById('angleInput').value = c.displayDeg;
+            state.carX = c.vertex.x;
+            state.carY = c.vertex.y;
+            state.offTrackDistance = 0;
+
+            state.turnStartDeg = state.currentCornerTurnDeg;
+            state.turnTargetDeg = c.displayDeg;
+            state.enteredAngleDeg = c.displayDeg;
+            state.isTargetAngleCorrect = true;
+            state.carStage = 'TURNING';
+            state.animProgress = 0;
+            updateDashboardUI();
+        }
+
+        function triggerOffTrackDrive() {
+            const { corners } = computePolygonGeometry();
+            const c = corners[state.activeCornerIndex];
+
+            if (state.carStage === 'TURN_WRONG') {
+                state.carStage = 'DRIVING_OFF';
+                state.animProgress = 0;
+            } else if (state.carStage === 'OFF_TRACK_STOP') {
+                // Return car back to the vertex
+                state.carX = c.vertex.x;
+                state.carY = c.vertex.y;
+                state.offTrackDistance = 0;
+                state.carStage = 'TURN_WRONG';
+            }
+            updateDashboardUI();
+        }
+
+        function onGatherSliderChange(val) {
+            state.gatherAnimTarget = null;
+            state.gatherRatio = parseFloat(val) / 100;
+            document.getElementById('gatherValueLabel').textContent = `${Math.round(val)}%`;
+            document.getElementById('btn-gather-quick').textContent = state.gatherRatio > 0.9 ? '원래대로' : '외각 모으기';
+            updateDashboardUI();
+        }
+
+        function toggleGatherPeak() {
+            state.gatherAnimTarget = state.gatherRatio < 0.5 ? 1.0 : 0.0;
+        }
+
+        // ============================================================================
+        // 5. DASHBOARD UI UPDATER
+        // ============================================================================
+        function updateDashboardUI() {
+            const { corners } = computePolygonGeometry();
+            const n = corners.length;
+            const activeCorner = corners[Math.min(state.activeCornerIndex, n - 1)];
+
+            // 1. Primary Drive Button State
+            const driveBtn = document.getElementById('btn-drive-corner');
+            const driveText = document.getElementById('text-drive-corner');
+
+            if (state.carStage === 'START_LINE') {
+                driveBtn.disabled = false;
+                driveBtn.className = "flex-1 py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-base transition-all flex items-center justify-center gap-2";
+                driveText.textContent = `코너 A로 이동`;
+            } else if (state.carStage === 'WAITING_INPUT' || state.carStage === 'TURN_WRONG' || state.carStage === 'OFF_TRACK_STOP') {
+                driveBtn.disabled = false;
+                driveBtn.className = "flex-1 py-3 px-4 rounded-xl bg-slate-200 text-slate-600 font-extrabold text-base transition-all flex items-center justify-center gap-2";
+                driveText.textContent = `코너 ${activeCorner.label} 조향 대기 중`;
+            } else if (state.carStage === 'TURN_CORRECT') {
+                driveBtn.disabled = false;
+                driveBtn.className = "flex-1 py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-base transition-all flex items-center justify-center gap-2";
+                if (state.completedCorners < n) {
+                    const nextC = corners[state.completedCorners];
+                    driveText.textContent = `다음 코너 ${nextC.label}로 이동`;
+                } else {
+                    driveText.textContent = `출발선으로 복귀 (완주)`;
+                }
+            } else if (state.carStage === 'LAP_COMPLETE') {
+                driveBtn.disabled = false;
+                driveBtn.className = "flex-1 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-base transition-all flex items-center justify-center gap-2";
+                driveText.textContent = `${getTurnTarget()}° 완주 완료 (다시 시작)`;
+            }
+
+            // 2. Manual Steering Box State
+            const manualPanel = document.getElementById('manual-steering-panel');
+            const vertexDot = document.getElementById('active-vertex-dot');
+            const panelTitle = document.getElementById('manual-panel-title');
+            const intBadge = document.getElementById('interior-hint-badge');
+            const presetIntBtn = document.getElementById('btn-preset-interior');
+            const feedbackBox = document.getElementById('turn-feedback-box');
+
+            vertexDot.style.backgroundColor = activeCorner.color.hex;
+            intBadge.textContent = `내각 ${activeCorner.interiorDeg}°`;
+            intBadge.className = "text-base font-extrabold font-mono-num px-2.5 py-0.5 rounded-lg bg-blue-100 text-blue-800 border border-blue-200";
+            presetIntBtn.textContent = `내각(${activeCorner.interiorDeg}°)`;
+
+            const isAtCornerForInput = (state.carStage === 'WAITING_INPUT' || state.carStage === 'TURN_WRONG' || state.carStage === 'OFF_TRACK_STOP' || state.carStage === 'TURNING');
+
+            if (isAtCornerForInput) {
+                manualPanel.className = "p-3.5 rounded-2xl border-2 border-blue-500 bg-blue-50/40 space-y-2.5 transition-all";
+                panelTitle.textContent = `코너 ${activeCorner.label} 회전각 입력`;
+            } else {
+                manualPanel.className = "p-3.5 rounded-2xl border-2 border-slate-200 bg-slate-50/60 space-y-2.5 opacity-60 transition-all";
+                panelTitle.textContent = `코너 이동 후 입력 가능`;
+            }
+
+            // 3. Wrong / Correct Feedback Sub-panel
+            if (state.carStage === 'TURN_WRONG' || state.carStage === 'DRIVING_OFF' || state.carStage === 'OFF_TRACK_STOP') {
+                feedbackBox.classList.remove('hidden');
+                const diff = state.enteredAngleDeg - activeCorner.displayDeg;
+                // 돌아야 할 방향과 반대로 돈 경우를 따로 알려 줌
+                const wrongDir = Math.sign(state.enteredAngleDeg) !== Math.sign(activeCorner.displayDeg) && state.enteredAngleDeg !== 0;
+                const diffText = wrongDir
+                    ? (activeCorner.displayDeg < 0 ? '왼쪽으로 돌아야 해요' : '오른쪽으로 돌아야 해요')
+                    : (Math.abs(state.enteredAngleDeg) < Math.abs(activeCorner.displayDeg) ? `${Math.abs(diff)}° 덜 돎` : `${Math.abs(diff)}° 더 돎`);
+
+                document.getElementById('feedback-status-text').className = "text-base font-extrabold text-rose-600";
+                document.getElementById('feedback-status-text').textContent = `길에서 벗어나요! (${state.enteredAngleDeg}°)`;
+
+                const diffBadge = document.getElementById('feedback-diff-badge');
+                diffBadge.className = "text-sm font-mono-num font-bold px-2 py-0.5 rounded-md bg-rose-100 text-rose-700";
+                diffBadge.textContent = diffText;
+
+                document.getElementById('wrong-action-buttons').classList.remove('hidden');
+                document.getElementById('text-snap-correct').textContent = `정답(${activeCorner.displayDeg}°)으로 바로잡기`;
+
+                const offBtnText = document.getElementById('text-offtrack');
+                if (state.carStage === 'OFF_TRACK_STOP') {
+                    offBtnText.textContent = `원래 코너(${activeCorner.label}) 복귀`;
+                } else {
+                    offBtnText.textContent = `이 방향 그대로 직진`;
+                }
+            } else if (state.carStage === 'TURN_CORRECT') {
+                feedbackBox.classList.remove('hidden');
+                document.getElementById('feedback-status-text').className = "text-base font-extrabold text-emerald-700";
+                document.getElementById('feedback-status-text').textContent = `외각만큼 정확히 돌았어요! (${activeCorner.displayDeg}°)`;
+
+                const diffBadge = document.getElementById('feedback-diff-badge');
+                diffBadge.className = "text-sm font-mono-num font-bold px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800";
+                diffBadge.textContent = `180° − ${activeCorner.interiorDeg}°`;
+
+                document.getElementById('wrong-action-buttons').classList.add('hidden');
+            } else {
+                feedbackBox.classList.add('hidden');
+            }
+
+            // 4. Steering Wheel & Gauges
+            document.getElementById('steering-wheel-svg').style.transform = `rotate(${state.cumulativeTurnDeg}deg)`;
+            document.getElementById('current-turn-angle').textContent = `${Math.round(state.currentCornerTurnDeg)}°`;
+
+            const target = getTurnTarget();
+            const displayTotal = (state.showAllAnglesAlways || state.gatherRatio > 0.05 || state.completedCorners === n)
+                ? target
+                : Math.round(state.cumulativeTurnDeg);
+            document.getElementById('gauge-denominator').textContent = `/ ${target}°`;
+
+            document.getElementById('cumulative-turn-angle').textContent = `${displayTotal}°`;
+            document.getElementById('gauge-center-num').textContent = `${displayTotal}°`;
+            document.getElementById('corner-progress-badge').textContent = `${state.completedCorners} / ${n} 완료`;
+
+            renderPizzaGaugeSVG(corners);
+            renderEquationPills(corners);
+        }
+
+        // 누적 회전 게이지: 바퀴마다 안쪽 띠로, 왼쪽으로 돈 각(−)은 지워지는 모양으로
+        function renderPizzaGaugeSVG(corners) {
+            const group = document.getElementById('pizza-wedges-group');
+            group.innerHTML = '';
+            const showFull = state.showAllAnglesAlways || state.gatherRatio > 0.05;
+            const laps = Math.max(1, state.lapCount);
+            const bw = 20 / laps; // 바퀴 하나의 띠 두께 (바깥 반지름 42 ~ 안쪽 22)
+
+            const pieces = [];
+            let cum = 0;
+            corners.forEach((c, i) => {
+                let deg = 0;
+                if (showFull || i < state.completedCorners) deg = c.exactDeg;
+                else if (i === state.activeCornerIndex && state.carStage === 'TURNING' && state.isTargetAngleCorrect)
+                    deg = c.exactDeg * easeInOutCubic(state.animProgress);
+                if (Math.abs(deg) > 0.2) pieces.push({ from: Math.min(cum, cum + deg), to: Math.max(cum, cum + deg), neg: deg < 0, color: c.color.hex });
+                cum += c.exactDeg;
+            });
+
+            // 양수(오른쪽) 먼저, 음수(왼쪽, 되돌아간 부분)를 위에
+            [...pieces.filter(p => !p.neg), ...pieces.filter(p => p.neg)].forEach(p => {
+                let a = Math.max(0, p.from);
+                while (a < p.to - 0.01) {
+                    const lap = Math.floor(a / 360 + 1e-9);
+                    const end = Math.min(p.to, (lap + 1) * 360);
+                    const outer = 42 - Math.min(lap, laps - 1) * bw, inner = outer - bw;
+                    group.appendChild(createSvgAnnulusSlice(50, 50, outer, inner, a - lap * 360, end - lap * 360, p.neg ? 'rgba(255,255,255,0.85)' : p.color, p.neg ? p.color : '#FFFFFF', p.neg));
+                    a = end;
+                }
+            });
+        }
+
+        function createSvgAnnulusSlice(cx, cy, r1, r0, startDeg, endDeg, fill, stroke, dashed) {
+            const rad = d => (d * Math.PI) / 180;
+            const pt = (r, d) => `${cx + r * Math.cos(rad(d))} ${cy + r * Math.sin(rad(d))}`;
+            const large = endDeg - startDeg > 180 ? 1 : 0;
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', `M ${pt(r1, startDeg)} A ${r1} ${r1} 0 ${large} 1 ${pt(r1, endDeg)} L ${pt(r0, endDeg)} A ${r0} ${r0} 0 ${large} 0 ${pt(r0, startDeg)} Z`);
+            path.setAttribute('fill', fill);
+            path.setAttribute('stroke', stroke);
+            path.setAttribute('stroke-width', dashed ? '1.8' : '1.2');
+            if (dashed) path.setAttribute('stroke-dasharray', '3 2');
+            return path;
+        }
+
+        function renderEquationPills(corners) {
+            const container = document.getElementById('angle-pills-container');
+            const showFull = state.showAllAnglesAlways || state.gatherRatio > 0.05;
+            let html = '';
+            let visibleSum = 0;
+
+            corners.forEach((c, idx) => {
+                const isRevealed = showFull || idx < state.completedCorners;
+                if (isRevealed) {
+                    visibleSum += c.displayDeg;
+                    html += c.displayDeg < 0
+                        ? `<span class="px-2 py-1 rounded-lg font-mono-num text-sm font-extrabold flex items-center gap-1 border-2 border-dashed bg-white" style="border-color:${c.color.hex}; color:${c.color.badgeText};">
+                            <span>${c.label}</span><span>(${c.displayDeg}°)</span></span>`
+                        : `<span class="px-2 py-1 rounded-lg font-mono-num text-sm font-extrabold text-white flex items-center gap-1" style="background-color: ${c.color.hex};">
+                            <span>${c.label}</span><span>${c.displayDeg}°</span></span>`;
+                } else {
+                    html += `<span class="px-2 py-1 rounded-lg font-mono-num text-sm font-bold text-slate-400 border-2 border-dashed border-slate-600">${c.label} ?°</span>`;
+                }
+                if (idx < corners.length - 1) html += `<span class="text-slate-400 font-bold text-sm">+</span>`;
+            });
+
+            const isAllDone = showFull || state.completedCorners === corners.length;
+            const target = getTurnTarget();
+            const totalText = isAllDone ? (state.lapCount > 1 ? `360° × ${state.lapCount} = ${target}°` : '360°') : `${visibleSum}°`;
+            html += `<span class="text-slate-300 font-extrabold text-base">=</span>
+                <span class="px-2.5 py-1 rounded-lg font-mono-num text-xl font-extrabold ${isAllDone ? 'bg-amber-400 text-slate-900' : 'bg-slate-700 text-white'}">${totalText}</span>`;
+            container.innerHTML = html;
+
+            // 내각의 합 = 180° × n − 외각의 합 (볼록·오목·별 모두 성립)
+            const n = corners.length;
+            document.getElementById('interior-sum-line').innerHTML = isAllDone
+                ? `${state.shapeMode === 'STAR' ? '별 꼭짓점 각의 합' : '내각의 합'} = 180° × ${n} − ${target}° = <span class="text-amber-300 text-base">${180 * n - target}°</span>`
+                : `${state.shapeMode === 'STAR' ? '별 꼭짓점 각의 합' : '내각의 합'} = 180° × ${n} − (외각의 합)`;
+        }
+
+        // ============================================================================
+        // 6. VERTEX DRAGGING INTERACTION
+        // ============================================================================
+        function getPointerPos(evt) {
+            const rect = canvas.getBoundingClientRect();
+            const clientX = evt.touches ? evt.touches[0].clientX : evt.clientX;
+            const clientY = evt.touches ? evt.touches[0].clientY : evt.clientY;
+            return { x: clientX - rect.left, y: clientY - rect.top };
+        }
+
+        canvas.addEventListener('mousedown', onPointerDown);
+        canvas.addEventListener('mousemove', onPointerMove);
+        window.addEventListener('mouseup', onPointerUp);
+
+        canvas.addEventListener('touchstart', (e) => onPointerDown(e), { passive: false });
+        canvas.addEventListener('touchmove', (e) => onPointerMove(e), { passive: false });
+        window.addEventListener('touchend', onPointerUp);
+
+        function onPointerDown(evt) {
+            const pos = getPointerPos(evt);
+            for (let i = 0; i < state.vertices.length; i++) {
+                const v = state.vertices[i];
+                if (Math.hypot(pos.x - v.x, pos.y - v.y) <= 26 * S) {
+                    state.draggingVertexIndex = i;
+                    if (evt.cancelable) evt.preventDefault();
+                    return;
+                }
+            }
+        }
+
+        function onPointerMove(evt) {
+            const pos = getPointerPos(evt);
+            const { w, h } = getCanvasSize();
+
+            if (state.draggingVertexIndex !== -1) {
+                if (evt.cancelable) evt.preventDefault();
+                const idx = state.draggingVertexIndex;
+                const oldVertex = { ...state.vertices[idx] };
+
+                const pad = 40 * S;
+                state.vertices[idx] = {
+                    x: Math.max(pad, Math.min(w - pad, pos.x)),
+                    y: Math.max(pad, Math.min(h - pad, pos.y))
+                };
+
+                if (!isValidShape(state.vertices)) {
+                    state.vertices[idx] = oldVertex;
+                } else {
+                    syncStaticCarPose();
+                }
+                return;
+            }
+
+            let foundHover = -1;
+            for (let i = 0; i < state.vertices.length; i++) {
+                if (Math.hypot(pos.x - state.vertices[i].x, pos.y - state.vertices[i].y) <= 26 * S) {
+                    foundHover = i;
+                    break;
+                }
+            }
+            state.hoveredVertexIndex = foundHover;
+            canvas.style.cursor = foundHover !== -1 ? 'pointer' : 'grab';
+        }
+
+        function onPointerUp() {
+            state.draggingVertexIndex = -1;
+        }
+
+        // ============================================================================
+        // 7. ANIMATION ENGINE
+        // ============================================================================
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        let lastTime = performance.now();
+
+        function animateLoop(now) {
+            const dt = Math.min((now - lastTime) / 1000, 0.1);
+            lastTime = now;
+
+            updateSimState(dt);
+            renderCanvasScene();
+
+            requestAnimationFrame(animateLoop);
+        }
+
+        function updateSimState(dt) {
+            // 1. Gather slider animation
+            if (state.gatherAnimTarget !== null) {
+                const speed = 1.9 * dt;
+                if (Math.abs(state.gatherRatio - state.gatherAnimTarget) <= speed) {
+                    state.gatherRatio = state.gatherAnimTarget;
+                    state.gatherAnimTarget = null;
+                } else {
+                    state.gatherRatio += Math.sign(state.gatherAnimTarget - state.gatherRatio) * speed;
+                }
+                const pct = Math.round(state.gatherRatio * 100);
+                document.getElementById('gatherSlider').value = pct;
+                document.getElementById('gatherValueLabel').textContent = `${pct}%`;
+                document.getElementById('btn-gather-quick').textContent = state.gatherRatio > 0.9 ? '원래대로' : '외각 모으기';
+                updateDashboardUI();
+            }
+
+            const { corners } = computePolygonGeometry();
+            const n = corners.length;
+            const c = corners[Math.min(state.activeCornerIndex, n - 1)];
+            const prevSum = corners.slice(0, state.completedCorners).reduce((a, item) => a + item.displayDeg, 0);
+
+            // 2. Stage Transitions
+            if (state.carStage === 'DRIVING_TO_V') {
+                state.animProgress += dt * 1.8;
+                const t = easeInOutCubic(Math.min(state.animProgress, 1));
+
+                let startX, startY;
+                if (state.activeCornerIndex === 0) {
+                    const s = getStartPointInfo();
+                    startX = s.x;
+                    startY = s.y;
+                } else {
+                    const prevV = corners[state.activeCornerIndex - 1].vertex;
+                    startX = prevV.x;
+                    startY = prevV.y;
+                }
+
+                state.carX = startX + (c.vertex.x - startX) * t;
+                state.carY = startY + (c.vertex.y - startY) * t;
+                state.carAngle = c.inAngle;
+
+                if (state.animProgress >= 1) {
+                    if (state.steeringMode === 'AUTO') {
+                        state.turnStartDeg = 0;
+                        state.turnTargetDeg = c.displayDeg;
+                        state.enteredAngleDeg = c.displayDeg;
+                        state.isTargetAngleCorrect = true;
+                        state.carStage = 'TURNING';
+                        state.animProgress = 0;
+                    } else {
+                        state.carStage = 'WAITING_INPUT';
+                        state.animProgress = 0;
+                        const inputEl = document.getElementById('angleInput');
+                        inputEl.value = '';
+                        inputEl.focus();
+                    }
+                    updateDashboardUI();
+                }
+            } else if (state.carStage === 'TURNING') {
+                state.animProgress += dt * 1.5;
+                const t = easeInOutCubic(Math.min(state.animProgress, 1));
+
+                const currDeg = state.turnStartDeg + (state.turnTargetDeg - state.turnStartDeg) * t;
+                state.currentCornerTurnDeg = currDeg;
+                state.cumulativeTurnDeg = prevSum + currDeg;
+                state.carAngle = c.inAngle + (currDeg * Math.PI) / 180;
+
+                updateDashboardUI();
+
+                if (state.animProgress >= 1) {
+                    state.currentCornerTurnDeg = state.turnTargetDeg;
+                    state.cumulativeTurnDeg = prevSum + state.turnTargetDeg;
+
+                    if (state.isTargetAngleCorrect) {
+                        state.carAngle = c.outAngle;
+                        state.completedCorners = state.activeCornerIndex + 1;
+                        state.carStage = 'TURN_CORRECT';
+                    } else {
+                        state.carStage = 'TURN_WRONG';
+                    }
+                    updateDashboardUI();
+                }
+            } else if (state.carStage === 'DRIVING_OFF') {
+                state.animProgress += dt * 1.4;
+                const t = easeInOutCubic(Math.min(state.animProgress, 1));
+                state.offTrackDistance = t * 145 * S;
+
+                const wrongRad = c.inAngle + (state.currentCornerTurnDeg * Math.PI) / 180;
+                state.carX = c.vertex.x + state.offTrackDistance * Math.cos(wrongRad);
+                state.carY = c.vertex.y + state.offTrackDistance * Math.sin(wrongRad);
+                state.carAngle = wrongRad;
+
+                if (state.animProgress >= 1) {
+                    state.carStage = 'OFF_TRACK_STOP';
+                    updateDashboardUI();
+                }
+            } else if (state.carStage === 'RETURNING_HOME') {
+                state.animProgress += dt * 1.9;
+                const t = easeInOutCubic(Math.min(state.animProgress, 1));
+                const s = getStartPointInfo();
+                const lastCorner = corners[n - 1];
+
+                state.carX = lastCorner.vertex.x + (s.x - lastCorner.vertex.x) * t;
+                state.carY = lastCorner.vertex.y + (s.y - lastCorner.vertex.y) * t;
+                state.carAngle = s.angle;
+
+                if (state.animProgress >= 1) {
+                    state.carStage = 'LAP_COMPLETE';
+                    state.cumulativeTurnDeg = getTurnTarget();
+                    updateDashboardUI();
+                }
+            }
+        }
+
+        // ============================================================================
+        // 8. CANVAS RENDERER
+        // ============================================================================
+        function renderCanvasScene() {
+            const { w, h } = getCanvasSize();
+            ctx.clearRect(0, 0, w, h);
+            if (state.vertices.length === 0) return;
+
+            const { corners, centroid } = computePolygonGeometry();
+            const gather = state.gatherRatio;
+            const polyAlpha = Math.max(0.18, 1 - gather * 0.72);
+            const wedgeRadius = Math.min(w, h) * 0.13;
+            // 휴대폰처럼 작은 화면에서는 각도 숫자를 조금 작게
+            labelK = Math.max(0.68, Math.min(1, Math.min(w, h) / 650));
+
+            // 1. Polygon Track
+            ctx.save();
+            ctx.beginPath();
+            state.vertices.forEach((v, idx) => idx === 0 ? ctx.moveTo(v.x, v.y) : ctx.lineTo(v.x, v.y));
+            ctx.closePath();
+            ctx.fillStyle = `rgba(255, 255, 255, ${0.78 * polyAlpha})`;
+            ctx.fill();
+            ctx.lineWidth = 8 * S;
+            ctx.lineJoin = 'round';
+            ctx.strokeStyle = `rgba(226, 232, 240, ${polyAlpha})`;
+            ctx.stroke();
+            ctx.lineWidth = 3.5 * S;
+            ctx.strokeStyle = `rgba(30, 41, 59, ${polyAlpha})`;
+            ctx.stroke();
+            ctx.restore();
+
+            // 2. Start Line Marker
+            if (gather < 0.5) drawStartFlag(getStartPointInfo(), 1 - gather * 2);
+
+            // 3. Interior Angles (숫자는 외각을 그린 뒤에 써서 가려지지 않게)
+            const interiorLabels = (state.showInteriorAngles && gather < 0.45) ? drawInteriorAngles(corners, 1 - gather * 2.2) : [];
+
+            // 4. Exterior Angle Wedges + Extension Lines
+            // 별다각형을 모을 때는 바퀴마다 반지름을 키워 나선(겹 원)처럼 쌓기 위해 각 꼭짓점 앞까지의 누적 회전각을 구함
+            const cumBefore = [];
+            corners.reduce((acc, c) => { cumBefore.push(acc); return acc + c.exactDeg; }, 0);
+            const lapRadius = lap => wedgeRadius * (1 + 0.55 * lap);
+            const target = getTurnTarget();
+
+            // 오른쪽(+)으로 돈 외각을 먼저, 왼쪽(−)으로 돈 외각을 위에 그림 (모았을 때 상쇄되는 모습이 보이도록)
+            const drawOrder = [...corners.filter(c => c.displayDeg >= 0), ...corners.filter(c => c.displayDeg < 0)];
+            drawOrder.forEach(c => {
+                const idx = c.index;
+                const isCompleted = idx < state.completedCorners || state.showAllAnglesAlways || gather > 0.02;
+                const isActiveCorner = idx === state.activeCornerIndex && (
+                    state.carStage === 'WAITING_INPUT' || state.carStage === 'TURNING' ||
+                    state.carStage === 'TURN_WRONG' || state.carStage === 'DRIVING_OFF' || state.carStage === 'OFF_TRACK_STOP'
+                );
+                if (!isCompleted && !isActiveCorner) return;
+
+                const ox = c.vertex.x + (centroid.x - c.vertex.x) * gather;
+                const oy = c.vertex.y + (centroid.y - c.vertex.y) * gather;
+
+                // 4A. 연장선 ("원래 가던 길")
+                const extLength = wedgeRadius + 42 * S;
+                const ex = ox + extLength * Math.cos(c.inAngle);
+                const ey = oy + extLength * Math.sin(c.inAngle);
+                ctx.save();
+                ctx.beginPath();
+                ctx.setLineDash([6 * S, 5 * S]);
+                ctx.moveTo(ox, oy);
+                ctx.lineTo(ex, ey);
+                ctx.lineWidth = 3 * S;
+                ctx.strokeStyle = gather > 0.5 ? 'rgba(255, 255, 255, 0.8)' : '#10B981';
+                ctx.stroke();
+                ctx.setLineDash([]);
+                if (gather < 0.4) drawArcArrowhead(ex, ey, c.inAngle, '#10B981');
+                ctx.restore();
+
+                // 4B. 외각 부채꼴 (+ 시계 방향, − 반시계 방향)
+                let sweepRad = 0, isWrongWedge = false, displayDegNum = c.displayDeg;
+                if (isCompleted) {
+                    sweepRad = c.turnRad;
+                } else if (isActiveCorner) {
+                    sweepRad = (state.currentCornerTurnDeg * Math.PI) / 180;
+                    displayDegNum = Math.round(state.currentCornerTurnDeg);
+                    if (!state.isTargetAngleCorrect && state.carStage !== 'WAITING_INPUT') isWrongWedge = true;
+                }
+                const neg = sweepRad < 0;
+
+                if (Math.abs(sweepRad) > 0.01) {
+                    const label = `${displayDegNum < 0 ? '−' : ''}${Math.abs(displayDegNum)}°`;
+                    const px = (gather > 0.5 ? 18 : 22) * S * labelK;
+                    const fit = fitLabelInWedge(label, px, Math.abs(sweepRad), wedgeRadius, gather > 0.5 ? 1 : 1.6, gather > 0.5 ? 0.62 : 0.5);
+                    const r = state.showExteriorNumbers ? fit.r : wedgeRadius;
+                    const solid = (state.showExteriorNumbers || gather > 0.3) && !neg;
+                    const strokeCol = isWrongWedge ? '#BE123C' : c.color.hex;
+
+                    // 바퀴 경계(360°의 배수)에서 잘라 여러 조각으로 그림. 모았을 때 조각마다 바퀴에 맞는 반지름
+                    const startCum = cumBefore[idx];
+                    const segs = [];
+                    if (!neg && !isWrongWedge && isCompleted) {
+                        let a = startCum, end = startCum + c.exactDeg;
+                        while (a < end - 0.01) {
+                            const lap = Math.floor(a / 360 + 1e-9);
+                            const e = Math.min(end, (lap + 1) * 360);
+                            segs.push({ a0: (a - startCum) * Math.PI / 180, a1: (e - startCum) * Math.PI / 180, lap: Math.max(0, lap) });
+                            a = e;
+                        }
+                    } else {
+                        segs.push({ a0: 0, a1: sweepRad, lap: Math.max(0, Math.floor(startCum / 360 + 1e-9)) });
+                    }
+
+                    ctx.save();
+                    const multiLap = state.lapCount > 1;
+                    segs.forEach(sg => {
+                        const rr = r + (lapRadius(sg.lap) - wedgeRadius) * gather * (multiLap ? 1 : 0);
+                        // 두 번째 바퀴부터는 안쪽 바퀴를 가리지 않도록 고리 모양으로 (모을수록 안쪽 반지름이 커짐)
+                        const rIn = multiLap && sg.lap > 0 ? (r + (lapRadius(sg.lap - 1) - wedgeRadius) * gather) * gather : 0;
+                        sg.r = rr;
+                        sg.rIn = rIn;
+                        const a0 = c.inAngle + sg.a0, a1 = c.inAngle + sg.a1, ccw = sg.a1 < sg.a0;
+                        ctx.beginPath();
+                        if (rIn > 1) {
+                            ctx.arc(ox, oy, rr, a0, a1, ccw);
+                            ctx.arc(ox, oy, rIn, a1, a0, !ccw);
+                        } else {
+                            ctx.moveTo(ox, oy);
+                            ctx.arc(ox, oy, rr, a0, a1, ccw);
+                        }
+                        ctx.closePath();
+                        if (isWrongWedge) {
+                            ctx.fillStyle = (state.showExteriorNumbers || gather > 0.3) ? 'rgba(225, 29, 72, 0.85)' : 'rgba(244, 63, 94, 0.25)';
+                        } else if (neg) {
+                            // 왼쪽으로 돈 외각: 연한 색 + 점선 (모으면 앞 외각을 지우는 모습)
+                            ctx.fillStyle = gather > 0.3 ? 'rgba(255, 255, 255, 0.82)' : c.color.fill;
+                        } else {
+                            ctx.fillStyle = solid ? c.color.solidFill : c.color.fill;
+                        }
+                        ctx.fill();
+                        ctx.lineWidth = (neg ? 3 : 2.2) * S;
+                        ctx.setLineDash(neg ? [6 * S, 4 * S] : []);
+                        ctx.strokeStyle = neg || !solid || isWrongWedge ? strokeCol : '#FFFFFF';
+                        ctx.stroke();
+                        ctx.setLineDash([]);
+                    });
+
+                    // 호 끝 화살표 (도는 방향)
+                    if (gather < 0.7 && Math.abs(sweepRad) > 0.2) {
+                        const arrowAng = c.inAngle + sweepRad;
+                        const rr = segs[segs.length - 1].r;
+                        drawArcArrowhead(ox + rr * Math.cos(arrowAng), oy + rr * Math.sin(arrowAng), arrowAng + (neg ? -Math.PI / 2 : Math.PI / 2), strokeCol);
+                    }
+
+                    // 부채꼴 안 숫자 (가장 큰 조각에)
+                    if (state.showExteriorNumbers && !(gather > 0.5 && Math.abs(sweepRad) < 0.3)) {
+                        const big = segs.reduce((m, sg) => Math.abs(sg.a1 - sg.a0) > Math.abs(m.a1 - m.a0) ? sg : m, segs[0]);
+                        const midAng = c.inAngle + (big.a0 + big.a1) / 2;
+                        const d = big.rIn > 1 ? (big.rIn + big.r) / 2 : fit.d * (big.r / r);
+                        const inside = fit.inside && !neg;
+                        drawWedgeText(label, ox + d * Math.cos(midAng), oy + d * Math.sin(midAng), px, inside ? undefined : (isWrongWedge ? '#BE123C' : c.color.badgeText));
+                    }
+                    ctx.restore();
+                }
+
+                // 4C. 잘못 돌았을 때: 빨간 이탈 경로
+                if (isActiveCorner && isWrongWedge && gather === 0) {
+                    const wrongAngleRad = c.inAngle + sweepRad;
+                    const rayLen = 175 * S;
+                    const wx = ox + rayLen * Math.cos(wrongAngleRad);
+                    const wy = oy + rayLen * Math.sin(wrongAngleRad);
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.setLineDash([8 * S, 6 * S]);
+                    ctx.moveTo(ox, oy);
+                    ctx.lineTo(wx, wy);
+                    ctx.lineWidth = 3.5 * S;
+                    ctx.strokeStyle = '#E11D48';
+                    ctx.stroke();
+                    ctx.setLineDash([]);
+                    drawArcArrowhead(wx, wy, wrongAngleRad, '#E11D48');
+                    ctx.restore();
+                }
+            });
+
+            interiorLabels.forEach(draw => draw());
+
+            // 5. 모은 외각이 이루는 360° 원 (별은 바퀴 수만큼 겹 원)
+            if (gather > 0.85) {
+                const ringAlpha = (gather - 0.85) / 0.15;
+                ctx.save();
+                const laps = Math.max(1, state.lapCount);
+                ctx.lineWidth = 3.5 * S;
+                ctx.strokeStyle = `rgba(15, 23, 42, ${ringAlpha})`;
+                ctx.setLineDash([8 * S, 6 * S]);
+                ctx.beginPath();
+                ctx.arc(centroid.x, centroid.y, (laps > 1 ? lapRadius(laps - 1) : wedgeRadius) + 10 * S, 0, Math.PI * 2);
+                ctx.stroke();
+                ctx.setLineDash([]);
+                ctx.fillStyle = `rgba(15, 23, 42, ${ringAlpha})`;
+                ctx.beginPath();
+                ctx.arc(centroid.x, centroid.y, 32 * S, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.fillStyle = `rgba(255, 255, 255, ${ringAlpha})`;
+                ctx.font = monoFont(18);
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(`${target}°`, centroid.x, centroid.y + 1);
+                if (laps > 1) {
+                    // 원 바깥에 "360° × 2바퀴" 안내
+                    const ty = centroid.y + lapRadius(laps - 1) + 40 * S;
+                    ctx.font = monoFont(20);
+                    ctx.lineWidth = 5 * S;
+                    ctx.strokeStyle = `rgba(255, 255, 255, ${ringAlpha})`;
+                    ctx.strokeText(`360° × ${laps}바퀴 = ${target}°`, centroid.x, ty);
+                    ctx.fillStyle = `rgba(15, 23, 42, ${ringAlpha})`;
+                    ctx.fillText(`360° × ${laps}바퀴 = ${target}°`, centroid.x, ty);
+                }
+                ctx.restore();
+            }
+
+            // 6. 꼭짓점 (A, B, C...)
+            corners.forEach((c, idx) => {
+                const isHovered = state.hoveredVertexIndex === idx || state.draggingVertexIndex === idx;
+                const r = (isHovered ? 15 : 13) * S;
+                ctx.save();
+                ctx.globalAlpha = 1 - gather * 0.6; // 외각을 모으면 꼭짓점은 흐리게
+                if (isHovered) {
+                    ctx.beginPath();
+                    ctx.arc(c.vertex.x, c.vertex.y, 22 * S, 0, Math.PI * 2);
+                    ctx.fillStyle = `${c.color.hex}28`;
+                    ctx.fill();
+                }
+                ctx.beginPath();
+                ctx.arc(c.vertex.x, c.vertex.y, r, 0, Math.PI * 2);
+                ctx.fillStyle = '#FFFFFF';
+                ctx.fill();
+                ctx.lineWidth = 3.5 * S;
+                ctx.strokeStyle = c.color.hex;
+                ctx.stroke();
+                ctx.font = monoFont(13);
+                ctx.fillStyle = '#0F172A';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(c.label, c.vertex.x, c.vertex.y + 0.5);
+                ctx.restore();
+            });
+
+            // 7. 자동차
+            if (gather < 0.65) {
+                const isOffTrack = state.carStage === 'DRIVING_OFF' || state.carStage === 'OFF_TRACK_STOP';
+                drawTopDownCar(state.carX, state.carY, state.carAngle, 1 - gather * 1.4, isOffTrack);
+            }
+        }
+
+        // 부채꼴 안에 글자가 들어갈 위치와 필요한 반지름
+        // (글자 상자를 감싸는 원이 부채꼴 안, 꼭짓점 원 바깥에 놓이도록)
+        function fitLabelInWedge(text, px, sweepRad, baseR, maxScale, minFrac) {
+            ctx.save();
+            ctx.font = `800 ${Math.round(px)}px "JetBrains Mono", Consolas, monospace`;
+            const tw = ctx.measureText(text).width;
+            ctx.restore();
+            const rt = Math.hypot(tw / 2, px / 2) + 2 * S;
+            maxScale = Math.max(1, maxScale);
+            const halfSin = Math.sin(Math.min(sweepRad, Math.PI * 0.999) / 2);
+            const d = Math.max(baseR * minFrac, 20 * S + rt, rt / Math.max(halfSin, 0.01));
+            const needR = d + rt + 4 * S;
+            if (needR <= baseR * maxScale) return { inside: true, d, r: Math.max(baseR, needR) };
+            return { inside: false, d: Math.max(baseR + rt + 4 * S, d), r: baseR };
+        }
+
+        // 부채꼴 안 흰 글씨(어두운 테두리) 또는 바깥 색 글씨(흰 테두리)
+        function drawWedgeText(txt, x, y, px, color) {
+            ctx.save();
+            ctx.font = `800 ${Math.round(px)}px "JetBrains Mono", Consolas, monospace`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.lineJoin = 'round';
+            ctx.lineWidth = 4.5 * S;
+            ctx.strokeStyle = color ? 'rgba(255, 255, 255, 0.95)' : 'rgba(15, 23, 42, 0.45)';
+            ctx.strokeText(txt, x, y + 1);
+            ctx.fillStyle = color || '#FFFFFF';
+            ctx.fillText(txt, x, y + 1);
+            ctx.restore();
+        }
+
+        function drawInteriorAngles(corners, alpha) {
+            const labels = [];
+            corners.forEach((c, idx) => {
+                const startA = c.outAngle;
+                const endA = c.inAngle + Math.PI;
+                const isFocused = (idx === state.activeCornerIndex) && (
+                    state.carStage === 'WAITING_INPUT' || state.carStage === 'TURN_WRONG' || state.carStage === 'OFF_TRACK_STOP'
+                );
+                // 내각 크기: 시작 방향에서 시계 방향으로 잰 각 (전에는 일부 꼭짓점에서 원 전체가 그려지던 문제 수정)
+                let sweep = normalizeAngleSigned(endA - startA);
+                if (sweep < 0) sweep += Math.PI * 2;
+
+                const text = `${c.interiorDeg}°`;
+                const px = (isFocused ? 26 : 21) * S * labelK;
+                // 변이 짧으면 이웃 내각과 겹치지 않도록 부채꼴을 작게
+                const minEdge = Math.min(Math.hypot(c.vertex.x - c.prev.x, c.vertex.y - c.prev.y), Math.hypot(c.next.x - c.vertex.x, c.next.y - c.vertex.y));
+                const baseR = Math.min((isFocused ? 64 : 54) * S, minEdge * 0.3);
+                const fit = fitLabelInWedge(text, px, sweep, baseR, (minEdge * 0.42) / baseR, 0.55);
+
+                ctx.save();
+                ctx.globalAlpha = alpha;
+                ctx.beginPath();
+                ctx.moveTo(c.vertex.x, c.vertex.y);
+                ctx.arc(c.vertex.x, c.vertex.y, fit.r, startA, startA + sweep, false);
+                ctx.closePath();
+                ctx.fillStyle = isFocused ? 'rgba(37, 99, 235, 0.22)' : 'rgba(148, 163, 184, 0.25)';
+                ctx.fill();
+                ctx.lineWidth = (isFocused ? 3 : 2) * S;
+                ctx.strokeStyle = isFocused ? '#2563EB' : '#64748B';
+                ctx.stroke();
+
+                ctx.restore();
+
+                const midA = startA + sweep / 2;
+                labels.push(() => {
+                    ctx.save();
+                    ctx.globalAlpha = alpha;
+                    drawWedgeText(text, c.vertex.x + fit.d * Math.cos(midA), c.vertex.y + fit.d * Math.sin(midA), px,
+                        isFocused ? '#1D4ED8' : '#1E293B');
+                    ctx.restore();
+                });
+            });
+            return labels;
+        }
+
+        function drawArcArrowhead(x, y, radians, colorHex) {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.rotate(radians);
+            ctx.scale(S, S);
+            ctx.beginPath();
+            ctx.moveTo(0, 0);
+            ctx.lineTo(-10, -5);
+            ctx.lineTo(-7.5, 0);
+            ctx.lineTo(-10, 5);
+            ctx.closePath();
+            ctx.fillStyle = colorHex;
+            ctx.fill();
+            ctx.restore();
+        }
+
+        function drawStartFlag(startInfo, alpha) {
+            ctx.save();
+            ctx.globalAlpha = Math.max(0, alpha);
+            ctx.translate(startInfo.x, startInfo.y);
+            ctx.rotate(startInfo.angle);
+            ctx.scale(S, S);
+
+            ctx.fillStyle = '#0F172A';
+            ctx.fillRect(-3, -14, 6, 28);
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(-3, -7, 3, 7);
+            ctx.fillRect(0, 0, 3, 7);
+            ctx.fillRect(-3, 7, 3, 7);
+            ctx.restore();
+        }
+
+        function drawTopDownCar(x, y, angle, alpha, isWarning) {
+            ctx.save();
+            ctx.globalAlpha = Math.max(0, alpha);
+            ctx.translate(x, y);
+            ctx.rotate(angle);
+            ctx.scale(S, S);
+
+            // Headlight beam
+            const grad = ctx.createLinearGradient(16, 0, 50, 0);
+            grad.addColorStop(0, isWarning ? 'rgba(244, 63, 94, 0.42)' : 'rgba(56, 189, 248, 0.35)');
+            grad.addColorStop(1, 'rgba(56, 189, 248, 0)');
+            ctx.fillStyle = grad;
+            ctx.beginPath();
+            ctx.moveTo(16, -9);
+            ctx.lineTo(50, -19);
+            ctx.lineTo(50, 19);
+            ctx.lineTo(16, 9);
+            ctx.closePath();
+            ctx.fill();
+
+            // Shadow
+            ctx.fillStyle = 'rgba(15, 23, 42, 0.2)';
+            ctx.beginPath();
+            ctx.roundRect(-20, -11, 40, 25, 8);
+            ctx.fill();
+
+            // Wheels
+            ctx.fillStyle = '#0F172A';
+            ctx.beginPath();
+            ctx.roundRect(-14, -14, 9, 4, 1.5);
+            ctx.roundRect(-14, 10, 9, 4, 1.5);
+            ctx.roundRect(6, -14, 9, 4, 1.5);
+            ctx.roundRect(6, 10, 9, 4, 1.5);
+            ctx.fill();
+
+            // Body
+            ctx.fillStyle = isWarning ? '#be123c' : '#1E293B';
+            ctx.beginPath();
+            ctx.roundRect(-19, -11, 38, 22, 7);
+            ctx.fill();
+            ctx.lineWidth = 1.5;
+            ctx.strokeStyle = '#FFFFFF';
+            ctx.stroke();
+
+            // Center stripe
+            ctx.fillStyle = isWarning ? '#FDA4AF' : '#38BDF8';
+            ctx.fillRect(-17, -2, 34, 4);
+
+            // Roof
+            ctx.fillStyle = '#0F172A';
+            ctx.beginPath();
+            ctx.roundRect(-9, -8, 18, 16, 4);
+            ctx.fill();
+
+            // Windshield
+            ctx.fillStyle = isWarning ? '#FECDD3' : '#7DD3FC';
+            ctx.beginPath();
+            ctx.moveTo(3, -6.5);
+            ctx.lineTo(8, -5.5);
+            ctx.lineTo(8, 5.5);
+            ctx.lineTo(3, 6.5);
+            ctx.closePath();
+            ctx.fill();
+
+            ctx.restore();
+        }
+
+        // ============================================================================
+        // 9. 확인 문제 (외각)
+        // ============================================================================
+        function openModal(title, html) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-body').innerHTML = html;
+            document.getElementById('modal-backdrop').classList.remove('hidden');
+            lucide.createIcons();
+        }
+        function closeModal() {
+            document.getElementById('modal-backdrop').classList.add('hidden');
+        }
+        window.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+        function showOnCanvas(n) {
+            closeModal();
+            if (state.shapeMode !== 'CONVEX') { state.shapeMode = 'CONVEX'; renderShapeMenu(); }
+            if (n >= MIN_SIDES && n <= MAX_SIDES) setPolygonSides(n);
+        }
+
+        const randInt = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
+        const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+        function shuffle(arr) {
+            const a = [...arr];
+            for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+            return a;
+        }
+        function makeChoices(answer, candidates) {
+            const wrong = [...new Set(candidates)].filter(c => c !== answer);
+            return shuffle([answer, ...shuffle(wrong).slice(0, 3)]);
+        }
+
+        // 한 외각의 크기가 자연수인 정다각형
+        const REGULAR_NS = [3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36];
+        const nearRegular = n => REGULAR_NS.filter(k => k !== n).sort((a, b) => Math.abs(a - n) - Math.abs(b - n));
+
+        const QUIZ_TYPES = [
+            // 외각의 합
+            () => {
+                const n = randInt(5, 15);
+                return {
+                    q: `${polyName(n)}의 외각의 크기의 합은?`,
+                    answer: '360°',
+                    choices: makeChoices('360°', [`${180 * (n - 2)}°`, `${180 * n}°`, '180°', `${360 * (n - 2)}°`]),
+                    explain: `다각형을 한 바퀴 돌면 처음 방향으로 돌아오므로, 외각의 크기의 합은 변의 수와 관계없이 항상 360°예요.`,
+                    n
+                };
+            },
+            // 정다각형의 한 외각
+            () => {
+                const n = pick(REGULAR_NS.filter(k => k >= 5)), val = 360 / n;
+                const near = nearRegular(n).slice(0, 2).map(k => `${360 / k}°`);
+                return {
+                    q: `정${polyName(n)}의 한 외각의 크기는?`,
+                    answer: `${val}°`,
+                    choices: makeChoices(`${val}°`, [`${180 * (n - 2) / n}°`, ...near, `${180 / n}°`].filter(v => !v.includes('.'))),
+                    explain: `외각의 크기의 합은 360°이고, 정다각형은 외각 ${n}개의 크기가 모두 같아요.<br>360° ÷ ${n} = ${val}°`,
+                    n
+                };
+            },
+            // 한 외각으로 정다각형 찾기
+            () => {
+                const n = pick(REGULAR_NS.filter(k => k >= 5)), val = 360 / n;
+                const others = nearRegular(n).slice(0, 3).map(polyName);
+                return {
+                    q: `한 외각의 크기가 ${val}°인 정다각형은?`,
+                    answer: `정${polyName(n)}`,
+                    choices: makeChoices(`정${polyName(n)}`, others.map(x => `정${x}`)),
+                    explain: `360° ÷ ${val}° = ${n} 이므로 정${polyName(n)}이에요.`,
+                    n
+                };
+            },
+            // 한 내각으로 정다각형 찾기 (외각 이용)
+            () => {
+                const n = pick(REGULAR_NS.filter(k => k >= 5 && k <= 20)), interior = 180 * (n - 2) / n, ext = 360 / n;
+                return {
+                    q: `한 내각의 크기가 ${interior}°인 정다각형은?`,
+                    answer: `정${polyName(n)}`,
+                    choices: makeChoices(`정${polyName(n)}`, nearRegular(n).slice(0, 3).map(k => `정${polyName(k)}`)),
+                    explain: `한 외각의 크기는 180° − ${interior}° = ${ext}°예요.<br>360° ÷ ${ext}° = ${n} 이므로 정${polyName(n)}이에요.`,
+                    n
+                };
+            },
+            // 한 꼭짓점의 내각과 외각
+            () => {
+                const interior = randInt(7, 16) * 10 + pick([0, 5]);
+                const ext = 180 - interior;
+                return {
+                    q: `다각형의 한 꼭짓점에서 내각의 크기가 ${interior}°일 때, 이 꼭짓점의 외각의 크기는?`,
+                    answer: `${ext}°`,
+                    choices: makeChoices(`${ext}°`, [`${interior}°`, `${360 - interior}°`, `${ext + 10}°`, `${Math.abs(90 - ext)}°`]),
+                    explain: `한 꼭짓점에서 내각과 외각을 합하면 180°(평각)예요.<br>180° − ${interior}° = ${ext}°`,
+                    n: 0
+                };
+            }
+        ];
+
+        const quiz = { score: 0, total: 0, current: null, lastType: -1, answered: false };
+
+        function newQuizQuestion() {
+            let t;
+            do { t = randInt(0, QUIZ_TYPES.length - 1); } while (t === quiz.lastType);
+            quiz.lastType = t;
+            quiz.current = QUIZ_TYPES[t]();
+            quiz.answered = false;
+            renderQuiz();
+        }
+
+        function renderQuiz(chosen) {
+            const c = quiz.current;
+            const choiceBtns = c.choices.map((ch, i) => {
+                let cls = 'border-slate-300 bg-white hover:bg-slate-50 text-slate-900';
+                if (quiz.answered) {
+                    if (ch === c.answer) cls = 'border-emerald-500 bg-emerald-50 text-emerald-800';
+                    else if (ch === chosen) cls = 'border-rose-500 bg-rose-50 text-rose-700';
+                    else cls = 'border-slate-200 bg-white text-slate-400';
+                }
+                return `<button ${quiz.answered ? 'disabled' : ''} onclick="answerQuiz(${i})"
+                    class="choice-btn px-3 md:px-4 py-4 md:py-5 rounded-2xl border-[3px] text-xl md:text-2xl font-extrabold font-mono-num ${cls}">
+                    <span class="text-slate-400 mr-2">${'①②③④'[i]}</span>${ch}</button>`;
+            }).join('');
+
+            let feedback = '';
+            if (quiz.answered) {
+                const ok = chosen === c.answer;
+                feedback = `
+                    <div class="mt-5 rounded-2xl p-5 ${ok ? 'bg-emerald-50 border-2 border-emerald-300' : 'bg-rose-50 border-2 border-rose-300'}">
+                        <div class="text-2xl font-extrabold ${ok ? 'text-emerald-700' : 'text-rose-700'} mb-2">${ok ? '정답이에요!' : `아쉬워요. 정답은 ${c.answer}`}</div>
+                        <div class="text-xl font-semibold text-slate-800 leading-relaxed font-mono-num">${c.explain}</div>
+                    </div>
+                    <div class="flex flex-wrap justify-end gap-2 mt-4">
+                        ${c.n >= MIN_SIDES && c.n <= MAX_SIDES ? `<button onclick="showOnCanvas(${c.n})" class="px-4 py-3 rounded-xl border-2 border-slate-300 text-slate-700 text-lg font-bold hover:bg-slate-50">그림으로 확인</button>` : ''}
+                        <button onclick="newQuizQuestion()" class="px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-lg font-extrabold flex items-center gap-2">다음 문제 <i data-lucide="arrow-right" class="w-5 h-5"></i></button>
+                    </div>`;
+            }
+
+            openModal('확인 문제', `
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-lg font-bold text-slate-500">문제 ${quiz.total + (quiz.answered ? 0 : 1)}</span>
+                    <span class="text-lg font-extrabold text-slate-700">맞힌 문제 <span class="text-amber-600">${quiz.score}</span> / ${quiz.total}</span>
+                </div>
+                <p class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-snug mb-6">${c.q}</p>
+                <div class="grid grid-cols-2 gap-3">${choiceBtns}</div>
+                ${feedback}`);
+        }
+
+        function answerQuiz(i) {
+            if (quiz.answered) return;
+            const chosen = quiz.current.choices[i];
+            quiz.answered = true;
+            quiz.total++;
+            if (chosen === quiz.current.answer) quiz.score++;
+            renderQuiz(chosen);
+        }
+
+        // 사용법 안내 (처음 써 보는 사람용)
+        function openHelp() {
+            const step = (n, title, body) => `
+                <li class="flex gap-3">
+                    <span class="w-8 h-8 rounded-full bg-slate-900 text-white font-extrabold flex items-center justify-center shrink-0 font-mono-num">${n}</span>
+                    <div class="min-w-0">
+                        <div class="text-lg font-extrabold text-slate-900">${title}</div>
+                        <div class="text-base font-semibold text-slate-600 leading-relaxed">${body}</div>
+                    </div>
+                </li>`;
+            const mode = (color, title, body) => `
+                <div class="rounded-2xl border-2 p-4" style="border-color:${color}">
+                    <div class="text-base font-extrabold mb-1" style="color:${color}">${title}</div>
+                    <div class="text-sm font-semibold text-slate-700 leading-relaxed">${body}</div>
+                </div>`;
+            openModal('사용법', `
+                <p class="text-lg font-semibold text-slate-700 mb-5">자동차가 다각형 둘레를 한 바퀴 돌면서 꼭짓점마다 핸들을 돌린 각(외각)을 모두 더하면 몇 도가 될까요?</p>
+                <ol class="space-y-4 mb-6">
+                    ${step(1, '코너로 이동', '<b>코너 A로 이동</b> 버튼을 누르면 자동차가 첫 꼭짓점까지 달려가요.')}
+                    ${step(2, '돌 각도 입력', '핸들을 몇 도 돌려야 다음 변을 따라갈지 입력하고 <b>핸들 돌리기</b>를 눌러요. <b>내각값</b> 버튼으로 흔한 실수(내각만큼 돌기)도 보여 줄 수 있어요.')}
+                    ${step(3, '한 바퀴 완주', '모든 꼭짓점을 돌면 <b>외각의 크기의 합</b> 칸에 계산식이 완성돼요. <b>자동으로 돌기</b>를 고르면 정답 각도로 알아서 돌아요.')}
+                    ${step(4, '외각 모으기', '<b>외각 모으기</b>를 누르면 외각들이 한가운데로 모여 360°의 원이 돼요.')}
+                    ${step(5, '모양 바꾸기', '꼭짓점을 끌어 모양을 바꿔도 외각의 합은 그대로예요. 위쪽 − / + 로 삼각형부터 팔각형까지 바꿀 수 있어요.')}
+                </ol>
+                <div class="text-base font-extrabold text-slate-900 mb-2">응용 버튼</div>
+                <div class="grid md:grid-cols-2 gap-3 mb-5">
+                    ${mode('#EA580C', '오목다각형', '들어간 꼭짓점에서는 자동차가 왼쪽으로 돌아요. 이 외각은 −로 입력해요(예: −40). 그래도 외각의 합은 360°예요.')}
+                    ${mode('#7C3AED', '별다각형', '오각별을 그리면 자동차가 두 바퀴 돌아서 외각의 합이 720°가 돼요. 별 꼭짓점 각의 합은 180° × 5 − 720° = 180°예요.')}
+                </div>
+                <div class="text-sm font-semibold text-slate-500">각도 보기 메뉴에서 외각·내각 숫자를 켜고 끌 수 있어요. 확인 문제에서는 매번 새 문제가 나와요.</div>`);
+        }
+
+        function openQuiz() {
+            if (!quiz.current || quiz.answered) newQuizQuestion();
+            else renderQuiz();
+        }
+
+        window.onload = function () {
+            try {
+                const saved = localStorage.getItem('polygonLab.boardMode');
+                // 저장된 설정이 없으면 큰 화면(전자칠판·대형 모니터)에서만 칠판 모드로 시작
+                state.boardMode = saved !== null ? saved === '1' : window.innerWidth >= 1280;
+            } catch (e) {}
+            applyBoardMode();
+            renderViewMenu();
+            renderShapeMenu();
+            resizeCanvas();
+            setPolygonSides(state.numSides);
+            requestAnimationFrame(animateLoop);
+        };
+
+    </script>
+</div>
+</body>
+</html>
