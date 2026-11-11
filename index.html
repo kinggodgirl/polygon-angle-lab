@@ -118,6 +118,10 @@
                 <i data-lucide="layout-grid" class="w-4 h-4 text-slate-500"></i>
                 <span id="text-reset-shape" class="hidden sm:inline">정다각형으로</span>
             </button>
+            <button onclick="makeGeneralPolygon()" id="btn-general" title="누를 때마다 내각이 모두 10°의 배수인 새 다각형" class="shrink-0 px-3 py-2 rounded-xl text-sm font-bold border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 active:scale-95 transition-all flex items-center gap-1.5">
+                <i data-lucide="shuffle" class="w-4 h-4 text-slate-500"></i>
+                <span>일반 다각형</span>
+            </button>
         </div>
 
         <div class="flex flex-wrap items-center gap-2 min-w-0 xl:shrink-0">
@@ -382,6 +386,7 @@
             'monitor': '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>',
             'maximize': '<path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/>',
             'x': '<path d="M18 6 6 18M6 6l12 12"/>',
+            'shuffle': '<path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/><path d="m18 2 4 4-4 4"/><path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"/><path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"/><path d="m18 14 4 4-4 4"/>',
             'presentation': '<path d="M2 3h20M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3M12 16v5M8 21h8"/>',
             'info': '<circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>',
             'star': '<polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/>',
@@ -860,6 +865,7 @@
             }
             document.getElementById('left-turn-hint').classList.toggle('hidden', state.shapeMode !== 'CONCAVE');
             document.getElementById('text-reset-shape').textContent = state.shapeMode === 'CONVEX' ? '정다각형으로' : '처음 모양으로';
+            document.getElementById('btn-general').classList.toggle('hidden', state.shapeMode !== 'CONVEX');
         }
 
         function setShapeMode(mode) {
@@ -2257,6 +2263,77 @@
             document.getElementById('ppt-slide').classList.add('hidden');
         }
         window.addEventListener('keydown', e => { if (e.key === 'Escape') closePpt(); });
+
+        // ---------------------------------------------------------------------------
+        // 일반 다각형: 내각이 모두 10°의 배수인 볼록다각형을 무작위로 만듦
+        //  외각 e(= 180° − 내각)를 10°의 배수로 골라 합을 360°로 맞추고,
+        //  그 방향으로 변을 이어 닫히도록 마지막 두 변의 길이를 계산
+        // ---------------------------------------------------------------------------
+        function randomExteriorAngles(n) {
+            const minE = n === 3 ? 50 : 20;                      // 내각 최대 130°(삼각형) / 160°
+            const maxE = Math.min(150, 360 - minE * (n - 1));    // 내각 최소 30°
+            for (let t = 0; t < 400; t++) {
+                const e = Array(n).fill(minE);
+                let units = (360 - minE * n) / 10;
+                while (units > 0) {
+                    const k = Math.floor(Math.random() * n);
+                    if (e[k] + 10 <= maxE) { e[k] += 10; units--; }
+                }
+                // 정다각형처럼 보이지 않도록 크기 차이가 있게
+                if (Math.max(...e) - Math.min(...e) >= (n <= 4 ? 30 : 20)) return e;
+            }
+            return null;
+        }
+
+        function buildPolygonFromExterior(e) {
+            const n = e.length;
+            const dirs = [];
+            let h = -Math.PI / 2 + (Math.random() - 0.5) * 0.6;   // 첫 변의 방향
+            for (let i = 0; i < n; i++) { dirs.push(h); h += e[i] * Math.PI / 180; }
+            for (let t = 0; t < 300; t++) {
+                const L = dirs.map(() => 0.6 + Math.random() * 0.8);
+                // 마지막 두 변 길이 a, b: Σ L·u = 0
+                let sx = 0, sy = 0;
+                for (let i = 0; i < n - 2; i++) { sx += L[i] * Math.cos(dirs[i]); sy += L[i] * Math.sin(dirs[i]); }
+                const u1 = [Math.cos(dirs[n - 2]), Math.sin(dirs[n - 2])], u2 = [Math.cos(dirs[n - 1]), Math.sin(dirs[n - 1])];
+                const det = u1[0] * u2[1] - u1[1] * u2[0];
+                if (Math.abs(det) < 1e-6) continue;
+                const a = (-sx * u2[1] + sy * u2[0]) / det;
+                const b = (-u1[0] * sy + u1[1] * sx) / det;
+                if (a < 0.45 || b < 0.45 || a > 1.9 || b > 1.9) continue;
+                L[n - 2] = a; L[n - 1] = b;
+                // 꼭짓점: 변 i는 꼭짓점 i → i+1. 꼭짓점 i의 외각 = 변 i−1과 변 i의 방향 차이
+                const pts = [{ x: 0, y: 0 }];
+                for (let i = 0; i < n - 1; i++) pts.push({ x: pts[i].x + L[i] * Math.cos(dirs[i]), y: pts[i].y + L[i] * Math.sin(dirs[i]) });
+                return pts;
+            }
+            return null;
+        }
+
+        function makeGeneralPolygon() {
+            if (state.shapeMode !== 'CONVEX') return;
+            const n = state.numSides;
+            initRegularPolygon(n);   // 화면 배치(중심·크기) 계산
+            const reg = state.vertices;
+            const rcx = reg.reduce((a, v) => a + v.x, 0) / n, rcy = reg.reduce((a, v) => a + v.y, 0) / n;
+            const R = Math.max(...reg.map(v => Math.hypot(v.x - rcx, v.y - rcy)));
+            for (let t = 0; t < 60; t++) {
+                const e = randomExteriorAngles(n);
+                const pts = e && buildPolygonFromExterior(e);
+                if (!pts) continue;
+                // 정다각형과 같은 크기의 틀 안에 들어가도록 확대·이동
+                const xs = pts.map(p => p.x), ys = pts.map(p => p.y);
+                const bw = Math.max(...xs) - Math.min(...xs), bh = Math.max(...ys) - Math.min(...ys);
+                const k = (2 * R) / Math.max(bw, bh) * 0.98;
+                const mx = (Math.max(...xs) + Math.min(...xs)) / 2, my = (Math.max(...ys) + Math.min(...ys)) / 2;
+                const verts = pts.map(p => ({ x: rcx + (p.x - mx) * k, y: rcy + (p.y - my) * k }));
+                if (!isStrictlyConvexClockwise(verts)) continue;
+                state.vertices = verts;
+                state.lapCount = 1;
+                resetCarSimulation();
+                return;
+            }
+        }
 
         function openQuiz() {
             if (!quiz.current || quiz.answered) newQuizQuestion();
